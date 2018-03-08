@@ -1,4 +1,27 @@
 .navbar {
+  height: 5.5rem;
   margin-bottom: 0;
   background-color: #1d3641;
+}
+
+#secondNav { 
+  background-color: lightgrey;
+  height: 11rem;
+ 
+}
+
+.btn {
+  border-radius: 0;
+  background-color: #49adc1;
+  color: white;
+}
+
+/* .btn active {
+  background-color: #286d87;
+} button select*/
+
+.todahHeaderLogo {
+  height: 60%;
+  margin-top: 1.5%;
+  padding: 0 2.7% 0 2%;
 }
