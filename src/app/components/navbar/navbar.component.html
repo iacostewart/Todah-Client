@@ -31,8 +31,8 @@
       </ul>
       <form class="navbar-form navbar-left">
         <!-- Idea is that starting a campaign carries that yellow/orange color all the way through the envelope wall -->
-        <a routerLink="/startCampaign"><button type="button" class="btn btn-warning btn-lg">Start a Campaign</button></a>
-        <a routerLink="/snapshot"><button type="button" class="btn btn-primary btn-lg">Find a Campaign</button></a>
+          <!-- <a routerLink="/startCampaign"><button type="button" class="btn btn-warning btn-lg">Start a Campaign</button></a>
+          <a routerLink="/snapshot"><button type="button" class="btn btn-primary btn-lg">Find a Campaign</button></a> -->
         <!-- Only visible when logged in as admin -->
         <a routerLink="/admin"><button type="button" class="btn btn-default">Admin Portal</button></a>
       </form>
@@ -213,4 +213,9 @@
       </ul>
     </div>
   </div>
+</nav>
+<nav class="navbar navbar-default" id="secondNav">
+  <img  class="todahHeaderLogo" src="../../../assets/todah_logo.PNG" alt="" />
+  <a routerLink="/startCampaign"><button type="button" class="btn btn-lg">Start a Campaign</button></a>
+  <a routerLink="/snapshot"><button type="button" class="btn btn-lg">Find a Campaign</button></a>
 </nav>
