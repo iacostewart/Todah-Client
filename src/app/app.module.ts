@@ -20,6 +20,13 @@ import { FaqComponent } from './components/faq/faq.component';
 import { AboutComponent } from './components/about/about.component';
 import { PricingComponent } from './components/pricing/pricing.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+
+
+
+// import { StartCampaignForm1Component } from './campaign/startCampaign/shared/start-campaign-form1/start-campaign-form1.component'
+
 
 
 @NgModule({
@@ -45,11 +52,14 @@ import { ContactComponent } from './components/contact/contact.component';
     AdminModule,
     MatDialogModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    HttpModule,
+    FormsModule, 
+    ReactiveFormsModule,
   ],
 
   providers: [],
 
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent ]
 })
 export class AppModule { }
