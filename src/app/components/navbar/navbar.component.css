@@ -25,3 +25,28 @@
   margin-top: 1.5%;
   padding: 0 2.7% 0 2%;
 }
+
+.loginRetister {
+  margin: 2.5rem 5rem;
+}
+
+  
+.container-12 {
+  margin: 130px 471px 0 471px;
+} 
+
+.modal-dialog {
+  margin: 0;
+}
+
+.registermodal {
+  margin: 2rem;
+}
+.signinmodal {
+  margin: 2rem;
+}
+
+.spanx {
+  margin-right: 15rem;
+  color: white;
+}

@@ -5,6 +5,11 @@ import { CommonModule } from '@angular/common';
 import { CampaignModule } from './campaign/campaign.module';
 import { AppRoutingModule } from './shared/app-routing.module';
 import { AdminModule } from './admin/admin.module';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
+import {FormsModule} from '@angular/forms';
+
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -36,6 +41,7 @@ import { HttpModule } from '@angular/http';
     AboutComponent,
     PricingComponent,
     ContactComponent
+  
   ],
 
   imports: [
@@ -44,10 +50,12 @@ import { HttpModule } from '@angular/http';
     CommonModule,
     CampaignModule,
     AdminModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    FormsModule,
     HttpModule,
     FormsModule, 
     ReactiveFormsModule,
-    
   ],
 
   providers: [],
