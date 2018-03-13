@@ -7,34 +7,30 @@
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
 
       <!-- Add Todah logo here -->
-      <a class="navbar-brand" routerLink="/home">Brand</a>
+      <a class="navbar-brand" routerLink="/home">Home</a>
+      <a  class="how-it-works" routerLink="/howItWorks">How it Works</a>
+      <a class="about" routerLink="/about">About</a>
+      <a class="contact" routerLink="/contact">Contact</a>
+      <!-- <a class="pricing" routerLink="/pricing">Pricing</a> -->
     </div>
 
     <!-- Features don't quite work with mobile dropdown -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Other Stuff <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a routerLink="/howItWorks">How it Works</a></li>
-            <li><a routerLink="/about">About</a></li>
-            <li><a routerLink="/contact">Contact</a></li>
-            <li><a routerLink="/pricing">Pricing</a></li>
-          </ul>
-        </li>
+        
       </ul>
       <form class="navbar-form navbar-left">
         <!-- Idea is that starting a campaign carries that yellow/orange color all the way through the envelope wall -->
           <!-- <a routerLink="/startCampaign"><button type="button" class="btn btn-warning btn-lg">Start a Campaign</button></a>
           <a routerLink="/snapshot"><button type="button" class="btn btn-primary btn-lg">Find a Campaign</button></a> -->
         <!-- Only visible when logged in as admin -->
-        <a routerLink="/admin"><button type="button" class="btn btn-default">Admin Portal</button></a>
+        <!-- <a routerLink="/admin"><button type="button" class="btn btn-default">Admin Portal</button></a> -->
       </form>
       
       <ul class="nav navbar-nav navbar-right">
@@ -48,7 +44,7 @@
       </ul>
       <form class="navbar-form navbar-right">
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search Campaign" list="categories">
+          <input type="text" class="form-control" placeholder="Search Campaigns" list="categories">
           <datalist id="categories">
             <option value="Animals"></option>
             <option value="Arts & Culture"></option>
@@ -216,6 +212,7 @@
 </nav>
 <nav class="navbar navbar-default" id="secondNav">
   <img  class="todahHeaderLogo" src="../../../assets/todah_logo.PNG" alt="" />
-  <a routerLink="/startCampaign"><button type="button" class="btn btn-lg">Start a Campaign</button></a>
-  <a routerLink="/snapshot"><button type="button" class="btn btn-lg">Find a Campaign</button></a>
+  <a  routerLink="/snapshot"><button type="button" class="btn btn-lg">Find a Campaign</button></a>
+  <a  routerLink="/startCampaign"><button type="button" class="btn btn-lg">Start a Campaign</button></a>
+ 
 </nav>
