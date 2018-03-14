@@ -26,6 +26,7 @@
   padding: 0 2.7% 0 2%;
 }
 
+<<<<<<< HEAD
 .navbar-brand {
   position: relative;
   top: .7px;
@@ -70,3 +71,29 @@
   color: lightgray;
 } */
 
+=======
+.loginRetister {
+  margin: 2.5rem 5rem;
+}
+
+  
+.container-12 {
+  margin: 130px 471px 0 471px;
+} 
+
+.modal-dialog {
+  margin: 0;
+}
+
+.registermodal {
+  margin: 2rem;
+}
+.signinmodal {
+  margin: 2rem;
+}
+
+.spanx {
+  margin-right: 15rem;
+  color: white;
+}
+>>>>>>> ccd6babad877e0ffb0acec54d3f07ceb83a6c038
