@@ -1,0 +1,51 @@
+
+
+<h1>Register</h1>
+<h3>New to Todah?</h3>
+<p>A Todah account is required to continue.</p>
+<div>
+  <form [formGroup]="regForm" #f (ngSubmit)="onSubmit()">
+    
+    <mat-input-container>
+      <input matInput type="text" placeholder="First Name" id="firstname" formControlName="firstname" >
+    </mat-input-container>
+    
+    <mat-input-container>
+      <input  matInput type="text" placeholder="lastName"id="lastname" formControlName="lastname" >
+    </mat-input-container>
+<br>
+
+    <mat-input-container>
+      <input matInput type="text" placeholder="User Name" id="username" formControlName="username" >
+    </mat-input-container>
+
+    <br>
+
+    <mat-input-container>
+      <input matInput type="text" placeholder="Email" id="email" formControlName="email" >
+    </mat-input-container>
+
+    <br>
+
+    <mat-input-container>
+      <input matInput type="text"  placeholder="Password" id="password" formControlName="password">
+    </mat-input-container>
+    <br>
+    <mat-input-container>
+      <input matInput type="text" placeholder="Confirm Password" id="repassword" formControlName="repassword">
+    </mat-input-container>
+    <br>
+    <button mat-button class="popup-btn" (click)="dialogRef.close({name: name.value, email: email.value, username: username.value, password: password.value, repassword: repassword.value})">Submit</button>
+
+
+    <!-- <button mat-button class="popup-btn" data-dismiss="myModal" (click)="openDialogReg" type="submit" >submit</button> -->
+    
+</form>
+  
+  </div>
+  <!-- bellow on the (click) we are calling for the close, and at the close we are takeing the values of nickname and student id with us.. -->
+  
+    <!-- <button mat-button class="popup-btn" (click)="dialogRef.close({name: name.value, email: email.value, username: username.value, password: password.value, repassword: repassword.value})">Submit</button> -->
+
+
+<!-- (click)="openDialogReg" -->

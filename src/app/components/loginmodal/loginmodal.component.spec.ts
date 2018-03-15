@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import { NavbarComponent } from './navbar.component';
 
-describe('NavbarComponent', () => {
-  let component: NavbarComponent;
-  let fixture: ComponentFixture<NavbarComponent>;
+import { LoginmodalComponent } from './loginmodal.component';
+
+describe('LoginmodalComponent', () => {
+  let component: LoginmodalComponent;
+  let fixture: ComponentFixture<LoginmodalComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NavbarComponent ]
+      declarations: [ LoginmodalComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NavbarComponent);
+    fixture = TestBed.createComponent(LoginmodalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
