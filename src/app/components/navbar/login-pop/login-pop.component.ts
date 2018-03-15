@@ -24,13 +24,22 @@ import {MatCardModule} from '@angular/material/card';
   styleUrls: ['./login-pop.component.css']
 })
 export class LoginPopComponent implements OnInit {
+  logForm: FormGroup;
 
-  constructor(public dialogRef: MatDialogRef<LoginPopComponent>) {
-    
+
+  constructor(public dialogRef: MatDialogRef<LoginPopComponent>, private form: FormBuilder) {
+    this.createForm();
   }
-
   ngOnInit() {
   }
-
+createForm() {
+  this.logForm = this.form.group({
+    'email': new FormControl(null, Validators.required),
+    'password': new FormControl(null, Validators.required),
+  })
+}
+onSubmit() {
+  console.log(this.logForm);
+}
 }
 

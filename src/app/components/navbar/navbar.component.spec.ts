@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import {MatFormFieldModule} from '@angular/material/form-field';
 import { NavbarComponent } from './navbar.component';
 
 describe('NavbarComponent', () => {

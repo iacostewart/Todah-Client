@@ -6,7 +6,7 @@ import { CampaignModule } from './campaign/campaign.module';
 import { AppRoutingModule } from './shared/app-routing.module';
 import { AdminModule } from './admin/admin.module';
 import {MatDialogModule} from '@angular/material/dialog';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatFormFieldModule, MatInputModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
@@ -47,7 +47,7 @@ import { LoginPopComponent } from './components/navbar/login-pop/login-pop.compo
     LoginPopComponent
   
   ],
-entryComponents: [RegistrationPopComponent],
+entryComponents: [RegistrationPopComponent, LoginPopComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -60,7 +60,9 @@ entryComponents: [RegistrationPopComponent],
     HttpModule,
     FormsModule, 
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatInputModule
+    
   ],
 
   providers: [],
