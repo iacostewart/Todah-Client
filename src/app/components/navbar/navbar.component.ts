@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {FormsModule, FormBuilder, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-navbar',

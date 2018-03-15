@@ -16,12 +16,16 @@ import { StartCampaignForm1Component } from './startCampaign/shared/start-campai
 import { StartCampaignForm2Component } from './startCampaign/shared/start-campaign-form2/start-campaign-form2.component';
 import { StartCampaignConfirmComponent } from './startCampaign/shared/start-campaign-confirm/start-campaign-confirm.component';
 import { DeleteCampaignComponent } from './delete-campaign/delete-campaign.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ImageUploadModule } from "angular2-image-upload";
 
 
 @NgModule({
   imports: [
     CommonModule,
-    CampaignRoutingModule
+    CampaignRoutingModule, 
+    ReactiveFormsModule,
+    ImageUploadModule.forRoot(),
   ],
   declarations: [
     ProfileComponent,
@@ -37,7 +41,8 @@ import { DeleteCampaignComponent } from './delete-campaign/delete-campaign.compo
     StartCampaignForm1Component,
     StartCampaignForm2Component,
     StartCampaignConfirmComponent,
-    DeleteCampaignComponent
+    DeleteCampaignComponent, 
+   
   ],
   exports: [
     ProfileComponent,

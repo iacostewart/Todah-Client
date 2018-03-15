@@ -17,8 +17,10 @@ import { StartCampaignConfirmComponent } from '../campaign/startCampaign/shared/
 import { DeleteCampaignComponent } from '../campaign/delete-campaign/delete-campaign.component';
 
 
+
 const campaignRoutes: Routes = [
   { path: 'profile', component: ProfileComponent },
+
 
   { path: 'snapshot', component: FindCampaignSnapshotComponent },
   { path: 'findCampaign', component: FindCampaignComponent },
