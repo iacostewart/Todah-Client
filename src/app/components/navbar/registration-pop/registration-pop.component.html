@@ -1,0 +1,41 @@
+
+
+<h1>Register</h1>
+<h3>New to Todah?</h3>
+<p>A Todah account is required to continue.</p>
+<div>
+    <label>Enter your full name or org</label>
+    <br>
+    <mat-input-container>
+      <input matInput type="text" #name >
+    </mat-input-container>
+    <br>
+  
+    <label>Enter Your email</label>
+    <br>
+    <mat-input-container>
+      <input matInput type="text" #email >
+    </mat-input-container>
+
+    <label>Enter your desired Username</label>
+    <br>
+    <mat-input-container>
+      <input matInput type="text" #username >
+    </mat-input-container>
+
+    <label>password</label>
+    <br>
+    <mat-input-container>
+      <input matInput type="text" #password >
+    </mat-input-container>
+
+    <label>Re-enter your password</label>
+    <br>
+    <mat-input-container>
+      <input matInput type="text" #repassword >
+    </mat-input-container>
+  </div>
+  <!-- bellow on the (click) we are calling for the close, and at the close we are takeing the values of nickname and student id with us.. -->
+  <div mat-dialog-actions>
+    <button mat-button class="popup-btn" (click)="dialogRef.close({name: name.value, email: email.value, username: username.value, password: password.value, repassword: repassword.value})">Submit</button>
+  </div>

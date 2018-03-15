@@ -1,0 +1,20 @@
+
+<h1>login</h1>
+<div>
+<label>Enter Your email</label>
+<br>
+<mat-input-container>
+  <input matInput type="text" #email >
+</mat-input-container>
+
+
+
+    <label>password</label>
+    <br>
+    <mat-input-container>
+      <input matInput type="text" #password >
+    </mat-input-container>
+
+    <div mat-dialog-actions>
+        <button mat-button class="popup-btn" (click)="dialogRef.close({email: email.value, password: password.value})">Submit</button>
+      </div>
