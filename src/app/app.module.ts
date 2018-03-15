@@ -17,6 +17,8 @@ import { PricingComponent } from './components/pricing/pricing.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+import { CampaignService } from './campaign/campaign.service';
 
 
 
@@ -47,10 +49,11 @@ import { HttpModule } from '@angular/http';
     HttpModule,
     FormsModule, 
     ReactiveFormsModule,
+    HttpClientModule
     
   ],
 
-  providers: [],
+  providers: [CampaignService],
 
   bootstrap: [AppComponent ]
 })
