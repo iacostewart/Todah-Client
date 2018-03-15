@@ -11,6 +11,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 
+
+
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
@@ -22,8 +24,13 @@ import { PricingComponent } from './components/pricing/pricing.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+
 import { RegistrationPopComponent } from './components/navbar/registration-pop/registration-pop.component';
 import { LoginPopComponent } from './components/navbar/login-pop/login-pop.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { CampaignService } from './campaign/campaign.service';
+
 
 
 
@@ -60,12 +67,17 @@ entryComponents: [RegistrationPopComponent, LoginPopComponent],
     HttpModule,
     FormsModule, 
     ReactiveFormsModule,
+
     BrowserAnimationsModule,
-    MatInputModule
+    MatInputModule,
+   
+     msCampForm,
+    HttpClientModule
     
+
   ],
 
-  providers: [],
+  providers: [CampaignService],
 
   bootstrap: [AppComponent ]
 })
