@@ -9,8 +9,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 
 
-
-
+import { Component } from '@angular/core';
+import { ScrollToModule } from 'ng2-scroll-to-el';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
@@ -56,6 +56,8 @@ import { HttpModule } from '@angular/http';
     HttpModule,
     FormsModule, 
     ReactiveFormsModule,
+    ScrollToModule.forRoot()
+
   ],
 
   providers: [],
