@@ -1,11 +1,17 @@
-
-
 .jumbotron {
   height: 100vh;
   background-size: cover; 
   background-repeat: no-repeat;
   background-position: center center;
   width: 100%;
+
+  background-color: grey;
+}
+
+.panel {
+  background-color: lightgray;
+}
+
 }
 
 .center {
@@ -14,3 +20,4 @@
   margin-right: auto;
   width: 50%;
 }
+

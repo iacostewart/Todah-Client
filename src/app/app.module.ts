@@ -11,8 +11,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 
-
-
+import { Component } from '@angular/core';
+import { ScrollToModule } from 'ng2-scroll-to-el';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
@@ -67,6 +67,9 @@ entryComponents: [RegistrationPopComponent, LoginPopComponent],
     HttpModule,
     FormsModule, 
     ReactiveFormsModule,
+
+    ScrollToModule.forRoot(),
+
 
     BrowserAnimationsModule,
     MatInputModule,
