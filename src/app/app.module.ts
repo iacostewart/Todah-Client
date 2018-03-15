@@ -73,8 +73,6 @@ entryComponents: [RegistrationPopComponent, LoginPopComponent],
 
     BrowserAnimationsModule,
     MatInputModule,
-   
-     msCampForm,
     HttpClientModule
     
 
