@@ -26,7 +26,7 @@ export class StartCampaignForm1Component implements OnInit {
 
   createForm() {
     this.campaignForm = this.form.group({
-      'campaignData': new FormGroup({
+      
         // 'project_img_thumb_url': new FormControl(null),
         // 'creator_id': new FormControl(null),
         // 'organization_name': new FormControl(null, Validators.required),
@@ -56,7 +56,7 @@ export class StartCampaignForm1Component implements OnInit {
         "finished_step_one": new FormControl(true),
         "slider_inputs": new FormControl("twitter.com"),
         "slider_ranges": new FormControl("insta.com"),
-        "goal_currency": new FormControl("youtube.com"),
+        "goal_currency": new FormControl("usd"),
         "goal": new FormControl(50000),
         "finished_step_two": new FormControl(false),
         "end_date": new FormControl("05/30/2018"),
@@ -68,7 +68,7 @@ export class StartCampaignForm1Component implements OnInit {
         "project_short_description": new FormControl("This is a campaign to raise money to kiick off Adams flower shop.  To bring color and sweet smells to every house"),
         "project_category_id": new FormControl(1),
         "is_approved": new FormControl(false),
-        "initial_funds_currency": new FormControl(null),
+        "initial_funds_currency": new FormControl("usd"),
         "initial_funds": new FormControl(1500.25),
         "organization_chapter_name": new FormControl("twitter.com"),
         "organization_staff_name": new FormControl("insta.com"),
@@ -85,13 +85,12 @@ export class StartCampaignForm1Component implements OnInit {
         "allow_cash_donations": new FormControl(false),
         "published_email_sent": new FormControl(true),
         "client_is_paying_platform_fees": new FormControl(true)
-      }),
-    })
+      }) 
   }
 
   onSubmit() {
     // console.log(this.campaignForm);
-    this.campaignService.storeCampaign(this.campaignForm)
+    this.campaignService.storeCampaign(this.campaignForm.value)
       .subscribe(
       (response) => console.log(response),
       (error) => console.log(error)
