@@ -6,7 +6,9 @@ import { CampaignModule } from './campaign/campaign.module';
 import { AppRoutingModule } from './shared/app-routing.module';
 import { AdminModule } from './admin/admin.module';
 import {MatDialogModule} from '@angular/material/dialog';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatFormFieldModule, MatInputModule} from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 
 
 
@@ -22,8 +24,13 @@ import { PricingComponent } from './components/pricing/pricing.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+
+import { RegistrationPopComponent } from './components/navbar/registration-pop/registration-pop.component';
+import { LoginPopComponent } from './components/navbar/login-pop/login-pop.component';
+
 import { HttpClientModule } from '@angular/common/http';
 import { CampaignService } from './campaign/campaign.service';
+
 
 
 
@@ -42,10 +49,12 @@ import { CampaignService } from './campaign/campaign.service';
     FaqComponent,
     AboutComponent,
     PricingComponent,
-    ContactComponent
+    ContactComponent,
+    RegistrationPopComponent,
+    LoginPopComponent
   
   ],
-
+entryComponents: [RegistrationPopComponent, LoginPopComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -58,9 +67,14 @@ import { CampaignService } from './campaign/campaign.service';
     HttpModule,
     FormsModule, 
     ReactiveFormsModule,
+
+    BrowserAnimationsModule,
+    MatInputModule,
+   
      msCampForm,
     HttpClientModule
-    development
+    
+
   ],
 
   providers: [CampaignService],
@@ -68,3 +82,4 @@ import { CampaignService } from './campaign/campaign.service';
   bootstrap: [AppComponent ]
 })
 export class AppModule { }
+export class PizzaPartyAppModule { }
