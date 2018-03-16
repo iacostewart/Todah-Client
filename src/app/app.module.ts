@@ -30,6 +30,7 @@ import { LoginPopComponent } from './components/navbar/login-pop/login-pop.compo
 
 import { HttpClientModule } from '@angular/common/http';
 import { CampaignService } from './campaign/campaign.service';
+import { RegistrationService } from './components/navbar/auth.service';
 
 
 
@@ -78,7 +79,10 @@ entryComponents: [RegistrationPopComponent, LoginPopComponent],
 
   ],
 
-  providers: [CampaignService],
+  providers: [
+    CampaignService, 
+    RegistrationService
+  ],
 
   bootstrap: [AppComponent ]
 })

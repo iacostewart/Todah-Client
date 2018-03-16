@@ -7,11 +7,10 @@
 
 
 // @Injectable()
-// export class RegistrationService {
+// export class LoginService {
 //     constructor(private http: HttpClient) {}
-    
 //     storeUsers(users: Users) {
-//         return this.http.post(`${api_url}/signup`, users, );
+//         return this.http.post(`${api_url}/login`, users, );
 //     }
 
     
