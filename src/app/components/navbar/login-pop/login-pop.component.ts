@@ -38,6 +38,11 @@ createForm() {
     'password': new FormControl(null, Validators.required),
   })
 }
+
+onCloseConfirm(){
+  this.dialogRef.close();
+}
+
 onSubmit() {
   console.log(this.logForm);
 }

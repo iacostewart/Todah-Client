@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatRadioModule} from '@angular/material/radio';
@@ -7,7 +7,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
-import {MatDialog, MatDialogRef} from '@angular/material';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { RegistrationService } from './registration.service';
 
@@ -51,11 +51,11 @@ createForm() {
 
   })
   }
-  // onSubmit() {
-  //   console.log(this.regForm);
-  //   // modal: this.regForm
-  // }
- 
+
+  onCloseConfirm() {
+    this.dialogRef.close();
+  }
+
   onSubmit() {
     // console.log(this.campaignForm);
     this.registrationService.storeUsers(this.regForm.value)
