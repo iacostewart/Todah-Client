@@ -36,7 +36,12 @@ ngOnInit() {
 }
 
 openDialogReg() {
-  this.dialogRef = this.dialog.open(RegistrationPopComponent);
+  this.dialogRef = this.dialog.open(RegistrationPopComponent, {
+    height:'450px',
+    width: '600px',
+    backdropClass: 'salmon',
+    
+  });
   this.dialogRef.afterClosed().subscribe((result) => {
     console.log(result);
   })
