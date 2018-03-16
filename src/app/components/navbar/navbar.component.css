@@ -12,7 +12,9 @@
 
 .btn {
   border-radius: 0;
-  background-color: #63BAD3;
+
+  background-color: #63bad3;
+
   color: white;
 }
 
@@ -26,7 +28,7 @@
   padding: 0 2.7% 0 2%;
 }
 
-<<<<<<< HEAD
+
 .navbar-brand {
   position: relative;
   top: .7px;
@@ -71,7 +73,10 @@
   color: lightgray;
 } */
 
-=======
+
+
+
+
 .loginRetister {
   margin: 2.5rem 5rem;
 }
@@ -95,5 +100,7 @@
 .spanx {
   margin-right: 15rem;
   color: white;
+
 }
+
 

@@ -5,21 +5,59 @@
     <h3 style="color: white">Smaller Gifts, Bigger Impact</h3>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>  
     <!-- Button to scroll down to promo video -->
-    <p><a href="#video" role="button" class="btn btn-primary large">Watch!</a></p>
+   <p><button class="btn btn-primary" [scrollTo]="'#video'" [scrollDuration]="1500" [scrollOffset]="-5">Watch video!</button></p>
+  
   </div>
 </div>
 <div class="container">
   <div class="row">
+
+
     <!-- Promo video here -->
-    <div class="col-md-12" style=" text-align: center">
-      <img src="../../assets/jumbo.jpeg" style="max-width: 60%" id="video">
-    </div>
+    <div id="video">
+    <video width="1200" height="1000" id="videoPlayer" controls="controls">
+        <source src="../../../assets/video.mov" type="video/mp4">
+        <source src="../../../assets/video.mov" type="video/ogg">
+     <script>
+        var videoPlayer = document.getElementById('videoPlayer');
+    
+        // Auto play, half volume.
+        videoPlayer.play()
+        videoPlayer.volume = 0.5;
+    
+        // Play / pause.
+        videoPlayer.addEventListener('click', function () {
+            if (videoPlayer.paused == false) {
+                videoPlayer.pause();
+                videoPlayer.firstChild.nodeValue = 'Play';
+            } else {
+                videoPlayer.play();
+                videoPlayer.firstChild.nodeValue = 'Pause';
+            }
+        });
+    </script>
+     </video>
+    </div> 
+  
+
+
     <!-- Comparison of different fundraising techniques and pathway to creating campaign here -->
     <div class="col-md-12">
      
     </div>
   </div>
 </div>
+<!-- pyramid -->
+<div class='panel panel-default'>
+  <div class='panel-body'>
+<h1 class="text-center">Todah is Better than Crowdfunding</h1>
+<br>
+<br>
+
+<img src="../../../assets/pyramid2.jpg" alt="pyramid" class="center">
+</div>
+</div>
+<!-- easy as 123 -->
 <div class="panel panel-default">
   <div class="panel-body">
     <h1 class="text-center">Campaigns as Easy as 1-2-3</h1>
@@ -50,15 +88,34 @@
 <div class="container">
   <div class="row">
     <div class="col-md-2">
-  <img src="../../../assets/girl4.jpg" alt="camille1" style="border-radius:50%; height:150px; width:150px; "></div><div class="col-md-4"><br><br><p>"I had no idea raising this much money would happen so fast! Todah will always be the fundraising site I will use! Thank you, Katherine Brooks!" -Kelly</p></div>
+
+  <img src="../../../assets/girl4.jpg" alt="camille1" style="height:150px; width:150px; ">
+</div>
+<div class="col-md-4">
+  <br><br>
+    <p>"I had no idea raising this much money would happen so fast! Todah will always be the fundraising site I will use! Thank you, Katherine Brooks!" -Kelly</p>
+  </div>
 </div>
 <div class="row">
     <div class="col-md-2">
-  <img src="../../../assets/guy7.jpg" alt="streetstyle" style="border-radius:50%; height:150px; width:150px; "></div><div class="col-md-4"><br><br><p>"I have been fundraising both the old-school way, and through Go Fund Me! They have never delivered like Todah. Never again, Go Fund Me! I'm here to stay!"-Bill</p>
-    </div>
+  <img src="../../../assets/guy7.jpg" alt="streetstyle" style=" height:150px; width:150px; ">
+</div>
+<div class="col-md-4">
+  <br><br>
+  <p>"I have been fundraising both the old-school way, and through Go Fund Me! They have never delivered like Todah. Never again, Go Fund Me! I'm here to stay!"-Bill</p>
+
+</div>
     </div>
     <div class="row">
         <div class="col-md-2">
-  <img src="../../../assets/girl6.jpg" alt="other" style="border-radius:50%; height:150px; width:150px;"></div><div class="col-md-4"><p>"Todah is great! It is so easy to set up and use. I just send a link to all the people in my community and, BAM!, They use it and my non-profit gets the help it needs!"-Jan</p>
+
+  <img src="../../../assets/girl6.jpg" alt="other" style=" height:150px; width:150px;">
+</div>
+<div class="col-md-4">
+  <p>"Todah is great! It is so easy to set up and use. I just send a link to all the people in my community and, BAM!, They use it and my non-profit gets the help it needs!"-Jan</p>
+
+
 </div>
 </div>
+</div>
+
