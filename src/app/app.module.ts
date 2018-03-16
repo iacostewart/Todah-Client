@@ -6,11 +6,13 @@ import { CampaignModule } from './campaign/campaign.module';
 import { AppRoutingModule } from './shared/app-routing.module';
 import { AdminModule } from './admin/admin.module';
 import {MatDialogModule} from '@angular/material/dialog';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatFormFieldModule, MatInputModule} from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 
-
+import { Component } from '@angular/core';
+import { ScrollToModule } from 'ng2-scroll-to-el';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
@@ -22,6 +24,13 @@ import { PricingComponent } from './components/pricing/pricing.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+
+import { RegistrationPopComponent } from './components/navbar/registration-pop/registration-pop.component';
+import { LoginPopComponent } from './components/navbar/login-pop/login-pop.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { CampaignService } from './campaign/campaign.service';
+
 
 
 
@@ -40,10 +49,12 @@ import { HttpModule } from '@angular/http';
     FaqComponent,
     AboutComponent,
     PricingComponent,
-    ContactComponent
+    ContactComponent,
+    RegistrationPopComponent,
+    LoginPopComponent
   
   ],
-
+entryComponents: [RegistrationPopComponent, LoginPopComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -56,10 +67,20 @@ import { HttpModule } from '@angular/http';
     HttpModule,
     FormsModule, 
     ReactiveFormsModule,
+
+    ScrollToModule.forRoot(),
+
+
+    BrowserAnimationsModule,
+    MatInputModule,
+    HttpClientModule
+    
+
   ],
 
-  providers: [],
+  providers: [CampaignService],
 
   bootstrap: [AppComponent ]
 })
 export class AppModule { }
+export class PizzaPartyAppModule { }
