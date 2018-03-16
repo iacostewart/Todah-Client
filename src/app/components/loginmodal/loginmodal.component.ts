@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
-  selector: 'app-loginmodal',
-  templateUrl: './loginmodal.component.html',
-  styleUrls: ['./loginmodal.component.css']
+  selector: 'app-how-to-succeed',
+  templateUrl: './how-to-succeed.component.html',
+  styleUrls: ['./how-to-succeed.component.css']
 })
-export class LoginmodalComponent implements OnInit {
+export class HowToSucceedComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit() {
   }
 
+
+
 }
+
