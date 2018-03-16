@@ -17,16 +17,22 @@ import {MatCardModule} from '@angular/material/card';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
+
+
 })
 export class NavbarComponent implements OnInit{
 dialogRef: MatDialogRef<RegistrationPopComponent>;
 dialogReflog: MatDialogRef<LoginPopComponent>
 constructor(public dialog: MatDialog) {
   // this.openDialog();
+  
+  let isLogedIn: '';
+
 }
 ngOnInit() {
-  
+ 
+
 }
 
 openDialogReg() {
