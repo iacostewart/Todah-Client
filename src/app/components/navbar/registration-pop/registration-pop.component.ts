@@ -9,7 +9,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
-import { RegistrationService } from './registration.service';
+import { RegistrationService } from '../auth.service';
 
 
 @Component({
@@ -21,7 +21,12 @@ export class RegistrationPopComponent implements OnInit {
   regForm: FormGroup;
 
 
-  constructor(private registrationService: RegistrationService, public dialogRef: MatDialogRef<RegistrationPopComponent>, private form: FormBuilder) {
+  constructor(
+     
+    public dialogRef: MatDialogRef<RegistrationPopComponent>, 
+    private form: FormBuilder, 
+    private registrationService: RegistrationService
+  ) {
     this.createForm();
   
   }
@@ -58,9 +63,10 @@ createForm() {
 
   onSubmit() {
     // console.log(this.campaignForm);
+    console.log("this is regForm",this.regForm)
     this.registrationService.storeUsers(this.regForm.value)
       .subscribe(
-      (response) => console.log(response),
+      (response) => console.log("this is the response", response),
       (error) => console.log(error)
       );
   }
