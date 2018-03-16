@@ -5,7 +5,7 @@
 <p>A Todah account is required to continue.</p>
 <div>
   <form [formGroup]="regForm" #f (ngSubmit)="onSubmit()">
-    
+    <div class="row"></div>
     <mat-input-container>
       <input matInput type="text" placeholder="First Name" id="firstname" formControlName="firstname" >
     </mat-input-container>
@@ -19,7 +19,7 @@
       <input matInput type="text" placeholder="User Name" id="username" formControlName="username" >
     </mat-input-container>
 
-    <br>
+    
 
     <mat-input-container>
       <input matInput type="text" placeholder="Email" id="email" formControlName="email" >
@@ -30,13 +30,15 @@
     <mat-input-container>
       <input matInput type="text"  placeholder="Password" id="password" formControlName="password">
     </mat-input-container>
-    <br>
+    
     <mat-input-container>
       <input matInput type="text" placeholder="Confirm Password" id="repassword">
     </mat-input-container>
     <br>
+    
+    <div mat-dialog-actions>
     <button mat-button class="popup-btn" (click)="onCloseConfirm()" >Submit</button>
-
+  </div> 
 
     <!-- <button mat-button class="popup-btn" data-dismiss="myModal" (click)="openDialogReg" type="submit" >submit</button> -->
     
