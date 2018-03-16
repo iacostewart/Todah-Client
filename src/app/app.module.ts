@@ -77,7 +77,9 @@ entryComponents: [
     HttpClientModule
   ],
 
-  providers: [CampaignService],
+  
+  providers: [CampaignService,
+  ],
 
   bootstrap: [AppComponent ]
 })
