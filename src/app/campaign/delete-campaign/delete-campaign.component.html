@@ -2,14 +2,17 @@
   <div class="row">
     <h1 style="text-align: center">Delete Your Campaign :(</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod aliquid vitae eaque mollitia, commodi assumenda eveniet corporis similique amet architecto non expedita voluptatem totam! Aliquam culpa beatae iusto quaerat id.</p>
-    <div class="row" style="text-align: center">
-      <div class="col-md-6">
-        <a routerLink=""><button type="button" class="btn btn-danger">Permanently Delete this Campaign</button></a>
+    <form [formGroup]="deleteForm" #f (ngSubmit)="onSubmit(f)">
+      <div class="row" style="text-align: center">
+        <div class="col-md-6">
+          <!-- <input type="text" placeholder="#" formControlName="id" > -->
+          <button type="submit" class="btn btn-danger">Permanently Delete this Campaign</button>
+        </div>
+        <div class="col-md-6">
+          <a routerLink="/startCampaign"><button type="button" class="btn btn-primary">I CHANGED MY MIND! Go back to Campaign</button></a>
+        </div>
       </div>
-      <div class="col-md-6">
-        <a routerLink="/startCampaign"><button type="button" class="btn btn-primary">I CHANGED MY MIND! Go back to Campaign</button></a>
-      </div>
-    </div>
+    </form>   
   </div>
 </div>
 <br><br><br>
