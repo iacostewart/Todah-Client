@@ -13,6 +13,8 @@ export class StartCampaignForm1Component implements OnInit {
   campaignImageFile: File = null;
   defaultDropdownDirection = 'select';
   @ViewChild('MainImage') User_Image;
+  // public currentText: string = '';
+  // public charsLeft: number = 140;
 
 
 
@@ -87,6 +89,11 @@ export class StartCampaignForm1Component implements OnInit {
         "client_is_paying_platform_fees": new FormControl(true)
       }) 
   }
+
+
+  // changed() {
+  //   this.charsLeft = 140 - this.currentText.length;
+  // }
 
   onSubmit() {
     // console.log(this.campaignForm);
