@@ -1,7 +1,10 @@
 .panel-body {
-    background-color:#257692;
+    background-color:#1f3d49;
     height: 150px;
- 
+}
+
+#footer_color {
+    background-color:#1f3d49;
 }
 
 button {
