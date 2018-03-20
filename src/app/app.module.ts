@@ -31,6 +31,9 @@ import { LoginPopComponent } from './components/navbar/login-pop/login-pop.compo
 
 import { CampaignService } from './campaign/campaign.service';
 import { RegistrationService } from './components/navbar/auth.service';
+// =======
+// import { PersonalCampaignComponent } from './personal-campaign/personal-campaign.component';
+// >>>>>>> Stashed changes
 
 
 
@@ -52,7 +55,8 @@ import { RegistrationService } from './components/navbar/auth.service';
     PricingComponent,
     ContactComponent,
     RegistrationPopComponent,
-    LoginPopComponent
+    LoginPopComponent,
+    // PersonalCampaignComponent
   
   ],
 entryComponents: [
