@@ -11,6 +11,11 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { RegistrationService } from '../auth.service';
 
+interface Response{
+  message: String;
+  token: string;
+  data: Object;
+}
 
 @Component({
   selector: 'app-registration-pop',
@@ -43,15 +48,15 @@ export class RegistrationPopComponent implements OnInit {
   // is_active?: boolean;
 createForm() {
   this.regForm = this.form.group({
-    'lastname': new FormControl( '' , Validators.required),
-    'is_superuser': new FormControl( '', Validators.required),
+    'lastname': new FormControl( 'Tester' , Validators.required),
+    'is_superuser': new FormControl( false, Validators.required),
     'is_staff': new FormControl(true, Validators.required),
     'is_active': new FormControl(true, Validators.required),
-    'firstname': new FormControl('', Validators.required),
-    'username': new FormControl('', Validators.required),
-    'email': new FormControl('', Validators.required),
-    'password': new FormControl('', Validators.required),
-    'repassword': new FormControl('', Validators.required)
+    'firstname': new FormControl('Test', Validators.required),
+    'username': new FormControl('Test', Validators.required),
+    'email': new FormControl('Test@test.com', Validators.required),
+    'password': new FormControl('Test7*', Validators.required),
+    'repassword': new FormControl('Test7*', Validators.required)
              
 
   })
@@ -69,10 +74,11 @@ createForm() {
     console.log("this is regForm",this.regForm)
     this.registrationService.storeUsers(this.regForm.value)
       .subscribe(
-      (response) => console.log("this is the response", response),
+      (response: Response) => window.localStorage.setItem("token", response.token),
       (error) => console.log(error)
       );
      console.log('&&&&&& registration button***********',this.regForm)
+     console.log("********* TOKEN *******",window.localStorage.token)
   }
 
 }
