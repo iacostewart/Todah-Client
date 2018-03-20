@@ -7,3 +7,4 @@ export interface Users {
   email?:string;
   is_staff?:boolean;
   is_active?:boolean
+}
