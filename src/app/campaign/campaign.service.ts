@@ -16,7 +16,7 @@ export class CampaignService {
     }
 
     private getHeaders(){
-        return new HttpHeaders().set('Authorization', "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZTkyMGIzYi05ZTkzLTQ3NWItOGZlMS1lNGUwY2FmMWM0YjMiLCJpYXQiOjE1MjEwNTgxNzA2MDV9.GO9T7BGlIMATumE6pGtmawLSTx0WhhvRkru8ZprlUKE");
+        return new HttpHeaders().set('Authorization', window.localStorage.token);
       }
     
     getCampaign(id: string){
