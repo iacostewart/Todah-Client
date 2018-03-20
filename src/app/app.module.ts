@@ -6,9 +6,10 @@ import { CampaignModule } from './campaign/campaign.module';
 import { AppRoutingModule } from './shared/app-routing.module';
 import { AdminModule } from './admin/admin.module';
 import {MatDialogModule} from '@angular/material/dialog';
-import {MatFormFieldModule, MatInputModule} from '@angular/material';
+import {MatFormFieldModule, MatInputModule, MatSliderModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HttpModule } from '@angular/http';
+// import {MaterialModule} from '@angular/material';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
@@ -57,13 +58,13 @@ import { RegistrationService } from './components/navbar/auth.service';
     RegistrationPopComponent,
     LoginPopComponent,
     // PersonalCampaignComponent
-  
+
   ],
 entryComponents: [
   RegistrationPopComponent,
    LoginPopComponent
   ],
-  
+
    imports: [
     BrowserModule,
     AppRoutingModule,
@@ -74,22 +75,27 @@ entryComponents: [
     MatFormFieldModule,
     FormsModule,
     HttpModule,
-    FormsModule, 
+    FormsModule,
+    MatSliderModule,
     ReactiveFormsModule,
+    // MaterialModule.forRoot(),
     ScrollToModule.forRoot(),
     BrowserAnimationsModule,
     MatInputModule,
     HttpClientModule
   ],
-
+  // schemas: [CUSTOM_ELEMENTS_SCHEMA],
 
   providers: [
-    CampaignService, 
+    CampaignService,
     RegistrationService
 
   ],
 
-  bootstrap: [AppComponent ]
+  bootstrap: [
+    AppComponent
+  ],
+
 })
 export class AppModule { }
 export class PizzaPartyAppModule { }
