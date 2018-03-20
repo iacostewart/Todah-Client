@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { CampaignService } from '../../../campaign.service';
+import { Router } from '@angular/router'
 
 
 @Component({
@@ -18,7 +19,7 @@ export class StartCampaignForm1Component implements OnInit {
 
 
 
-  constructor(private campaignService: CampaignService, private form: FormBuilder) {
+  constructor(private campaignService: CampaignService, private form: FormBuilder, private router: Router) {
     this.createForm();
   }
 
@@ -99,7 +100,8 @@ export class StartCampaignForm1Component implements OnInit {
     // console.log(this.campaignForm);
     this.campaignService.storeCampaign(this.campaignForm.value)
       .subscribe(
-      (response) => console.log(response),
+              (response) => this.router.navigate(["/startCampaign-form2"]),
+      // (response) => console.log(response),
       (error) => console.log(error)
       );
   }
