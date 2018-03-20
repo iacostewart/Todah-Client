@@ -13,6 +13,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Inject } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
+import { MatDialogContainer } from '@angular/material/typings/dialog/dialog-container';
 
 @Component({
   selector: 'app-navbar',
@@ -36,11 +37,18 @@ ngOnInit() {
 }
 
 openDialogReg() {
-  this.dialogRef = this.dialog.open(RegistrationPopComponent);
-  this.dialogRef.afterClosed().subscribe((result) => {
-    console.log(result);
-  })
+  this.dialogRef = this.dialog.open(RegistrationPopComponent, {
+    height: '550px',
+    width: '500px',
+    panelClass: 'myapp-no-padding-dialog'
+   
+    
+    
+  });
+
 }
+
+
 
 openDialogLog() {
   this.dialogReflog = this.dialog.open(LoginPopComponent);

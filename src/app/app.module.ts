@@ -8,10 +8,13 @@ import { AdminModule } from './admin/admin.module';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule, MatInputModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
-
-
+import { HttpModule } from '@angular/http';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
+import 'hammerjs';
+
+
 import { ScrollToModule } from 'ng2-scroll-to-el';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -22,14 +25,15 @@ import { FaqComponent } from './components/faq/faq.component';
 import { AboutComponent } from './components/about/about.component';
 import { PricingComponent } from './components/pricing/pricing.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 
 import { RegistrationPopComponent } from './components/navbar/registration-pop/registration-pop.component';
 import { LoginPopComponent } from './components/navbar/login-pop/login-pop.component';
 
-import { HttpClientModule } from '@angular/common/http';
 import { CampaignService } from './campaign/campaign.service';
+import { RegistrationService } from './components/navbar/auth.service';
+// =======
+// import { PersonalCampaignComponent } from './personal-campaign/personal-campaign.component';
+// >>>>>>> Stashed changes
 
 
 
@@ -51,11 +55,16 @@ import { CampaignService } from './campaign/campaign.service';
     PricingComponent,
     ContactComponent,
     RegistrationPopComponent,
-    LoginPopComponent
+    LoginPopComponent,
+    // PersonalCampaignComponent
   
   ],
-entryComponents: [RegistrationPopComponent, LoginPopComponent],
-  imports: [
+entryComponents: [
+  RegistrationPopComponent,
+   LoginPopComponent
+  ],
+  
+   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
@@ -67,18 +76,18 @@ entryComponents: [RegistrationPopComponent, LoginPopComponent],
     HttpModule,
     FormsModule, 
     ReactiveFormsModule,
-
     ScrollToModule.forRoot(),
-
-
     BrowserAnimationsModule,
     MatInputModule,
     HttpClientModule
-    
-
   ],
 
-  providers: [CampaignService],
+
+  providers: [
+    CampaignService, 
+    RegistrationService
+
+  ],
 
   bootstrap: [AppComponent ]
 })

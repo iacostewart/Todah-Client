@@ -36,7 +36,6 @@ const campaignRoutes: Routes = [
   { path: 'startCampaign-form1', component: StartCampaignForm1Component },
   { path: 'startCampaign-form2', component: StartCampaignForm2Component },
   { path: 'startCampaign-confirmation', component: StartCampaignConfirmComponent },
-
   { path: 'deleteCampaign', component: DeleteCampaignComponent },
 ];
 @NgModule({

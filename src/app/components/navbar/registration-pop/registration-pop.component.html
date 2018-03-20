@@ -5,7 +5,7 @@
 <p>A Todah account is required to continue.</p>
 <div>
   <form [formGroup]="regForm" #f (ngSubmit)="onSubmit()">
-    
+    <div class="row"></div>
     <mat-input-container>
       <input matInput type="text" placeholder="First Name" id="firstname" formControlName="firstname" >
     </mat-input-container>
@@ -19,7 +19,7 @@
       <input matInput type="text" placeholder="User Name" id="username" formControlName="username" >
     </mat-input-container>
 
-    <br>
+    
 
     <mat-input-container>
       <input matInput type="text" placeholder="Email" id="email" formControlName="email" >
@@ -30,18 +30,35 @@
     <mat-input-container>
       <input matInput type="text"  placeholder="Password" id="password" formControlName="password">
     </mat-input-container>
-    <br>
+    
     <mat-input-container>
-      <input matInput type="text" placeholder="Confirm Password" id="repassword" formControlName="repassword">
+      <input matInput type="text" placeholder="Confirm Password" id="repassword">
     </mat-input-container>
     <br>
+    
+    <div mat-dialog-actions>
     <button mat-button class="popup-btn" (click)="onCloseConfirm()" >Submit</button>
-
+  </div> 
 
     <!-- <button mat-button class="popup-btn" data-dismiss="myModal" (click)="openDialogReg" type="submit" >submit</button> -->
     
 </form>
-  
+  <br>
+  <br>
+  <p>Register or link your account:</p>
+  </div>
+  <div class="social-contianer">
+    <div class="row">
+      <div class="col-md-4">
+        <a href="#"><img src="../../../../assets/facebook.png" alt=""></a>
+      </div>
+      <div class="col-md-4">
+        <a href="#"><img src="../../../../assets/twitter.png" alt=""></a>
+      </div>
+      <div class="col-md-4">
+        <a href="#"><img src="../../../../assets/google+.png" alt=""></a>
+      </div>
+    </div>
   </div>
 <div class="container modal">
   

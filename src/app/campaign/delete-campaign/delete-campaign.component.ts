@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Injectable, Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router'
+import { CampaignService } from '../campaign.service';
+import { Campaign } from '../startCampaign/start-campaign/model/Campaign';
+import { Router } from '@angular/router'
+import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-delete-campaign',
@@ -7,9 +13,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeleteCampaignComponent implements OnInit {
 
-  constructor() { }
+  deleteForm: FormGroup;
+
+  constructor(private http: HttpClient, private ar: ActivatedRoute, private campaignService: CampaignService, private router: Router, private form: FormBuilder, ) {
+  this.deleteCamp()
+        }
+
 
   ngOnInit() {
   }
 
-}
+  deleteCamp() {
+    this.deleteForm = this.form.group({
+      'id': new FormControl
+    })
+  }
+  
+  onSubmit(){
+    console.log("delete?", this.deleteForm);
+    this.campaignService.deleteCampaign(9)
+    .subscribe(
+      (response) => this.router.navigate(["/"]),
+      // (response) => console.log(response),
+      (error) => console.log(error)
+    )};
+  }

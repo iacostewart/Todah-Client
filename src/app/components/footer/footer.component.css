@@ -1,0 +1,46 @@
+.panel-body {
+    background-color:#257692;
+    height: 150px;
+ 
+}
+
+button {
+    float: middle;
+}
+
+.container {
+    background-color: #1F3D49;
+    width: 100%;
+    height: 150px;
+    margin: -15px;
+}
+
+.first {
+    width: 200px;
+    height: 200px;
+    margin-top: -90px;
+    margin-left: 30px;
+    position: relative;
+}
+
+.third {
+    width: 200px;
+    height: 200px;
+    margin-top: -90px;
+    margin-left: 1600px;
+
+}
+
+.fourth {
+    width: 200px;
+    height: 200px;
+    margin-top: -200px;
+    margin-left: 2100px;
+   
+
+}
+.btn {
+    border-radius: 0;
+    background-color: #63bad3;
+    color: white;
+}
