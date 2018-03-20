@@ -19,6 +19,8 @@ import { Inject } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
 import { RegistrationService } from '../auth.service';
 
+
+
 @Component({
   selector: 'app-login-pop',
   templateUrl: './login-pop.component.html',
@@ -52,7 +54,6 @@ onSubmit() {
   // console.log(this.campaignForm);
   console.log("this is logForm",this.logForm)
   this.registrationService.login(this.logForm.value)
-
 }
 }
 
