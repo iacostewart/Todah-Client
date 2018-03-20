@@ -107,11 +107,14 @@
             <p>Your campaign teaser will appear with your main campaign image on Todah homepage
                as well as on any social media or email posts used to promote your campaign.</p>
             <textarea 
+              [(ngModel)]="currentText"
+              (keypress)="changed()"
               type="text" 
               placeholder="Short Description" 
               id="project_short_description" 
               formControlName="project_short_description" 
               class="form-control"></textarea>
+              <p>characters left: {{ charsleft }}</p>
               <!-- <span 
               *ngIf="!campaignForm.get('campaignData.project_short_description').valid && campaignForm.get('campaignData.project_short_description').touched" 
               class="help-block">Please enter a short description for your campaign.</span> -->
@@ -198,15 +201,13 @@
               class="form-control">
           </div>
         </div>
-
-
         <!-- <button class="btn btn-primary" type>Submit</button> -->
-
-
         <hr>
         <div class="row">
           <div class="col-md-4">
+              <!-- <a routerLink="/startCampaign-form2"> -->
             <button type="submit" class="btn btn-warning">Save and Go to Next Step!</button>
+              <!-- </a> -->
           </div>
           <br>
           <br>
@@ -226,9 +227,6 @@
         </div>
       </form>
     </div>
-
-
-
     <!-- Preview Card -->
     <!-- on another page? -->
     <!-- <div class="col-md-4">

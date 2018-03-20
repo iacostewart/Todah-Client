@@ -1,11 +1,9 @@
 .jumbotron {
   height: 100vh;
-  background-size: cover; 
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   width: 100%;
-
-  background-color: grey;
 }
 
 .panel {
@@ -19,3 +17,8 @@
   width: 50%;
 }
 
+video {
+  float: center;
+  display: block;
+  margin: 0 auto;
+}
