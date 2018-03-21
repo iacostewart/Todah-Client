@@ -6,6 +6,8 @@ import { Campaign } from '../startCampaign/start-campaign/model/Campaign';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 
+let campId = Number(window.localStorage.campId)
+
 @Component({
   selector: 'app-delete-campaign',
   templateUrl: './delete-campaign.component.html',
@@ -32,11 +34,10 @@ export class DeleteCampaignComponent implements OnInit {
 
   
   onSubmit(){
-    console.log("delete?", this.deleteForm);
-    this.campaignService.deleteCampaign(20)
+    console.log("delete?", campId);
+    this.campaignService.deleteCampaign(campId)
     .subscribe(
       (response) => this.router.navigate(['/']),
-      // (response) => console.log(response),
       (error) => console.log(error)
     );
   }
