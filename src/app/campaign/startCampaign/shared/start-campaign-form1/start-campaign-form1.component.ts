@@ -2,7 +2,11 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { CampaignService } from '../../../campaign.service';
 import { Router } from '@angular/router'
+import { Campaign } from '../../start-campaign/model/Campaign';
 
+interface CampId{
+  campId: number;
+}
 
 @Component({
   selector: 'app-start-campaign-form1',
@@ -68,7 +72,7 @@ export class StartCampaignForm1Component implements OnInit {
         "funded_amount_currency": new FormControl("A Flower in every vase"),
         "funded_amount": new FormControl(1500.25),
         "project_video": new FormControl("a rose by any other name smells as sweet"),
-        "project_short_description": new FormControl("camapign teaser"),
+        "project_short_description": new FormControl(""),
         "project_category_id": new FormControl(1),
         "is_approved": new FormControl(false),
         "initial_funds_currency": new FormControl("usd"),
@@ -98,14 +102,25 @@ export class StartCampaignForm1Component implements OnInit {
 
   onSubmit() {
     // console.log(this.campaignForm);
-    this.campaignService.storeCampaign(this.campaignForm.value)
-      .subscribe(
-              (response) => this.router.navigate(["/startCampaign-form2"]),
-      // (response) => console.log(response),
-      (error) => console.log(error)
-      );
+     this.campaignService.storeCampaign(this.campaignForm.value)
+  .subscribe((campId: CampId) => {
+    this.router.navigate(["/startCampaign-form2"]),
+    console.log('*******notyThingkie************',campId),
+    // (campId) => {JSON.stringify(campId), console.log(campId.id)}
+   window.localStorage.setItem('campId', JSON.stringify(campId.campId))
+  
+  },
+  (error) => console.log(error)
+  );
   }
 
-  
+  // this.campaignService.storeCampaign(this.campaignForm.value)
+  // .subscribe((response: Campaign) => {
+  //   console.log("******* THE RESPONSE *******", response);
+  //   this.router.navigate(["/startCampaign-form2"]
+  //       )},
+
+  // (error) => console.log(error)
+  // );
 
 }

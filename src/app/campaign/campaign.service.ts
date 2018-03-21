@@ -3,6 +3,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Campaign } from './startCampaign/start-campaign/model/Campaign';
 import { ActivatedRoute } from '@angular/router'
 
+interface CampId{
+    id: number;
+  }
 
 const api_url = 'http://localhost:3000/api';
 
@@ -12,7 +15,12 @@ export class CampaignService {
     constructor(private http: HttpClient, private ar: ActivatedRoute) {}
     
     storeCampaign(campaign: Campaign) {
-        return this.http.post(`${api_url}/campaigns`, campaign, { headers : this.getHeaders()});
+        return this.http.post(`${api_url}/campaigns`, campaign, { headers : this.getHeaders()})
+        // .subscribe( (campId: CampId) => {
+        //     console.log('*******notyThingkie************',campId );
+        //     window.localStorage.setItem('campId', campId.id);
+        //     console.log(window.localStorage)
+        //   }); 
     }
 
     private getHeaders(){
