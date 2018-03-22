@@ -126,7 +126,7 @@
             <label>Upload your Main Campaign Image
               <sup>*</sup>
             </label>
-            <input type="file" class="form-control" formControlName="project_image_thumb_url" #MainImage>
+            <input type="file" class="form-control" (change)="handleFileInput($event.target.files)" formControlName="project_image" #MainImage>
             <!-- <image-upload dropBoxMessage=""></image-upload> -->
             <br>
             <!-- look into event.file -->

@@ -18,8 +18,7 @@ export class StartCampaignForm1Component implements OnInit {
   campaignImageFile: File = null;
   defaultDropdownDirection = 'select';
   @ViewChild('MainImage') User_Image;
-  // public currentText: string = '';
-  // public charsLeft: number = 140;
+  fileToUpload: File = null;
 
 
 
@@ -52,7 +51,7 @@ export class StartCampaignForm1Component implements OnInit {
         // 'twitter': new FormControl(null),
         // 'instagram': new FormControl(null),
         // 'youtube': new FormControl(null),
-        "project_image_thumb_url": new FormControl(null),
+        "project_image_thumb_url": new FormControl("a rose"),
         "creator_id": new FormControl(2),
         "organization_name": new FormControl(""),
         "organization_ein": new FormControl("a rose by any other name smells as sweet"),
@@ -96,12 +95,18 @@ export class StartCampaignForm1Component implements OnInit {
   }
 
 
-  // changed() {
-  //   this.charsLeft = 140 - this.currentText.length;
-  // }
+  handleFileInput(files: FileList) {
+    console.log('file:', files);
+    this.fileToUpload = files.item(0);
+    this.campaignService.postFile(this.fileToUpload).subscribe(data => {
+      console.log(data);
+      }, error => {
+        console.log(error);
+      });
+}
 
   onSubmit() {
-    // console.log(this.campaignForm);
+    window.localStorage.campId = ""
      this.campaignService.storeCampaign(this.campaignForm.value)
   .subscribe((campId: CampId) => {
     this.router.navigate(["/startCampaign-form2"]),
