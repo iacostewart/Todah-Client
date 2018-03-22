@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CampaignRoutingModule } from '../shared/campaign-routing.module';
 import {MatSliderModule} from '@angular/material/slider';
+import {MatCardModule} from '@angular/material';
 
 import { ProfileComponent } from './profile/profile.component';
 import { FindCampaignSnapshotComponent } from './findCampaign/find-campaign-snapshot/find-campaign-snapshot.component';
@@ -31,6 +32,8 @@ import { CampaignService } from './campaign.service';
     // ImageUploadModule.forRoot(),
     HttpClientModule,
     MatSliderModule,
+    MatCardModule,
+
   ],
   declarations: [
     ProfileComponent,
@@ -48,6 +51,7 @@ import { CampaignService } from './campaign.service';
     StartCampaignConfirmComponent,
     DeleteCampaignComponent,
 
+
   ],
   exports: [
     ProfileComponent,
@@ -63,6 +67,7 @@ import { CampaignService } from './campaign.service';
     StartCampaignForm1Component,
     StartCampaignForm2Component,
     StartCampaignConfirmComponent,
+
     DeleteCampaignComponent
   ],
 
