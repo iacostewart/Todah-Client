@@ -5,18 +5,17 @@ import { CommonModule } from '@angular/common';
 import { CampaignModule } from './campaign/campaign.module';
 import { AppRoutingModule } from './shared/app-routing.module';
 import { AdminModule } from './admin/admin.module';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatFormFieldModule, MatInputModule, MatSliderModule} from '@angular/material';
-import {MatCardModule} from '@angular/material/card';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule, MatInputModule, MatSliderModule } from '@angular/material';
+import { MatCardModule } from '@angular/material/card';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpModule } from '@angular/http';
 // import {MaterialModule} from '@angular/material';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import 'hammerjs';
-import {
-  MatAutocompleteModule,
+import {MatAutocompleteModule,
   MatButtonModule,
   MatButtonToggleModule,
   MatCheckboxModule,
@@ -44,7 +43,7 @@ import {
   MatTabsModule,
   MatToolbarModule,
   MatTooltipModule,
-}
+} from '@angular/material';
 
 import { ScrollToModule } from 'ng2-scroll-to-el';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -93,12 +92,12 @@ import { RegistrationService } from './components/navbar/auth.service';
   exports: [
     MatCardModule
   ],
-entryComponents: [
-  RegistrationPopComponent,
-   LoginPopComponent
+  entryComponents: [
+    RegistrationPopComponent,
+    LoginPopComponent
   ],
 
-   imports: [
+  imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
@@ -117,7 +116,8 @@ entryComponents: [
     MatInputModule,
     HttpClientModule,
     MatCardModule,
-    
+
+
   ],
   // schemas: [CUSTOM_ELEMENTS_SCHEMA],
 

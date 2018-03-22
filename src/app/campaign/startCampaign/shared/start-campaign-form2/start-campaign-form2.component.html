@@ -24,9 +24,47 @@
         
 <form [formGroup]="campaignPg2" #f="ngForm" (ngSubmit)='onsubmit(f)'>
   <div class="row">
-    <div class="col-md-5">
+    <div class="col-md-12">
       <label>Campaign Goal*</label>
-      <input type="text" id="goal" placeholder="$50,000">
+      </div>
+      </div>
+      <div class="row">
+          <div class="form-group">
+              <input type="text" id="goal" placeholder="$0.00" class="form-control">
+            </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-7">
+          Pre-Campaign Funds Raised
+        </div>
+        <div class="col-md-2">
+          End Date*
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <input type="checkbox" class="mat-checkbox-input" >
+            Make this a Monthy Campaign!
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-5">
+          <div class="form-group">
+            <input  type="text" class="form-control align-left" placeholder="$0">
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-5">
+          <div class="form-group">
+            <input type="date" class="form-control align-right" placeholder="MM/DD/YYY" >
+          </div>
+        </div>
+      </div>
+
+      <!-- <input type="text" id="goal" placeholder="$50,000">
+    
     </div>
     <div class="col-md-3">
       <label>End Date*</label>
@@ -35,31 +73,25 @@
       <input type="checkbox" class="mat-checkbox-input">
       <label for="">Make this a Monthly Campaign!</label>
     </div>
-  </div>
+  </div> -->
 
 
-  <div class="form-group">
-    <label>Campaign Goal*</label>
-    <input type="text" id="goal" placeholder="$0.00" class="form-control">
-  </div>
+  
 
-  <div class="form-group">
-    <input type="checkbox" class="mat-checkbox-input">
-    <label>Make this a Monthly Campaign!</label>
-  </div>
   
   <div class="form-group">
     <label>Pre-Campaign Funds Raised</label>
     <input type="text" placeholder="$0" class="form-control">
+  <div class="form-group">
     <label>End Date*</label>
     <input type="text" placeholder="MM/DD/YYYY" class="form-control">
+  </div>
   </div>
 
   
 
 </form>
     <div class="col-md-8">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime natus doloribus dolor at repellat laboriosam voluptas esse odio ipsa officia labore autem praesentium veritatis, unde dolorum laudantium animi et exercitationem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum incidunt, cum pariatur odit dolor dicta eligendi consequatur, dignissimos, iusto itaque exercitationem aliquid at asperiores ipsam vel maiores repellendus quas natus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus libero ex, ullam dolores numquam in pariatur expedita, incidunt dolorum voluptates aliquid saepe! Esse minus enim possimus odio provident vero ullam.</p><br>
       <!-- Modal of slider information -->
       <div style="text-align: center">
         <button type="button" class="btn btn-default">How do these Sliders Work?</button>
@@ -107,3 +139,7 @@
 </div>
 <br><br><br>
   
+
+
+
+
