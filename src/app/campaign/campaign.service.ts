@@ -2,8 +2,11 @@ import { Injectable, Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Campaign } from './startCampaign/start-campaign/model/Campaign';
 import { ActivatedRoute } from '@angular/router'
+
+
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
+
 
 const api_url = 'http://localhost:3000/api';
 
@@ -39,6 +42,14 @@ export class CampaignService {
 
     deleteCampaign(id: number) {
         console.log("delete my campaign")
+
+        return this.http.delete(`${api_url}/campaigns/${id}`,{ headers : this.getHeaders()});
+    }
+
+  
+    
+}
+
         // window.localStorage.setItem("campId", "")
         console.log("CAMP ID IN LOCAL", id)
         window.location.reload()

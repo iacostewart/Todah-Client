@@ -18,7 +18,12 @@ export class StartCampaignForm1Component implements OnInit {
   campaignImageFile: File = null;
   defaultDropdownDirection = 'select';
   @ViewChild('MainImage') User_Image;
-  fileToUpload: File = null;
+
+  textCount = '';
+  maxLength = 125;
+  characterLeft = this.maxLength;
+  
+
 
 
 
@@ -95,15 +100,21 @@ export class StartCampaignForm1Component implements OnInit {
   }
 
 
-  handleFileInput(files: FileList) {
-    console.log('file:', files);
-    this.fileToUpload = files.item(0);
-    this.campaignService.postFile(this.fileToUpload).subscribe(data => {
-      console.log(data);
-      }, error => {
-        console.log(error);
-      });
-}
+
+
+
+
+  count(msg){
+    if(this.maxLength >= msg.length){
+      this.characterLeft = (this.maxLength) - (msg.length);
+    }
+    else{
+      this.textCount = msg.substr(0, msg.length - 1);
+    }
+  };
+
+
+  
 
   onSubmit() {
     window.localStorage.campId = ""
@@ -118,6 +129,7 @@ export class StartCampaignForm1Component implements OnInit {
   (error) => console.log(error)
   );
   }
+
 
   // this.campaignService.storeCampaign(this.campaignForm.value)
   // .subscribe((response: Campaign) => {
