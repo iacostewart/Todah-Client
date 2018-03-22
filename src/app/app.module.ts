@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ViewEncapsulation } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { CampaignModule } from './campaign/campaign.module';
@@ -7,6 +7,7 @@ import { AppRoutingModule } from './shared/app-routing.module';
 import { AdminModule } from './admin/admin.module';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule, MatInputModule, MatSliderModule} from '@angular/material';
+import {MatCardModule} from '@angular/material/card';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HttpModule } from '@angular/http';
 // import {MaterialModule} from '@angular/material';
@@ -14,7 +15,36 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import 'hammerjs';
-
+import {
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatDividerModule,
+  MatExpansionModule,
+  MatGridListModule,
+  MatIconModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatStepperModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
+}
 
 import { ScrollToModule } from 'ng2-scroll-to-el';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -60,6 +90,9 @@ import { RegistrationService } from './components/navbar/auth.service';
     // PersonalCampaignComponent
 
   ],
+  exports: [
+    MatCardModule
+  ],
 entryComponents: [
   RegistrationPopComponent,
    LoginPopComponent
@@ -82,7 +115,9 @@ entryComponents: [
     ScrollToModule.forRoot(),
     BrowserAnimationsModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule,
+    
   ],
   // schemas: [CUSTOM_ELEMENTS_SCHEMA],
 

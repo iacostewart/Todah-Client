@@ -3,7 +3,61 @@
     <h1 style="text-align: center">Start Your Own Campaign!</h1>
     <h2 style="text-align: center">Create Your Campaign!</h2>
     <h3>Contribution Information (2/3)</h3>
+  </div>
     <!-- Form -->
+    <!-- <form [formGroup]="campaignForm" #f="ngForm" (ngSubmit)="onSubmit(f)"> -->
+
+      <!-- <div>
+        <div class="form-group">
+          <label>Type and Select Organization Name (or 501(c)(3)number)
+            <sup>*</sup>
+          </label>
+          <input type="text" placeholder="Organization Name" id="organization_name" formControlName="organization_name" class="form-control">
+          
+        </div> -->
+
+        <!-- <div class="form-group">
+          <label>Chapter Name</label>
+          <input type="text" placeholder="Organization Chapter Name or Number (if applicable)" id="organization_chapter_name" formControlName="organization_chapter_name"
+            class="form-control">
+        </div> -->
+        
+<form [formGroup]="campaignPg2" #f="ngForm" (ngSubmit)='onsubmit(f)'>
+  <div class="row">
+    <div class="col-md-5">
+      <label>Campaign Goal*</label>
+      <input type="text" id="goal" placeholder="$50,000">
+    </div>
+    <div class="col-md-3">
+      <label>End Date*</label>
+    </div>
+    <div class="col-4">
+      <input type="checkbox" class="mat-checkbox-input">
+      <label for="">Make this a Monthly Campaign!</label>
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <label>Campaign Goal*</label>
+    <input type="text" id="goal" placeholder="$0.00" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <input type="checkbox" class="mat-checkbox-input">
+    <label>Make this a Monthly Campaign!</label>
+  </div>
+  
+  <div class="form-group">
+    <label>Pre-Campaign Funds Raised</label>
+    <input type="text" placeholder="$0" class="form-control">
+    <label>End Date*</label>
+    <input type="text" placeholder="MM/DD/YYYY" class="form-control">
+  </div>
+
+  
+
+</form>
     <div class="col-md-8">
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime natus doloribus dolor at repellat laboriosam voluptas esse odio ipsa officia labore autem praesentium veritatis, unde dolorum laudantium animi et exercitationem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum incidunt, cum pariatur odit dolor dicta eligendi consequatur, dignissimos, iusto itaque exercitationem aliquid at asperiores ipsam vel maiores repellendus quas natus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus libero ex, ullam dolores numquam in pariatur expedita, incidunt dolorum voluptates aliquid saepe! Esse minus enim possimus odio provident vero ullam.</p><br>
       <!-- Modal of slider information -->
@@ -11,8 +65,15 @@
         <button type="button" class="btn btn-default">How do these Sliders Work?</button>
       </div>
       <hr>
+      <br>
+    </div>
+      <!-- inside mat card starts here -->
+      
+      
       <!-- Sliders -->
-     
+
+
+      <!-- inside mat card stops here -->
       <div class="row">
         <!-- <form action=''> -->
           <mat-slider min="1" max="5" step="1" value="18"></mat-slider>
@@ -27,9 +88,9 @@
           <a routerLink="/deleteCampaign"><button type="button" class="btn btn-danger">Delete this Fundraiser :(</button></a>
         </div>
       </div>
-    </div>
+    
 
-    <!-- Calulator Card -->
+    <!-- Calulator Card   this is the sidebar section bellow-->
     <div class="col-md-4">
       <h3>Let Us Do the Math!</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, vero impedit non saepe minus optio quia voluptatem quae dignissimos necessitatibus facilis deserunt? Obcaecati autem saepe cumque ipsa distinctio adipisci repellendus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque exercitationem architecto fugiat, magni cupiditate impedit ratione sunt possimus? Voluptatibus quibusdam obcaecati numquam, dolorem consectetur provident magnam labore nihil placeat ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, repudiandae? Animi eos sapiente esse, facere fugiat fuga deleniti, explicabo, provident minus fugit vero autem consectetur quo magnam? Ad, facere! Id!</p>
@@ -40,7 +101,9 @@
         <button type="button" class="btn btn-default">Preview your Campaign!</button>
       </div>
     </div>
-  </div>
+    <!-- this is the end of the side bar section -->
+     <!-- outside mat-card -->
+  
 </div>
 <br><br><br>
   
