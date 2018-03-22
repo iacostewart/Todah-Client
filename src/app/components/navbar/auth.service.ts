@@ -8,6 +8,12 @@ import { Subject } from 'rxjs/Subject';
 import { Users } from '../../campaign/startCampaign/start-campaign/model/User';
 import { Token } from '../../campaign/startCampaign/start-campaign/model/Token';
 
+interface Tokens{
+  message: String;
+  token: string;
+  data: Object;
+}
+
 const api_Url = 'http://localhost:3000/api/users';
 
 @Injectable()
@@ -29,14 +35,15 @@ export class RegistrationService {
     `grant_type=password&username=${encodeURI(loginInfo.email)}&password=${encodeURI(loginInfo.password)}`;
 
     return this.http.post(`${api_Url}/Token`, loginInfo)
-    .subscribe( (token: Token) => {
-      this.userInfo = token;
-      localStorage.setItem('id_token', token.access_token);
+    .subscribe( (token: Tokens) => {
+      console.log('*******notyThingkie************',token );
+      window.localStorage.setItem('token', token.token);
       this.isLoggedIn.next(true);
       // this.router.navigate(['/notes'])
-    });
+      console.log('******* token **** not lord of the rings...', window.localStorage.token);
+    }); 
   }
-
+  
   // currentUser(): Observable<Object>{
   //   if (!localStorage.getItem('id_token')){return new Observable(observer => observer.next(false)); }
 
