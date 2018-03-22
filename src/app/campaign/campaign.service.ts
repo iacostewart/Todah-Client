@@ -42,17 +42,17 @@ export class CampaignService {
 
     deleteCampaign(id: number) {
         console.log("delete my campaign")
-
-        return this.http.delete(`${api_url}/campaigns/${id}`,{ headers : this.getHeaders()});
-    }
-
-  
-    
-}
-
-        // window.localStorage.setItem("campId", "")
         console.log("CAMP ID IN LOCAL", id)
         window.location.reload()
         this.router.navigate(['/home'])
-    return this.http.delete(`${api_url}/campaigns/${id}`,{ headers : this.getHeaders()})
-}}
+        return this.http.delete(`${api_url}/campaigns/${id}`,{ headers : this.getHeaders()});
+   
+    }
+   
+
+}
+  
+    
+
+        // window.localStorage.setItem("campId", "")
+      
