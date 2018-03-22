@@ -27,6 +27,7 @@ import { AboutComponent } from './components/about/about.component';
 import { PricingComponent } from './components/pricing/pricing.component';
 import { ContactComponent } from './components/contact/contact.component';
 
+
 import { RegistrationPopComponent } from './components/navbar/registration-pop/registration-pop.component';
 import { LoginPopComponent } from './components/navbar/login-pop/login-pop.component';
 

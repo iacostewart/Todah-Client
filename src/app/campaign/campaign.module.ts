@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CampaignRoutingModule } from '../shared/campaign-routing.module';
-import {MatSliderModule} from '@angular/material/slider';
-
+import {MatFormFieldModule, MatInputModule, MatSliderModule} from '@angular/material';
 import { ProfileComponent } from './profile/profile.component';
 import { FindCampaignSnapshotComponent } from './findCampaign/find-campaign-snapshot/find-campaign-snapshot.component';
 import { FindCampaignComponent } from './findCampaign/find-campaign/find-campaign.component';
@@ -21,6 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 // import { ImageUploadModule } from "angular2-image-upload";
 import { HttpClientModule } from '@angular/common/http';
 import { CampaignService } from './campaign.service';
+import { MatFormFieldControl } from '@angular/material';
 
 
 @NgModule({
@@ -31,6 +31,8 @@ import { CampaignService } from './campaign.service';
     // ImageUploadModule.forRoot(),
     HttpClientModule,
     MatSliderModule,
+    MatFormFieldModule
+
   ],
   declarations: [
     ProfileComponent,
@@ -47,6 +49,7 @@ import { CampaignService } from './campaign.service';
     StartCampaignForm2Component,
     StartCampaignConfirmComponent,
     DeleteCampaignComponent,
+
 
   ],
   exports: [

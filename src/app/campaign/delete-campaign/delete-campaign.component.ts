@@ -30,9 +30,9 @@ export class DeleteCampaignComponent implements OnInit {
     });
   }
 
-  
-  onSubmit(){
-    console.log("delete?", this.deleteForm);
+
+  onSubmit() {
+    console.log('delete?', this.deleteForm);
     this.campaignService.deleteCampaign(20)
     .subscribe(
       (response) => this.router.navigate(['/']),

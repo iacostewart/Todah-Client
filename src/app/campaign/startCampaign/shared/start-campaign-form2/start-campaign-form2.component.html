@@ -12,10 +12,26 @@
       </div>
       <hr>
       <!-- Sliders -->
-     
+      
+      <section class="example-section">
+          <mat-form-field class="example-margin">
+            <input matInput type="number" placeholder="Value" [(ngModel)]="value">
+          </mat-form-field>
+          <mat-form-field class="example-margin">
+            <input matInput type="number" placeholder="Min value" [(ngModel)]="min">
+          </mat-form-field>
+          <mat-form-field class="example-margin">
+            <input matInput type="number" placeholder="Max value" [(ngModel)]="max">
+          </mat-form-field>
+          <mat-form-field class="example-margin">
+            <input matInput type="number" placeholder="Step size" [(ngModel)]="step">
+          </mat-form-field>
+        </section>
+    
+  
       <div class="row">
         <!-- <form action=''> -->
-          <mat-slider min="1" max="5" step="1" value="18"></mat-slider>
+         
         <!-- </form> -->
         <div class="col-md-4">
           <a routerLink="/startCampaign-confirmation"><button type="button" class="btn btn-warning">LAUNCH YOUR CAMPAIGN!</button></a>
