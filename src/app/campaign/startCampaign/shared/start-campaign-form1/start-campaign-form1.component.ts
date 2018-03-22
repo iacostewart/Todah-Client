@@ -18,8 +18,12 @@ export class StartCampaignForm1Component implements OnInit {
   campaignImageFile: File = null;
   defaultDropdownDirection = 'select';
   @ViewChild('MainImage') User_Image;
-  // public currentText: string = '';
-  // public charsLeft: number = 140;
+
+  textCount = '';
+  maxLength = 125;
+  characterLeft = this.maxLength;
+  
+
 
 
 
@@ -52,6 +56,7 @@ export class StartCampaignForm1Component implements OnInit {
         // 'twitter': new FormControl(null),
         // 'instagram': new FormControl(null),
         // 'youtube': new FormControl(null),
+
         'project_image_thumb_url': new FormControl(null),
         'creator_id': new FormControl(2),
         'organization_name': new FormControl(''),
@@ -93,15 +98,28 @@ export class StartCampaignForm1Component implements OnInit {
         'published_email_sent': new FormControl(true),
         'client_is_paying_platform_fees': new FormControl(true)
       });
+     
   }
 
 
-  // changed() {
-  //   this.charsLeft = 140 - this.currentText.length;
-  // }
+
+
+
+
+  count(msg){
+    if(this.maxLength >= msg.length){
+      this.characterLeft = (this.maxLength) - (msg.length);
+    }
+    else{
+      this.textCount = msg.substr(0, msg.length - 1);
+    }
+  };
+
+
+  
 
   onSubmit() {
-    // console.log(this.campaignForm);
+    window.localStorage.campId = ""
      this.campaignService.storeCampaign(this.campaignForm.value)
   .subscribe((campId: CampId) => {
     this.router.navigate(['/startCampaign-form2']),
@@ -113,6 +131,7 @@ export class StartCampaignForm1Component implements OnInit {
   (error) => console.log(error)
   );
   }
+
 
   // this.campaignService.storeCampaign(this.campaignForm.value)
   // .subscribe((response: Campaign) => {
