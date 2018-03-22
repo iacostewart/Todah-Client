@@ -84,21 +84,10 @@
 
             <p>Your campaign teaser will appear with your main campaign image on Todah homepage as well as on any social media
               or email posts used to promote your campaign.</p>
-            <textarea [(ngModel)]="currentText" (keypress)="changed()" type="text" placeholder="Short Description" id="project_short_description"
+            <textarea [(ngModel)]="textCount" (keyup)="count(textCount)" type="text" placeholder="Short Description" id="project_short_description"
               formControlName="project_short_description" class="form-control"></textarea>
-            <p>characters left: {{ charsleft }}</p>
-            <!-- <span 
-
-          
-               [(ngModel)]="currentText"
-               (keypress)="changed()" -->
-            <textarea 
-              type="text" 
-              placeholder="Short Description" 
-              id="project_short_description" 
-              formControlName="project_short_description" 
-              class="form-control"></textarea>
-              <!-- <p>characters left: {{ charsleft }}</p> -->
+            <p>characters left: {{ characterLeft }}</p>
+            
               <!-- <span 
 
               *ngIf="!campaignForm.get('campaignData.project_short_description').valid && campaignForm.get('campaignData.project_short_description').touched" 
@@ -124,7 +113,7 @@
             <label>Upload your Main Campaign Image
               <sup>*</sup>
             </label>
-            <input type="file" class="form-control" formControlName="project_image_thumb_url" #MainImage>
+            <input type="file" id="file" class="form-control" (change)="fileInput($event.target.files)" formControlName="project_image_thumb_url" #MainImage>
             <!-- <image-upload dropBoxMessage=""></image-upload> -->
             <br>
             <!-- look into event.file -->

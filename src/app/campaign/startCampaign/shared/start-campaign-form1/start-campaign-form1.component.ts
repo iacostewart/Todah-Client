@@ -14,8 +14,10 @@ export class StartCampaignForm1Component implements OnInit {
   campaignImageFile: File = null;
   defaultDropdownDirection = 'select';
   @ViewChild('MainImage') User_Image;
-  // public currentText: string = '';
-  // public charsLeft: number = 140;
+  textCount = '';
+  maxLength = 125;
+  characterLeft = this.maxLength;
+  
 
 
 
@@ -92,19 +94,29 @@ export class StartCampaignForm1Component implements OnInit {
   }
 
 
-  // changed() {
-  //   this.charsLeft = 140 - this.currentText.length;
-  // }
+
+  fileInput(files: FileList) {
+    this.campaignImageFile = files.item(0);
+  };
+
+  count(msg){
+    if(this.maxLength >= msg.length){
+      this.characterLeft = (this.maxLength) - (msg.length);
+    }
+    else{
+      this.textCount = msg.substr(0, msg.length - 1);
+    }
+  };
 
   onSubmit() {
-    // console.log(this.campaignForm);
+    console.log(this.campaignForm);
     this.campaignService.storeCampaign(this.campaignForm.value)
       .subscribe(
               (response) => this.router.navigate(["/startCampaign-form2"]),
       // (response) => console.log(response),
       (error) => console.log(error)
       );
-  }
+  };
 
   
 
