@@ -1,5 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
+
 import { NgModule, ViewEncapsulation } from '@angular/core';
+
+import {CdkTableModule} from '@angular/cdk/table';
+
+
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { CampaignModule } from './campaign/campaign.module';
@@ -14,10 +19,19 @@ import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
+import {MatCardContent} from '@angular/material';
 import 'hammerjs';
+
 import {MatAutocompleteModule,
   MatButtonModule,
   MatButtonToggleModule,
+
+import {
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+
   MatCheckboxModule,
   MatChipsModule,
   MatDatepickerModule,
@@ -44,6 +58,7 @@ import {MatAutocompleteModule,
   MatToolbarModule,
   MatTooltipModule,
 } from '@angular/material';
+
 
 import { ScrollToModule } from 'ng2-scroll-to-el';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -110,6 +125,7 @@ import { RegistrationService } from './components/navbar/auth.service';
     FormsModule,
     MatSliderModule,
     ReactiveFormsModule,
+
     // MaterialModule.forRoot(),
     ScrollToModule.forRoot(),
     BrowserAnimationsModule,
@@ -121,6 +137,7 @@ import { RegistrationService } from './components/navbar/auth.service';
   ],
   // schemas: [CUSTOM_ELEMENTS_SCHEMA],
 
+
   providers: [
     CampaignService,
     RegistrationService
@@ -131,6 +148,45 @@ import { RegistrationService } from './components/navbar/auth.service';
     AppComponent
   ],
 
+})
+@NgModule({
+exports: [
+  CdkTableModule,
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatStepperModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatDividerModule,
+  MatCardContent,
+  MatExpansionModule,
+  MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
+
+],
 })
 export class AppModule { }
 export class PizzaPartyAppModule { }

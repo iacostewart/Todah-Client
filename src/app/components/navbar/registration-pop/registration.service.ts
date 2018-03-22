@@ -9,10 +9,10 @@
 // @Injectable()
 // export class RegistrationService {
 //     constructor(private http: HttpClient) {}
-    
+
 //     storeUsers(users: Users) {
 //         return this.http.post(`${api_url}/signup`, users, );
 //     }
 
-    
+
 // }
