@@ -15,3 +15,8 @@
     margin: 0 150;
 
 }
+
+.close_button {
+    direction: rtl;
+    display: flex;
+}
