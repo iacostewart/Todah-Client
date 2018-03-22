@@ -42,7 +42,6 @@ export class RegistrationService {
       // this.router.navigate(['/notes'])
       console.log('******* token **** not lord of the rings...', window.localStorage.token);
     }); 
-    
   }
   
   // currentUser(): Observable<Object>{
