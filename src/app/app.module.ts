@@ -1,14 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
+
+import { NgModule, ViewEncapsulation } from '@angular/core';
+
 import {CdkTableModule} from '@angular/cdk/table';
-import { NgModule } from '@angular/core';
+
+
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { CampaignModule } from './campaign/campaign.module';
 import { AppRoutingModule } from './shared/app-routing.module';
 import { AdminModule } from './admin/admin.module';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatFormFieldModule, MatInputModule, MatSliderModule} from '@angular/material';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule, MatInputModule, MatSliderModule } from '@angular/material';
+import { MatCardModule } from '@angular/material/card';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpModule } from '@angular/http';
 // import {MaterialModule} from '@angular/material';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -16,11 +21,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import {MatCardContent} from '@angular/material';
 import 'hammerjs';
+
+import {MatAutocompleteModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+
 import {
   MatAutocompleteModule,
   MatButtonModule,
   MatButtonToggleModule,
   MatCardModule,
+
   MatCheckboxModule,
   MatChipsModule,
   MatDatepickerModule,
@@ -93,12 +104,15 @@ import { RegistrationService } from './components/navbar/auth.service';
     // PersonalCampaignComponent
 
   ],
-entryComponents: [
-  RegistrationPopComponent,
-   LoginPopComponent
+  exports: [
+    MatCardModule
+  ],
+  entryComponents: [
+    RegistrationPopComponent,
+    LoginPopComponent
   ],
 
-   imports: [
+  imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
@@ -116,7 +130,10 @@ entryComponents: [
     ScrollToModule.forRoot(),
     BrowserAnimationsModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule,
+
+
   ],
   // schemas: [CUSTOM_ELEMENTS_SCHEMA],
 

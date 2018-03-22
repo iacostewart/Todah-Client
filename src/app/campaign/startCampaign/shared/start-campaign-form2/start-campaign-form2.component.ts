@@ -1,7 +1,13 @@
 import { NgModule } from '@angular/core';
+
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {MatSliderModule} from '@angular/material/slider';
+import {MatCardModule} from '@angular/material/card';
+
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import {MatFormFieldModule, MatInputModule, MatSliderModule, MatCardModule} from '@angular/material';
 import {MatCardContent} from '@angular/material';
+
 import {RouterModule} from '@angular/router';
 import {CommonModule} from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -22,7 +28,10 @@ import 'hammerjs';
   templateUrl: './start-campaign-form2.component.html',
   styleUrls: ['./start-campaign-form2.component.css'],
   encapsulation: ViewEncapsulation.None
+
+
   // perserveWhitespaces: boolean,
+
 
 })
 
@@ -63,6 +72,9 @@ export class StartCampaignForm2Component  {
 
     });
 }
+
+
+
   // get tickInterval(): number | 'auto' {
   //   return this.showTicks ? (this.autoTicks ? 'auto' : this._tickInterval) : 0;
   // }

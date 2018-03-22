@@ -1,3 +1,10 @@
+
+
+.align-right {
+    direction: rtl;
+    justify-content: flex-end;
+}
+
 .example-h2 {
     margin: 10px;
   }
@@ -17,3 +24,4 @@
   .mat-slider {
       width:700px;
   }
+
