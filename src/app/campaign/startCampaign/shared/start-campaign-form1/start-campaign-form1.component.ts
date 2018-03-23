@@ -4,6 +4,8 @@ import { CampaignService } from '../../../campaign.service';
 import { Router } from '@angular/router'
 import { Campaign } from '../../start-campaign/model/Campaign';
 
+let userId = window.localStorage.userId
+
 interface CampId{
   campId: number;
 }
@@ -57,12 +59,12 @@ export class StartCampaignForm1Component implements OnInit {
         // 'instagram': new FormControl(null),
         // 'youtube': new FormControl(null),
         "project_image_thumb_url": new FormControl("a rose"),
-        "creator_id": new FormControl(2),
-        "organization_name": new FormControl(""),
+        "creator_id": new FormControl(userId),
+        "organization_name": new FormControl(null, Validators.required),
         "organization_ein": new FormControl("a rose by any other name smells as sweet"),
-        "project_title": new FormControl(""),
-        "project_purpose": new FormControl(""),
-        "project_website": new FormControl(null),
+        "project_title": new FormControl(null, Validators.required),
+        "project_purpose": new FormControl(null, Validators.required),
+        "project_website": new FormControl(""),
         "project_image": new FormControl(null),
         "finished_step_one": new FormControl(true),
         "slider_inputs": new FormControl(""),
@@ -76,7 +78,7 @@ export class StartCampaignForm1Component implements OnInit {
         "funded_amount_currency": new FormControl("A Flower in every vase"),
         "funded_amount": new FormControl(1500.25),
         "project_video": new FormControl("a rose by any other name smells as sweet"),
-        "project_short_description": new FormControl(""),
+        "project_short_description": new FormControl(null, Validators.required),
         "project_category_id": new FormControl(1),
         "is_approved": new FormControl(false),
         "initial_funds_currency": new FormControl("usd"),
@@ -86,9 +88,9 @@ export class StartCampaignForm1Component implements OnInit {
         "external_payment_portal": new FormControl("youtube.com"),
         "is_personal_cause": new FormControl(false),
         "project_beneficiary": new FormControl("Hello World"),
-        "campaign_slug":new FormControl(""),
+        "campaign_slug":new FormControl(null, Validators.required),
         "never_event": new FormControl(false),
-        "project_role": new FormControl(null),
+        "project_role": new FormControl(null, Validators.required),
         "facebook_url": new FormControl(""),
         "instagram_url": new FormControl(""),
         "twitter_url": new FormControl(""),
