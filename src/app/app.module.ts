@@ -1,19 +1,58 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+
+import { NgModule, ViewEncapsulation } from '@angular/core';
+
+import {CdkTableModule} from '@angular/cdk/table';
+
+
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { CampaignModule } from './campaign/campaign.module';
 import { AppRoutingModule } from './shared/app-routing.module';
 import { AdminModule } from './admin/admin.module';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatFormFieldModule, MatInputModule, MatSliderModule} from '@angular/material';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule, MatInputModule, MatSliderModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpModule } from '@angular/http';
 // import {MaterialModule} from '@angular/material';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
+import {MatCardContent} from '@angular/material';
 import 'hammerjs';
+
+import {MatAutocompleteModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+
+  MatCardModule,
+
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatDividerModule,
+  MatExpansionModule,
+  MatGridListModule,
+  MatIconModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatStepperModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
+} from '@angular/material';
 
 
 import { ScrollToModule } from 'ng2-scroll-to-el';
@@ -60,12 +99,15 @@ import { RegistrationService } from './components/navbar/auth.service';
     // PersonalCampaignComponent
 
   ],
-entryComponents: [
-  RegistrationPopComponent,
-   LoginPopComponent
+  exports: [
+    MatCardModule
+  ],
+  entryComponents: [
+    RegistrationPopComponent,
+    LoginPopComponent
   ],
 
-   imports: [
+  imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
@@ -78,13 +120,17 @@ entryComponents: [
     FormsModule,
     MatSliderModule,
     ReactiveFormsModule,
+
     // MaterialModule.forRoot(),
     ScrollToModule.forRoot(),
     BrowserAnimationsModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+
+
   ],
   // schemas: [CUSTOM_ELEMENTS_SCHEMA],
+
 
   providers: [
     CampaignService,
@@ -96,6 +142,45 @@ entryComponents: [
     AppComponent
   ],
 
+})
+@NgModule({
+exports: [
+  CdkTableModule,
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatStepperModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatDividerModule,
+  MatCardContent,
+  MatExpansionModule,
+  MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
+
+],
 })
 export class AppModule { }
 export class PizzaPartyAppModule { }

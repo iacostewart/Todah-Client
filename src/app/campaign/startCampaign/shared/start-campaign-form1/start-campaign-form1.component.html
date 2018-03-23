@@ -101,7 +101,8 @@
             </label>
             <p>Enter your Campaign’s purpose. This purpose will be the main description of your Campaign, so be as detailed
               as you can!</p>
-            <textarea type="text" placeholder="Long Description" id="campaign_slug" formControlName="campaign_slug" class="form-control"></textarea>
+            <textarea [(ngModel)]="longDes" (keyup)="longCount(longDes)" type="text" placeholder="Long Description" id="campaign_slug" formControlName="campaign_slug" class="form-control"></textarea>
+            <p>characters left: {{ textRemaining }}</p>
             <!-- <span 
               *ngIf="!campaignForm.get('campaignData.campaign_slug').valid && campaignForm.get('campaignData.campaign_slug').touched" 
               class="help-block">Please enter a full description for your campaign.</span> -->
@@ -118,7 +119,6 @@
 
             <input type="file" id="file" class="form-control" (change)="fileInput($event.target.files)" formControlName="project_image" #MainImage>
 
-            <!-- <image-upload dropBoxMessage=""></image-upload> -->
             <br>
             <!-- look into event.file -->
             <!-- (uploadFinished)="onUploadFinished($event.file)"> not recongnized as a function-->
@@ -128,9 +128,8 @@
           </div>
           <!-- <div class="form-group">
             <label>Upload Additional Images and Videos</label>
-            <input type="file" class="form-control">
-            <image-upload dropBoxMessage=""></image-upload> -->
-          <!-- <br>
+            <input type="file" id="file" class="form-control" (change)="fileInput($event.target.files)" formControlName="project_video" >
+          <br>
           </div> -->
           <div class="form-group">
             <label>Facebook Url</label>
@@ -158,19 +157,20 @@
         <div class="row">
           <div class="col-md-4">
               <button type="submit" class="btn btn-warning">Save and Go to Next Step!</button>
-          <br>
-          <br>
+          </div>
           <div class="col-md-4">
             <a routerLink="/profile">
               <button type="button" class="btn btn-primary">Save for Later</button>
             </a>
+            <br>
+
           </div>
-          <br>
-          <br>
           <div class="col-md-4">
             <a routerLink="/deleteCampaign">
               <button type="button" class="btn btn-danger">Delete this Fundraiser :(</button>
             </a>
+          </div>
+          
           </div>
       <!-- </form> -->
     <!-- </div> -->
