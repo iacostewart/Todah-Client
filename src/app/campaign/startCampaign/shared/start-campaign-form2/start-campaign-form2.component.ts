@@ -46,7 +46,6 @@ export class StartCampaignForm2Component {
   invert = false;
   max = 100;
   min = 0;
-  showTicks = true;
   step: 18;
   thumbLabel = true;
   value: 18;
