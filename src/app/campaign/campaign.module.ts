@@ -69,7 +69,6 @@ import { CampaignService } from './campaign.service';
     StartCampaignConfirmComponent,
     DeleteCampaignComponent,
     MatCardModule,
-    development
   ],
 
   providers: [CampaignService]

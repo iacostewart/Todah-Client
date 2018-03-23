@@ -1,8 +1,5 @@
 import { NgModule } from '@angular/core';
 
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import {MatSliderModule} from '@angular/material/slider';
-import {MatCardModule} from '@angular/material/card';
 
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import {MatFormFieldModule, MatInputModule, MatSliderModule, MatCardModule} from '@angular/material';

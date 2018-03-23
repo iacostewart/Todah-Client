@@ -12,7 +12,6 @@ import { AppRoutingModule } from './shared/app-routing.module';
 import { AdminModule } from './admin/admin.module';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule, MatInputModule, MatSliderModule } from '@angular/material';
-import { MatCardModule } from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpModule } from '@angular/http';
 // import {MaterialModule} from '@angular/material';
@@ -26,10 +25,6 @@ import {MatAutocompleteModule,
   MatButtonModule,
   MatButtonToggleModule,
 
-import {
-  MatAutocompleteModule,
-  MatButtonModule,
-  MatButtonToggleModule,
   MatCardModule,
 
   MatCheckboxModule,
@@ -131,7 +126,6 @@ import { RegistrationService } from './components/navbar/auth.service';
     BrowserAnimationsModule,
     MatInputModule,
     HttpClientModule,
-    MatCardModule,
 
 
   ],
