@@ -38,7 +38,7 @@ ngOnInit() {
 
 openDialogReg() {
   this.dialogRef = this.dialog.open(RegistrationPopComponent, {
-    height: '550px',
+    height: '570px',
     width: '500px',
     panelClass: 'myapp-no-padding-dialog'
    
