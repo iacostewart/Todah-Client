@@ -15,8 +15,11 @@ export class StartCampaignForm1Component implements OnInit {
   defaultDropdownDirection = 'select';
   @ViewChild('MainImage') User_Image;
   textCount = '';
-  maxLength = 125;
+  maxLength = 150;
   characterLeft = this.maxLength;
+  longDes = '';
+  campLongText = 500;
+  textRemaining = this.campLongText;
   
 
 
@@ -57,7 +60,7 @@ export class StartCampaignForm1Component implements OnInit {
         "project_title": new FormControl(""),
         "project_purpose": new FormControl(""),
         "project_website": new FormControl(null),
-        "project_image": new FormControl(null),
+        "project_image": new FormControl(""),
         "finished_step_one": new FormControl(true),
         "slider_inputs": new FormControl(""),
         "slider_ranges": new FormControl(""),
@@ -105,6 +108,15 @@ export class StartCampaignForm1Component implements OnInit {
     }
     else{
       this.textCount = msg.substr(0, msg.length - 1);
+    }
+  };
+
+  longCount(msg){
+    if(this.campLongText >= msg.length){
+      this.textRemaining = (this.campLongText) - (msg.length);
+    }
+    else{
+      this.longDes = msg.substr(0, msg.length - 1);
     }
   };
 
