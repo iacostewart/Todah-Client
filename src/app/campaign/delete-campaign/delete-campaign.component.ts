@@ -6,6 +6,12 @@ import { Campaign } from '../startCampaign/start-campaign/model/Campaign';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 
+let campIds = Number(window.localStorage.campId)+1
+
+interface CampId{
+  campId: number;
+}
+
 @Component({
   selector: 'app-delete-campaign',
   templateUrl: './delete-campaign.component.html',
@@ -32,12 +38,25 @@ export class DeleteCampaignComponent implements OnInit {
 
   
   onSubmit(){
-    console.log("delete?", this.deleteForm);
-    this.campaignService.deleteCampaign(20)
-    .subscribe(
-      (response) => this.router.navigate(['/']),
-      // (response) => console.log(response),
-      (error) => console.log(error)
-    );
+    console.log("delete?", campIds);
+    this.campaignService.deleteCampaign(campIds)
+    .subscribe((campId: CampId) => {
+      this.router.navigate(['/home'])
+    //   console.log('*******campid Thingkie************',campId),
+    //   // (campId) => {JSON.stringify(campId), console.log(campId.id)}
+    // //  window.localStorage.setItem('campId', ""),
+    // //  console.log("camp id after",window.localStorage.campId)
+    //       (campId) => {this.router.navigate(['/'])}
+    
+    },
+    (error) => console.log(error)
+    )
+    }
   }
-  }
+  //   .subscribe(
+  //   () =>{console.log("LOCAL STORAGE", window.localStorage.campId)},
+
+  //     () => {this.router.navigate(['/'])}
+  //   )}
+  // }
+  
