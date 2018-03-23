@@ -16,8 +16,10 @@ export interface Campaign{
     slider_ranges?:string;
     goal_currency?:string;
     goal?:number;
+    //campain goal 
     finished_step_two?:boolean;
     end_date?:string;
+    //end date 
     is_published?:boolean;
     funder_count?:number;
     funded_amount_currency?:string;
@@ -28,6 +30,7 @@ export interface Campaign{
     is_approved?:boolean;
     initial_funds_currency?: string;
     initial_funds?: number;
+    //precamp stuffs
     organization_chapter_name?: string;
     organization_staff_name?:string;
     external_payment_portal?: string;
