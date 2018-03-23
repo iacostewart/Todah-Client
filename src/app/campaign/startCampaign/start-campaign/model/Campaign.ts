@@ -4,12 +4,13 @@ export interface Campaign{
     created_date?:Date;
     project_img_thumb_url?: string;
     creator_id?:number;
-    organization_name?: string;
+    organization_name: string;
     organization_ein?: string;
-    project_title?: string;
-    project_purpose?:string;
+    project_title: string;
+    project_purpose:string;
     project_website?: string;
     project_image?:string;
+    //^ should be required - once functional 
     finished_step_one?:boolean;
     slider_inputs?:string;
     slider_ranges?:string;
@@ -22,7 +23,7 @@ export interface Campaign{
     funded_amount_currency?:string;
     funded_amount?:number;
     project_video?:string;
-    project_short_description?: string;
+    project_short_description: string;
     project_category_id?: number;
     is_approved?:boolean;
     initial_funds_currency?: string;
@@ -32,9 +33,9 @@ export interface Campaign{
     external_payment_portal?: string;
     is_personal_cause?:boolean;
     project_beneficiary?:string;
-    campaign_slug?:string;
+    campaign_slug:string;
     never_event?:boolean;
-    project_role?:string;
+    project_role:string;
     facebook_url?:string;
     instagram_url?:string;
     twitter_url?:string;

@@ -4,7 +4,12 @@ import { CampaignService } from '../../../campaign.service';
 import { Router } from '@angular/router';
 import { Campaign } from '../../start-campaign/model/Campaign';
 
+
+let userId = window.localStorage.userId
+
+
 interface CampId {
+
   campId: number;
 }
 
@@ -103,6 +108,7 @@ export class StartCampaignForm1Component implements OnInit {
         'client_is_paying_platform_fees': new FormControl(true)
       });
      
+
 
   }
 
