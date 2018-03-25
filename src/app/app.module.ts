@@ -1,10 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
-
 import { NgModule, ViewEncapsulation } from '@angular/core';
-
 import {CdkTableModule} from '@angular/cdk/table';
-
-
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { CampaignModule } from './campaign/campaign.module';
@@ -21,17 +17,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import {MatCardContent} from '@angular/material';
 import 'hammerjs';
-
-import {MatAutocompleteModule,
-  MatButtonModule,
-  MatButtonToggleModule,
-
 import {
   MatAutocompleteModule,
   MatButtonModule,
   MatButtonToggleModule,
-  MatCardModule,
-
   MatCheckboxModule,
   MatChipsModule,
   MatDatepickerModule,
@@ -58,8 +47,6 @@ import {
   MatToolbarModule,
   MatTooltipModule,
 } from '@angular/material';
-
-
 import { ScrollToModule } from 'ng2-scroll-to-el';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -70,12 +57,11 @@ import { FaqComponent } from './components/faq/faq.component';
 import { AboutComponent } from './components/about/about.component';
 import { PricingComponent } from './components/pricing/pricing.component';
 import { ContactComponent } from './components/contact/contact.component';
-
 import { RegistrationPopComponent } from './components/navbar/registration-pop/registration-pop.component';
 import { LoginPopComponent } from './components/navbar/login-pop/login-pop.component';
-
 import { CampaignService } from './campaign/campaign.service';
 import { RegistrationService } from './components/navbar/auth.service';
+
 // =======
 // import { PersonalCampaignComponent } from './personal-campaign/personal-campaign.component';
 // >>>>>>> Stashed changes
@@ -140,7 +126,8 @@ import { RegistrationService } from './components/navbar/auth.service';
 
   providers: [
     CampaignService,
-    RegistrationService
+    RegistrationService,
+
 
   ],
 

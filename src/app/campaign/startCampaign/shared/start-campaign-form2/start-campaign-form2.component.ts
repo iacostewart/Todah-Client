@@ -1,13 +1,7 @@
 import { NgModule } from '@angular/core';
-
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatCardModule} from '@angular/material/card';
-
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
-import {MatFormFieldModule, MatInputModule, MatSliderModule, MatCardModule} from '@angular/material';
-import {MatCardContent} from '@angular/material';
-
 import {RouterModule} from '@angular/router';
 import {CommonModule} from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -45,12 +39,12 @@ export class StartCampaignForm2Component  {
   autoTicks = false;
   disabled = false;
   invert = false;
-  max = 100;
+  max = 5;
   min = 0;
   showTicks = true;
-  step: 18;
+  step: 1;
   thumbLabel = true;
-  value: 18;
+  value: 0;
   vertical: false;
 
 
