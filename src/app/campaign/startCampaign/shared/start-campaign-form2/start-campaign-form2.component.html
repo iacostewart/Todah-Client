@@ -30,7 +30,7 @@
       </div>
       <div class="row">
           <div class="form-group">
-              <input type="text" id="goal" placeholder="$0.00" class="form-control">
+              <input type="text" id="goal" placeholder="$0.00" class="form-control" formControlName="goal">
             </div>
       </div>
 
@@ -52,13 +52,13 @@
       <div class="row">
         <div class="col-md-5">
           <div class="form-group">
-            <input  type="text" class="form-control align-left" placeholder="$0">
+            <input  type="text" class="form-control align-left" placeholder="$0" formControlName="initial_funds">
           </div>
         </div>
         <div class="col-md-2"></div>
         <div class="col-md-5">
           <div class="form-group">
-            <input type="date" class="form-control align-right" placeholder="MM/DD/YYY" >
+            <input type="date" class="form-control align-right" placeholder="MM/DD/YYY" formControlName='end_date' >
           </div>
         </div>
       </div>
@@ -77,17 +77,28 @@
 
   <hr>
 
-    <div class="col-md-8">
+
+
+
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
       <!-- Modal of slider information -->
       <div style="text-align: center">
         <button type="button" class="btn btn-default">How do these Sliders Work?</button>
       </div>
       <br>
     </div>
+
     <br>
     <br>
     <br>
     <br>
+
+  </div>
 
       <!-- inside mat card starts here -->
       
@@ -190,10 +201,11 @@
               class="example-margin3"
               [disabled]="disabled"
               [invert]="invert"
-              [max]="100"
+              [max]="5"
               [min]="0"
               [step]="step"
               [thumb-label]="thumbLabel"
+             
               [tick-interval]="tickInterval"
               [vertical]="vertical">
           </mat-slider>
@@ -227,10 +239,9 @@
 
       <div class="row">
         <!-- <form action=''> -->
-         
         <!-- </form> -->
         <div class="col-md-4">
-          <a routerLink="/startCampaign-confirmation"><button type="button" class="btn btn-warning">LAUNCH YOUR CAMPAIGN!</button></a>
+          <button mat-button class="btn btn-warning popup-btn">LAUNCH YOUR CAMPAIGN!</button>
         </div>
         <div class="col-md-4">
           <a routerLink="/profile"><button type="button" class="btn btn-primary">Save for Later</button></a>
@@ -241,9 +252,11 @@
       </div>
     </form>
 
+    </form>
+    </div>
 
     <!-- Calulator Card   this is the sidebar section bellow-->
-   
+
 
 <!-- 
     Calulator Card -->
@@ -262,16 +275,34 @@
     <!-- this is the end of the side bar section -->
      <!-- outside mat-card -->
   
-</div>
-<br><br><br>
+
+
   
 
+<!-- 
 
 
+     [ngStyle]=\"_ticksContainerStyles\"
 
 
+     [ngStyle]=\"_trackFillStyles\"
 
+     [ngStyle]=\"_trackBackgroundStyles\"
 
-<br><br><br> 
-  
+     [ngStyle]=\"_ticksStyles\"
 
+     [ngStyle]=\"_thumbContainerStyles\"
+      
+
+#sliderWrapper
+"mat-slider-wrapper"
+"mat-slider-track-wrapper"
+"mat-slider-track-background"
+"mat-slider-track-fill"
+"mat-slider-ticks-container"
+"mat-slider-ticks"
+"mat-slider-thumb-container"
+"mat-slider-focus-ring"
+"mat-slider-thumb"
+"mat-slider-thumb-label"
+"mat-slider-thumb-label-text" -->

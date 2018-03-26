@@ -8,7 +8,6 @@ import { AppRoutingModule } from './shared/app-routing.module';
 import { AdminModule } from './admin/admin.module';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule, MatInputModule, MatSliderModule } from '@angular/material';
-import { MatCardModule } from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpModule } from '@angular/http';
 // import {MaterialModule} from '@angular/material';
@@ -21,6 +20,7 @@ import {
   MatAutocompleteModule,
   MatButtonModule,
   MatButtonToggleModule,
+  MatCardModule,
   MatCheckboxModule,
   MatChipsModule,
   MatDatepickerModule,
@@ -64,6 +64,7 @@ import { RegistrationService } from './components/navbar/auth.service';
 
 // =======
 // import { PersonalCampaignComponent } from './personal-campaign/personal-campaign.component';
+
 // >>>>>>> Stashed changes
 
 
@@ -117,7 +118,6 @@ import { RegistrationService } from './components/navbar/auth.service';
     BrowserAnimationsModule,
     MatInputModule,
     HttpClientModule,
-    MatCardModule,
 
 
   ],
