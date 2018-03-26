@@ -22,15 +22,20 @@
             class="form-control">
         </div> -->
 
-  <form [formGroup]="campaignPg2" #f="ngForm" (ngSubmit)='onsubmit(f)'>
-    <div class="row">
-      <div class="col-md-12">
-        <label>Campaign Goal*</label>
+        
+<form [formGroup]="campaignPg2" #f="ngForm" (ngSubmit)='onSubmit(f)'>
+  <div class="row">
+    <div class="col-md-12">
+      <label>Campaign Goal*</label>
+      </div>
+
       </div>
 
       <div class="row">
           <div class="form-group">
-              <input type="text" id="goal" placeholder="$0.00" class="form-control" formControlName="goal">
+
+              <input type="text" formControlName="goal" placeholder="$0.00" class="form-control">
+
             </div>
 
       </div>
@@ -54,13 +59,17 @@
       <div class="row">
         <div class="col-md-5">
           <div class="form-group">
-            <input  type="text" class="form-control align-left" placeholder="$0" formControlName="initial_funds">
+
+            <input type="text" formControlName="initial_funded" class="form-control align-left" placeholder="$0">
+
           </div>
         </div>
         <div class="col-md-2"></div>
         <div class="col-md-5">
           <div class="form-group">
-            <input type="date" class="form-control align-right" placeholder="MM/DD/YYY" formControlName='end_date' >
+
+            <input type="date"  class="form-control align-right" placeholder="MM/DD/YYY" >
+
           </div>
 
         </div>
@@ -86,39 +95,155 @@
 
 
 
+  
+  <div class="form-group">
+    <label>Pre-Campaign Funds Raised</label>
+    <input type="text"  placeholder="$0" class="form-control">
+  <div class="form-group">
+    <label>End Date*</label>
+    <input type="text" formControlName="end_date" placeholder="MM/DD/YYYY" class="form-control">
+  </div>
+  </div>
 
 
-<div class="row">
-    <div class="col-md-12">
 
+
+
+   <div class="col-md-8">
       <!-- Modal of slider information -->
       <div style="text-align: center">
         <button type="button" class="btn btn-default">How do these Sliders Work?</button>
       </div>
+      <hr>
       <br>
     </div>
-
-    <br>
-    <br>
-    <br>
-    <br>
-
-  </div>
-
       <!-- inside mat card starts here -->
       
-   
       
+      <!-- Sliders -->
 
-    
     
   
+  <mat-card class="You">
+    <mat-card-content>
+      <h2 class="example-h2"></h2>
+  
+      <mat-slider
+      class="example-margin3"
+          [disabled]="disabled"
+          [invert]="invert"
+          [max]="100"
+          [min]="0"
+          [step]="step"
+          [thumb-label]="thumbLabel"
+          [tick-interval]="tickInterval"
+          [vertical]="vertical">
+      </mat-slider>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="You">
+      <mat-card-content>
+        <h2 class="example-h2"></h2>
+  <mat-slider
+          class="example-margin3"
+          [disabled]="disabled"
+          [invert]="invert"
+          [max]="100"
+          [min]="0"
+          [step]="step"
+          [thumb-label]="thumbLabel"
+          [tick-interval]="tickInterval"
+          [vertical]="vertical">
+      </mat-slider>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="You">
+      <mat-card-content>
+        <h2 class="example-h2"></h2>
+      <mat-slider
+          class="example-margin3"
+          [disabled]="disabled"
+          [invert]="invert"
+          [max]="100"
+          [min]="0"
+          [step]="step"
+          [thumb-label]="thumbLabel"
+          [tick-interval]="tickInterval"
+          [vertical]="vertical">
+      </mat-slider>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="">
+    <mat-card-content>
+      <h2 class="example-h2">Juice</h2>
+      <mat-slider
+          class="example-margin3"
+          [disabled]="disabled"
+          [invert]="invert"
+          [max]="100"
+          [min]="0"
+          [step]="step"
+          [thumb-label]="thumbLabel"
+          [tick-interval]="tickInterval"
+          [vertical]="vertical">
+      </mat-slider>
+        </mat-card-content>
+  </mat-card>
+  <mat-card class="">
+      <mat-card-content>
+        <h2 class="example-h2">Juice</h2>
+        <mat-slider
+            class="example-margin3"
+            [disabled]="disabled"
+            [invert]="invert"
+            [max]="100"
+            [min]="0"
+            [step]="step"
+            [thumb-label]="thumbLabel"
+            [tick-interval]="tickInterval"
+            [vertical]="vertical">
+        </mat-slider>
+          </mat-card-content>
+    </mat-card>
+    <mat-card class="">
+        <mat-card-content>
+          <h2 class="example-h2">Juice</h2>
+          <mat-slider
+              class="example-margin3"
+              [disabled]="disabled"
+              [invert]="invert"
+              [max]="100"
+              [min]="0"
+              [step]="step"
+              [thumb-label]="thumbLabel"
+              [tick-interval]="tickInterval"
+              [vertical]="vertical">
+          </mat-slider>
+            </mat-card-content>
+      </mat-card>
+      <mat-card class="">
+          <mat-card-content>
+              <h2 class="example-h2">Juice</h2>
 
+      <mat-slider
+          class="example-margin3"
+          [disabled]="disabled"
+          [invert]="invert"
+          [max]="100"
+          [min]="0"
+          [step]="step"
+          [thumb-label]="thumbLabel"
+          [tick-interval]="tickInterval"
+          [vertical]="vertical">
+      </mat-slider>
+    </mat-card-content>
+      </mat-card>
+      
       <div class="row">
         <!-- <form action=''> -->
         <!-- </form> -->
         <div class="col-md-4">
-          <button mat-button class="btn btn-warning popup-btn">LAUNCH YOUR CAMPAIGN!</button>
+          <button type="submit" class="btn btn-warning">LAUNCH YOUR CAMPAIGN!</button>
         </div>
         <div class="col-md-4">
           <a routerLink="/profile"><button type="button" class="btn btn-primary">Save for Later</button></a>
@@ -127,28 +252,7 @@
           <a routerLink="/deleteCampaign"><button type="button" class="btn btn-danger">Delete this Fundraiser :(</button></a>
         </div>
       </div>
-    </form>
-
-
-    </form>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Calulator Card   this is the sidebar section bellow-->
-
-
-
-
-
+    </form> 
 
 
   <!-- Calulator Card   this is the sidebar section bellow-->
@@ -167,103 +271,3 @@
          <button type="button" class="btn btn-default">Preview your Campaign!</button>
       </div>
     </div>
-
-
-
-
-
-
-  
-
-
-
-
-  <!-- </div> -->
-
-    
-
-
-
- Old slider... Not sure if I will still need this or not
-
-  <mat-card class="You">
-      <mat-card-content>
-        <h2 class="example-h2">$1-10... </h2>
-
-        <mat-slider class="example-margin3" id="slider_inputs" [disabled]="disabled" [invert]="invert" [max]="100" [min]="0" [step]="step"
-          [thumb-label]="thumbLabel" [tick-interval]="tickInterval" [vertical]="vertical">
-        </mat-slider>
-      </mat-card-content>
-    </mat-card>
-    <mat-card class="You">
-      <mat-card-content>
-        <h2 class="example-h2">$11 - 25... </h2>
-        <mat-slider class="example-margin3" id="slider_inputs" [disabled]="disabled" [invert]="invert" [max]="100" [min]="0" [step]="step"
-          [thumb-label]="thumbLabel" [tick-interval]="tickInterval" [vertical]="vertical">
-         </mat-slider> 
-      </mat-card-content>
-    </mat-card>
-    <mat-card class="You">
-      <mat-card-content>
-        <h2 class="example-h2">$26 - 50 ...</h2>
-        <mat-slider class="example-margin3" color="black" id="slider_inputs" [disabled]="disabled" [invert]="invert" [max]="100"
-          [min]="0" [step]="step" [thumb-label]="thumbLabel" [tick-interval]="tickInterval" [vertical]="vertical">
-        </mat-slider>
-      </mat-card-content>
-    </mat-card>
-    <mat-card class="">
-      <mat-card-content>
-        <h2 class="example-h2">$51 - 100 ... </h2>
-        <mat-slider class="example-margin3" id="slider_inputs" [disabled]="disabled" [invert]="invert" [max]="100" [min]="0" [step]="step"
-          [thumb-label]="thumbLabel" [tick-interval]="tickInterval" [vertical]="vertical">
-        </mat-slider>
-      </mat-card-content>
-    </mat-card>
-    <mat-card class="">
-      <mat-card-content>
-        <h2 class="example-h2">$101 - 150 ...</h2>
-        <mat-slider class="example-margin3" id="slider_inputs" [disabled]="disabled" [invert]="invert" [max]="100" [min]="0" [step]="step"
-          [thumb-label]="thumbLabel" [tick-interval]="tickInterval" [vertical]="vertical">
-        </mat-slider>
-      </mat-card-content>
-    </mat-card>
-    <mat-card class="">
-      <mat-card-content>
-        <h2 class="example-h2">$151 - 200 ... </h2>
-        <mat-slider class="example-margin3" id="slider_inputs" [disabled]="disabled" [invert]="invert" [max]="100" [min]="0" [step]="step"
-          [thumb-label]="thumbLabel" [tick-interval]="tickInterval" [vertical]="vertical">
-        </mat-slider>
-      </mat-card-content>
-    </mat-card>
-    <mat-card class="">
-      <mat-card-content>
-        <h2 class="example-h2">$201 - 250 ... </h2>
-        <mat-slider class="example-margin3" id="slider_inputs" [disabled]="disabled" [invert]="invert" [max]="100" [min]="0" [step]="step"
-          [thumb-label]="thumbLabel" [tick-interval]="tickInterval" [vertical]="vertical">
-        </mat-slider>
-      </mat-card-content>
-    </mat-card>
-
-  </form> 
-     [ngStyle]=\"_trackFillStyles\"
-
-     [ngStyle]=\"_trackBackgroundStyles\"
-
-     [ngStyle]=\"_ticksStyles\"
-
-     [ngStyle]=\"_thumbContainerStyles\"
-      
-
-#sliderWrapper
-"mat-slider-wrapper"
-"mat-slider-track-wrapper"
-"mat-slider-track-background"
-"mat-slider-track-fill"
-"mat-slider-ticks-container"
-"mat-slider-ticks"
-"mat-slider-thumb-container"
-"mat-slider-focus-ring"
-"mat-slider-thumb"
-"mat-slider-thumb-label"
-"mat-slider-thumb-label-text" -->
-

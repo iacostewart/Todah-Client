@@ -1,19 +1,7 @@
-
-import { NgModule, ViewEncapsulation } from '@angular/core';
-import { Component } from '@angular/core';
-
-
-
-
 import { NgModule } from '@angular/core';
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation, ViewChild } from '@angular/core';
 import {MatFormFieldModule, MatInputModule, MatSliderModule, MatCardModule} from '@angular/material';
-
 import {MatCardContent} from '@angular/material';
-import {MatSelectModule} from '@angular/material/select';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatButtonModule} from '@angular/material/button';
-import {MatDialog, MatDialogRef} from '@angular/material';
 import {RouterModule} from '@angular/router';
 import {CommonModule} from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -28,15 +16,15 @@ import 'hammerjs';
 
 
 
+
 @Component({
   selector: 'app-start-campaign-form2',
   templateUrl: './start-campaign-form2.component.html',
   styleUrls: ['./start-campaign-form2.component.css'],
+  encapsulation: ViewEncapsulation.None
 
 
-  encapsulation: ViewEncapsulation.None,
-  preserveWhitespaces: false,
-
+  // perserveWhitespaces: boolean,
 
 
 })
@@ -44,53 +32,42 @@ import 'hammerjs';
 
 
 
-
-
-export class StartCampaignForm2Component {
-
+export class StartCampaignForm2Component implements OnInit  {
   campaignPg2: FormGroup;
   campaignImageFile: File = null;
   defaultDropdownDirection = 'select';
   autoTicks = false;
   disabled = false;
   invert = false;
-  max = 5;
+  max = 100;
   min = 0;
-
   showTicks = true;
   step: 18;
   thumbLabel = true;
-  showThumb  = true ;
-  value: 0;
+  value: 18;
   vertical: false;
 
 
-        'initial_funds': new FormControl(''),
-        'end_date': new FormControl('')
+  constructor(private campaignService: CampaignService, private form: FormBuilder, private router: Router) {
+    this.createForm(); }
 
 
-        
-      
+  ngOnInit() {
+  }
+  createForm() {
+    this.campaignPg2 = this.form.group({
+      'campId': new FormControl (Number(window.localStorage.campId)),
+      'goal': new FormControl(""),
+      'slider_inputs': new FormControl(5),
+      'slider_ranges': new FormControl(500),
+      'goal_currency': new FormControl('USD'),
+      'initial_funded_currency': new FormControl('USD'),
+      'initial_funded': new FormControl(""),
+      'end_date': new FormControl("")
 
     });
-    
 }
 
-
-
-
-
-onSubmit() {
-  console.log(this.campaignPg2)
-  this.router.navigate(['startCampaign-confirmation']);
- 
-}
- // this.campaignService.storeCampaign(this.campaignPg2.value)
- //   .subscribe(
- //           (response) => this.router.navigate(['/startCampaign-form3']),
- //   // (response) => console.log(response),
- //   (error) => console.log(error)
- //   );
 
 
   // get tickInterval(): number | 'auto' {
@@ -101,20 +78,19 @@ onSubmit() {
   // }
 //   // // private _tickInterval = 1;
 // }
+onSubmit() {
+  console.log("PAGE 2 INFO", this.campaignPg2.value);
+  this.campaignService.updateCampaign(this.campaignPg2.value)
+    .subscribe(
+      () => {
+      this.router.navigate(["/startCampaign-form3"])
+    },
+            // (response) => this.router.navigate(['/startCampaign-form3']),
+    // (response) => console.log(response),
+    (error) => console.log(error)
+    );
+}
 
 
-
-
-
-// function newFunction() {
-//   onsubmit(this: Window, ev:Event) => any;
-//   {
-//     // console.log(this.campaignForm);
-//     this.campaignService.storeCampaign(this.campaignPg2.value)
-//       .subscribe((response) => this.router.navigate(['/startCampaign-form3']),
-//         // (response) => console.log(response),
-//         (error) => console.log(error));
-//   }
-
-
+}
 

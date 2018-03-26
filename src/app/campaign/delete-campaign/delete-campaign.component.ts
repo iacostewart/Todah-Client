@@ -5,6 +5,8 @@ import { CampaignService } from '../campaign.service';
 import { Campaign } from '../startCampaign/start-campaign/model/Campaign';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import { campaingID } from '../globals';
+// import { campaignId } from "../startCampaign/shared/start-campaign-form1/start-campaign-form1.component"
 
 let campIds = Number(window.localStorage.campId)+1
 
@@ -15,14 +17,15 @@ interface CampId{
 @Component({
   selector: 'app-delete-campaign',
   templateUrl: './delete-campaign.component.html',
-  styleUrls: ['./delete-campaign.component.css']
+  styleUrls: ['./delete-campaign.component.css'],
+  providers: [campaingID]
 })
 export class DeleteCampaignComponent implements OnInit {
 
   deleteForm: FormGroup;
 
   // tslint:disable-next-line:max-line-length
-  constructor(private http: HttpClient, private ar: ActivatedRoute, private campaignService: CampaignService, private router: Router, private form: FormBuilder, ) {
+  constructor(private http: HttpClient, private ar: ActivatedRoute, private campaignService: CampaignService, private router: Router, private form: FormBuilder, public campaignID: campaingID) {
   this.deleteCamp();
         }
 
@@ -39,6 +42,7 @@ export class DeleteCampaignComponent implements OnInit {
   
   onSubmit(){
     console.log("delete?", campIds);
+    console.log("CAMPAIGN ID DELETE",this.campaignID.ID)
     this.campaignService.deleteCampaign(campIds)
     .subscribe((campId: CampId) => {
       this.router.navigate(['/home'])
