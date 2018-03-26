@@ -5,53 +5,36 @@
     <h3>Basic Information (1/3)</h3>
     <!-- Form -->
     <div class="col-md-8">
+        <!-- enctype="multipart/form-data" -->
       <form [formGroup]="campaignForm" #f="ngForm" (ngSubmit)="onSubmit(f)">
         <p>Once you publish, there will be a 24-48 hour delay while the Todah team reviews your campaign. Also be prepared that
           you will have to create or link a WePay account with your campaign to receive payments from your donors.</p>
-        <div >
+        <div>
           <div class="form-group">
             <label>Type and Select Organization Name (or 501(c)(3)number)
               <sup>*</sup>
             </label>
-            <input 
-              type="text" 
-              placeholder="Organization Name" 
-              id="organization_name" 
-              formControlName="organization_name" 
-              class="form-control">
-              <!-- <span 
+            <input type="text" placeholder="Organization Name" id="organization_name" formControlName="organization_name" class="form-control">
+            <!-- <span 
               *ngIf="!campaignForm.get('campaignData.organization_name').valid && campaignForm.get('campaignData.organization_name').touched" 
               class="help-block">Please enter an organization name.</span> -->
           </div>
           <div class="form-group">
             <label>Chapter Name</label>
-            <input 
-              type="text" 
-              placeholder="Organization Chapter Name or Number (if applicable)" 
-              id="organization_chapter_name" 
-              formControlName="organization_chapter_name"
+            <input type="text" placeholder="Organization Chapter Name or Number (if applicable)" id="organization_chapter_name" formControlName="organization_chapter_name"
               class="form-control">
           </div>
           <div class="form-group">
             <label>Staff Name</label>
-            <input 
-              type="text" 
-              placeholder="Organization Staff Name or Number (if applicable)" 
-              id="organization_staff_name" 
-              formControlName="organization_staff_name"
+            <input type="text" placeholder="Organization Staff Name or Number (if applicable)" id="organization_staff_name" formControlName="organization_staff_name"
               class="form-control">
           </div>
           <div class="form-group">
             <label>Campaign Title
               <sup>*</sup>
             </label>
-            <input 
-              type="text" 
-              placeholder="Campaign's Title" 
-              id="project_title" 
-              formControlName="project_title" 
-              class="form-control">
-              <!-- <span 
+            <input type="text" placeholder="Campaign's Title" id="project_title" formControlName="project_title" class="form-control">
+            <!-- <span 
               *ngIf="!campaignForm.get('campaignData.project_title').valid && campaignForm.get('campaignData.project_title').touched" 
               class="help-block">Please enter a campaign title.</span> -->
           </div>
@@ -59,15 +42,10 @@
             <label>Campaign Creator Role (i.e volunteer, staff, member, etc.)
               <sup>*</sup>
             </label>
-            <p>Your relationship to the organization for which you are creating this campaign. 
-              (i.e. volunteer, staff member, etc.)</p>
-            <input 
-              type="text" 
-              placeholder="Project Role" 
-              id="project_role" 
-              formControlName="project_role" 
-              class="form-control">
-              <!-- <span 
+            <p>Your relationship to the organization for which you are creating this campaign. (i.e. volunteer, staff member,
+              etc.)</p>
+            <input type="text" placeholder="Project Role" id="project_role" formControlName="project_role" class="form-control">
+            <!-- <span 
               *ngIf="!campaignForm.get('campaignData.project_role').valid && campaignForm.get('campaignData.project_role').touched" 
               class="help-block">Please enter a campaign creator role.</span> -->
           </div>
@@ -104,18 +82,17 @@
             <label>Campaign Teaser
               <sup>*</sup>
             </label>
-            <p>Your campaign teaser will appear with your main campaign image on Todah homepage
-               as well as on any social media or email posts used to promote your campaign.</p>
-            <textarea 
-              [(ngModel)]="currentText"
-              (keypress)="changed()"
-              type="text" 
-              placeholder="Short Description" 
-              id="project_short_description" 
-              formControlName="project_short_description" 
-              class="form-control"></textarea>
-              <p>characters left: {{ charsleft }}</p>
+
+            <p>Your campaign teaser will appear with your main campaign image on Todah homepage as well as on any social media
+              or email posts used to promote your campaign.</p>
+
+            <textarea [(ngModel)]="textCount" (keyup)="count(textCount)" type="text" placeholder="Short Description" id="project_short_description"
+              formControlName="project_short_description" class="form-control"></textarea>
+            <p>characters left: {{ characterLeft }}</p>
+            
+
               <!-- <span 
+
               *ngIf="!campaignForm.get('campaignData.project_short_description').valid && campaignForm.get('campaignData.project_short_description').touched" 
               class="help-block">Please enter a short description for your campaign.</span> -->
           </div>
@@ -123,34 +100,26 @@
             <label>Campaign Long Description
               <sup>*</sup>
             </label>
-            <p>Enter your Campaign’s purpose. This purpose will be the main description of your Campaign, 
-              so be as detailed as you can!</p>
-            <textarea 
-              type="text" 
-              placeholder="Long Description" 
-              id="campaign_slug" 
-              formControlName="campaign_slug" 
-              class="form-control"></textarea>
-              <!-- <span 
+            <p>Enter your Campaign’s purpose. This purpose will be the main description of your Campaign, so be as detailed
+              as you can!</p>
+            <textarea [(ngModel)]="longDes" (keyup)="longCount(longDes)" type="text" placeholder="Long Description" id="campaign_slug" formControlName="campaign_slug" class="form-control"></textarea>
+            <p>characters left: {{ textRemaining }}</p>
+            <!-- <span 
               *ngIf="!campaignForm.get('campaignData.campaign_slug').valid && campaignForm.get('campaignData.campaign_slug').touched" 
               class="help-block">Please enter a full description for your campaign.</span> -->
-              <!-- limit to 255 characters -->
+            <!-- limit to 255 characters -->
           </div>
           <div class="form-group">
             <label>Organization Website</label>
-            <input 
-              type="text" 
-              placeholder="Organization Website" 
-              id="project_website" 
-              formControlName="project_website" 
-              class="form-control">
+            <input type="text" placeholder="Organization Website" id="project_website" formControlName="project_website" class="form-control">
           </div>
           <div class="form-group">
             <label>Upload your Main Campaign Image
               <sup>*</sup>
             </label>
-            <input type="file" class="form-control" formControlName="project_image_thumb_url" #MainImage>
-            <!-- <image-upload dropBoxMessage=""></image-upload> -->
+
+            <!-- <input type="file" id="file" class="form-control" (change)="fileInput($event.target.files)" formControlName="project_image" #MainImage> -->
+
             <br>
             <!-- look into event.file -->
             <!-- (uploadFinished)="onUploadFinished($event.file)"> not recongnized as a function-->
@@ -158,75 +127,57 @@
               *ngIf="!campaignForm.get('campaignData.project_image_thumb_url').valid && campaignForm.get('campaignData.project_image_thumb_url').touched" 
               class="help-block">Please upload an image for your campaign.</span> -->
           </div>
-          <!-- <div class="form-group">
+          <div class="form-group">
             <label>Upload Additional Images and Videos</label>
-            <input type="file" class="form-control">
-            <image-upload dropBoxMessage=""></image-upload> -->
-            <!-- <br>
-          </div> -->
+            <input type="file" id="file" class="form-control" (change)="fileInput($event.target.files)"  >
+          <br>
+          </div>
           <div class="form-group">
             <label>Facebook Url</label>
-            <input 
-              type="text" 
-              placeholder="Facebook url" 
-              id="facebook_url" 
-              formControlName="facebook_url" 
-              class="form-control">
+            <input type="text" placeholder="Facebook url" id="facebook_url" formControlName="facebook_url" class="form-control">
           </div>
           <div class="form-group">
             <label>Twitter Url</label>
-            <input 
-              type="text" 
-              placeholder="Twitter url" 
-              id="twitter_url" 
-              formControlName="twitter_url" 
-              class="form-control">
+            <input type="text" placeholder="Twitter url" id="twitter_url" formControlName="twitter_url" class="form-control">
           </div>
           <div class="form-group">
             <label>Instagram Url</label>
-            <input 
-              type="text" 
-              placeholder="Instragram url" 
-              id="instagram_url" 
-              formControlName="instagram_url" 
-              class="form-control">
+            <input type="text" placeholder="Instragram url" id="instagram_url" formControlName="instagram_url" class="form-control">
           </div>
           <div class="form-group">
             <label>YouTube Url</label>
-            <input 
-              type="text" 
-              placeholder="YouTube url" 
-              id="youtube_url" 
-              formControlName="youtube_url" 
-              class="form-control">
+            <input type="text" placeholder="YouTube url" id="youtube_url" formControlName="youtube_url" class="form-control">
           </div>
         </div>
+
+
         <!-- <button class="btn btn-primary" type>Submit</button> -->
+
+
         <hr>
         <div class="row">
           <div class="col-md-4">
-              <!-- <a routerLink="/startCampaign-form2"> -->
-            <button type="submit" class="btn btn-warning">Save and Go to Next Step!</button>
-              <!-- </a> -->
+              <button type="submit" class="btn btn-warning">Save and Go to Next Step!</button>
           </div>
-          <br>
-          <br>
           <div class="col-md-4">
             <a routerLink="/profile">
               <button type="button" class="btn btn-primary">Save for Later</button>
             </a>
+            <br>
+
           </div>
-          <br>
-          <br>
           <div class="col-md-4">
             <a routerLink="/deleteCampaign">
               <button type="button" class="btn btn-danger">Delete this Fundraiser :(</button>
             </a>
           </div>
-
-        </div>
+          
+          </div>
       </form>
-    </div>
+    <!-- </div> -->
+
+
+
     <!-- Preview Card -->
     <!-- on another page? -->
     <!-- <div class="col-md-4">

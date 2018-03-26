@@ -1,0 +1,56 @@
+.example-h2 {
+    margin: 0px;
+  }
+  
+  /* .example-section3 {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+  } */
+  
+  .example-margin {
+    margin: 0px;
+
+  }
+
+/* 
+  .example-margin3 {
+    width:800px;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    outline: none;
+    vertical-align: middle;
+  }
+   */
+
+ 
+
+
+/* 
+  [ngStyle]=\"_ticksContainerStyles\"
+
+
+  [ngStyle]=\"_trackFillStyles\"
+
+  [ngStyle]=\"_trackBackgroundStyles\"
+
+  [ngStyle]=\"_ticksStyles\"
+
+  [ngStyle]=\"_thumbContainerStyles\"
+   
+
+#sliderWrapper
+"mat-slider-wrapper"
+"mat-slider-track-wrapper"
+"mat-slider-track-background"
+"mat-slider-track-fill"
+"mat-slider-ticks-container"
+"mat-slider-ticks"
+"mat-slider-thumb-container"
+"mat-slider-focus-ring"
+"mat-slider-thumb"
+"mat-slider-thumb-label"
+"mat-slider-thumb-label-text" --> */
+

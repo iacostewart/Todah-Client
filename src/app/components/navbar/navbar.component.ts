@@ -22,28 +22,28 @@ import { MatDialogContainer } from '@angular/material/typings/dialog/dialog-cont
 
 
 })
-export class NavbarComponent implements OnInit{
+export class NavbarComponent implements OnInit {
 dialogRef: MatDialogRef<RegistrationPopComponent>;
-dialogReflog: MatDialogRef<LoginPopComponent>
+dialogReflog: MatDialogRef<LoginPopComponent>;
 constructor(public dialog: MatDialog) {
   // this.openDialog();
-  
-  let isLogedIn: '';
+
+  // let isLogedIn: '';
 
 }
 ngOnInit() {
- 
+
 
 }
 
 openDialogReg() {
   this.dialogRef = this.dialog.open(RegistrationPopComponent, {
-    height: '550px',
+    height: '570px',
     width: '500px',
     panelClass: 'myapp-no-padding-dialog'
-   
-    
-    
+
+
+
   });
 
 }
@@ -54,7 +54,7 @@ openDialogLog() {
   this.dialogReflog = this.dialog.open(LoginPopComponent);
   this.dialogReflog.afterClosed().subscribe((result) => {
     console.log(result);
-  })
+  });
 }
 
 }

@@ -1,7 +1,8 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ViewEncapsulation, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CampaignRoutingModule } from '../shared/campaign-routing.module';
-
+import {MatSliderModule} from '@angular/material/slider';
+import {MatCardModule} from '@angular/material';
 import { ProfileComponent } from './profile/profile.component';
 import { FindCampaignSnapshotComponent } from './findCampaign/find-campaign-snapshot/find-campaign-snapshot.component';
 import { FindCampaignComponent } from './findCampaign/find-campaign/find-campaign.component';
@@ -17,18 +18,22 @@ import { StartCampaignForm2Component } from './startCampaign/shared/start-campai
 import { StartCampaignConfirmComponent } from './startCampaign/shared/start-campaign-confirm/start-campaign-confirm.component';
 import { DeleteCampaignComponent } from './delete-campaign/delete-campaign.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ImageUploadModule } from "angular2-image-upload";
+// import { ImageUploadModule } from "angular2-image-upload";
 import { HttpClientModule } from '@angular/common/http';
 import { CampaignService } from './campaign.service';
+import { campaingID } from './globals';
 
 
 @NgModule({
   imports: [
     CommonModule,
-    CampaignRoutingModule, 
+    CampaignRoutingModule,
     ReactiveFormsModule,
-    ImageUploadModule.forRoot(),
-    HttpClientModule
+    // ImageUploadModule.forRoot(),
+    HttpClientModule,
+    MatSliderModule,
+    MatCardModule,
+
   ],
   declarations: [
     ProfileComponent,
@@ -44,8 +49,10 @@ import { CampaignService } from './campaign.service';
     StartCampaignForm1Component,
     StartCampaignForm2Component,
     StartCampaignConfirmComponent,
-    DeleteCampaignComponent, 
-   
+    DeleteCampaignComponent,
+
+
+
   ],
   exports: [
     ProfileComponent,
@@ -61,10 +68,16 @@ import { CampaignService } from './campaign.service';
     StartCampaignForm1Component,
     StartCampaignForm2Component,
     StartCampaignConfirmComponent,
-    DeleteCampaignComponent
+    DeleteCampaignComponent,
+    MatCardModule
+
   ],
 
-  providers: [CampaignService]
+
+  providers: [CampaignService,
+    campaingID
+  ]
+
 
 })
 export class CampaignModule { }

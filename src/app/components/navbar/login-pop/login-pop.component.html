@@ -1,21 +1,23 @@
-
+<div class="close_button">
+  <a (click)="onCloseConfirm()" ><i class="far fa-times-circle fa-2x"></i></a>
+  </div>
 <h1>login</h1>
 <h4>Already Have an Account?</h4>
 <div>
-<label>Enter Your email</label>
-<br>
-<form [formGroup]="logForm" #f (ngSubmit)="onSubmit()">
+  
+   <form [formGroup]="logForm" #f (ngSubmit)="onSubmit()">
+<label>Enter Your email:</label>
+<br>  
 <mat-input-container>
   <input matInput type="text" id="email" formControlName="email" >
 </mat-input-container>
+<br>
 
-
-
-    <label>password</label>
+    <label>password:</label>
     <br>
-    <mat-input-container>
-      <input matInput type="text" id="password" formControlName="password">
-    </mat-input-container>
+      <mat-input-container>
+        <input matInput type="text" id="password" formControlName="password">
+      </mat-input-container>
 
     <div mat-dialog-actions>
         <button mat-button class="popup-btn" (click)="onCloseConfirm()">Submit</button>

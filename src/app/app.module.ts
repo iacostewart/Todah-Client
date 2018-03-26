@@ -1,20 +1,55 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ViewEncapsulation } from '@angular/core';
+import {CdkTableModule} from '@angular/cdk/table';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { CampaignModule } from './campaign/campaign.module';
 import { AppRoutingModule } from './shared/app-routing.module';
 import { AdminModule } from './admin/admin.module';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatFormFieldModule, MatInputModule} from '@angular/material';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule, MatInputModule, MatSliderModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpModule } from '@angular/http';
+// import {MaterialModule} from '@angular/material';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
+import {MatCardContent} from '@angular/material';
 import 'hammerjs';
+import {
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatDividerModule,
+  MatExpansionModule,
+  MatGridListModule,
+  MatIconModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatStepperModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
 
 
+  
+} from '@angular/material';
 import { ScrollToModule } from 'ng2-scroll-to-el';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -25,15 +60,17 @@ import { FaqComponent } from './components/faq/faq.component';
 import { AboutComponent } from './components/about/about.component';
 import { PricingComponent } from './components/pricing/pricing.component';
 import { ContactComponent } from './components/contact/contact.component';
-
 import { RegistrationPopComponent } from './components/navbar/registration-pop/registration-pop.component';
 import { LoginPopComponent } from './components/navbar/login-pop/login-pop.component';
-
 import { CampaignService } from './campaign/campaign.service';
 import { RegistrationService } from './components/navbar/auth.service';
-// =======
+
+
+
 // import { PersonalCampaignComponent } from './personal-campaign/personal-campaign.component';
-// >>>>>>> Stashed changes
+
+
+
 
 
 
@@ -57,14 +94,17 @@ import { RegistrationService } from './components/navbar/auth.service';
     RegistrationPopComponent,
     LoginPopComponent,
     // PersonalCampaignComponent
-  
+
   ],
-entryComponents: [
-  RegistrationPopComponent,
-   LoginPopComponent
+  exports: [
+    // MatCardModule
   ],
-  
-   imports: [
+  entryComponents: [
+    RegistrationPopComponent,
+    LoginPopComponent
+  ],
+
+  imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
@@ -74,22 +114,71 @@ entryComponents: [
     MatFormFieldModule,
     FormsModule,
     HttpModule,
-    FormsModule, 
+    FormsModule,
+    MatSliderModule,
     ReactiveFormsModule,
+
+    // MaterialModule.forRoot(),
     ScrollToModule.forRoot(),
     BrowserAnimationsModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+
+
   ],
+  // schemas: [CUSTOM_ELEMENTS_SCHEMA],
 
 
   providers: [
-    CampaignService, 
-    RegistrationService
+    CampaignService,
+    RegistrationService,
+
 
   ],
 
-  bootstrap: [AppComponent ]
+  bootstrap: [
+    AppComponent
+  ],
+
+})
+@NgModule({
+exports: [
+  CdkTableModule,
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  // MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatStepperModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatDividerModule,
+  MatCardContent,
+  MatExpansionModule,
+  MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
+
+],
 })
 export class AppModule { }
 export class PizzaPartyAppModule { }

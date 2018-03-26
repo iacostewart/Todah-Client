@@ -19,6 +19,8 @@ import { Inject } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
 import { RegistrationService } from '../auth.service';
 
+
+
 @Component({
   selector: 'app-login-pop',
   templateUrl: './login-pop.component.html',
@@ -30,7 +32,7 @@ export class LoginPopComponent implements OnInit {
 
   constructor(
     private registrationService: RegistrationService,
-    public dialogRef: MatDialogRef<LoginPopComponent>, 
+    public dialogRef: MatDialogRef<LoginPopComponent>,
     private form: FormBuilder
   ) {
     this.createForm();
@@ -41,18 +43,17 @@ createForm() {
   this.logForm = this.form.group({
     'email': new FormControl(null, Validators.required),
     'password': new FormControl(null, Validators.required),
-  })
+  });
 }
 
-onCloseConfirm(){
+onCloseConfirm() {
   this.dialogRef.close();
 }
 
 onSubmit() {
   // console.log(this.campaignForm);
-  console.log("this is logForm",this.logForm)
-  this.registrationService.login(this.logForm.value)
-
+  console.log('this is logForm', this.logForm );
+  this.registrationService.login(this.logForm.value);
 }
 }
 

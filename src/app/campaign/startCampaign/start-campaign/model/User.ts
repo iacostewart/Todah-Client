@@ -1,12 +1,10 @@
 export interface Users {
-  password?:string;
+  password:string;
   is_superuser?:boolean;
-  username?:string;
-  firstname?:string;
-  lastname?:string;
-  email?:string;
+  username:string;
+  firstname:string;
+  lastname:string;
+  email:string;
   is_staff?:boolean;
   is_active?:boolean
 }
-
-

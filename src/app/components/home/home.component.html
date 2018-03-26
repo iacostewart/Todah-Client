@@ -1,26 +1,26 @@
-<div class="jumbotron" style="background-image: url('../../assets/jumbo.jpeg')">
+<div class="jumbotron" style="background-image: url('https://images2.imgbox.com/17/06/YjrwqNJr_o.jpg')">
   <div class="container" style="text-align: center">
     <h1 style="color: white">Todah</h1>
     <h3 style="color: white">Smaller Gifts, Bigger Impact</h3>
 
     <br>
-    <!-- Button to scroll down to promo video -->
     <p>
-      <button class="btn btn-lg" [scrollTo]="'#video'" [scrollDuration]="1500" [scrollOffset]="-200">Watch video!</button>
-    </p>
-   
+        <button class="btn btn-lg" [scrollTo]="'video'" [scrollDuration]="1500" [scrollOffset]="-200">Watch video!</button>
+      </p>
+
   </div>
 </div>
-<div class="container">
-  <div class="row">
+<!-- <div class="container">
+  <div class="row"> -->
 
+    
 
-
-    <!-- Promo video here -->
-    <div id="video">
-      <video width="800" height="500" id="videoPlayer" controls="controls">
-        <source src="../../../assets/video.mov" type="video/mp4">
-        <!-- <source src="../../../assets/video.mov" type="video/ogg"> -->
+<!-- Promo video here -->
+<div class="jumbotronv jumbotron-fluid">
+  <div class="container">
+    <video width="1200" height="800" id="videoPlayer" poster="../../../assets/poster.PNG"  controls="controls">
+      <video src="../../../assets/video.mov" type="video/mp4">
+        <source src="../../../assets/video.mov" type="video/ogg">
         <script>
           var videoPlayer = document.getElementById('videoPlayer');
 
@@ -40,28 +40,86 @@
           });
         </script>
       </video>
-    </div>
-
-
-
-    <!-- Comparison of different fundraising techniques and pathway to creating campaign here -->
-    <div class="col-md-12">
-
-    </div>
+    </video>
   </div>
 </div>
-<!-- pyramid -->
+  <!-- Button to scroll down to promo video -->
+ 
+
+<!-- 
+        Comparison of different fundraising techniques and pathway to creating campaign here -->
+
+
+<!-- Fundraising -->
+
 <div class='panel panel-default'>
   <div class='panel-body'>
-    <h1 class="text-center">Todah is Better than Crowdfunding</h1>
-    <br>
-    <br>
+    <div class="container">
+      <h1 class="text-center">Todah is Better than crowdfunding </h1>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-sm-6 text-center">
+          <img class="responsive" src="../../../assets/traditional.png" alt="traditional">
+        </div>
+        
+          <div class="col-sm-6">
+              <div class="tran">
+            <h1 class="text center">Traditional</h1>
+            <br>
+            <p id="traditional"> It doesn't take much to get you addicted. There are no limits in this world. Even trees need
+              a friend. We all need friends...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h1 class="text center">Crowdfunding</h1>
+  <div class="row">
+    <div class="col-sm-6">
+      <br>
+      <br>
+      <br>
+      <p id="crowfunding"> If what you're doing doesn't make you happy - you're doing the wrong thing. Maybe there's a little something happening
+        right here. </p>
+    </div>
+    <div class="col-sm-6 text-center">
+      <img class="responsive2" src="../../../assets/crowdfunding.png" alt="crowfunding">
+    </div>
+  </div>
+  <div class="panelT panel-default">
+    <div class="panel-body">
+      <h1 class="text-center">Todah</h1>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-sm-6 text-center">
+          <img class="responsive3" src="../../../assets/1.PNG" alt="todah">
+        </div>
+        <i class="fa fa-circle" style="margin-right:1%"></i>
 
-    <img src="../../../assets/pyramid2.jpg" alt="pyramid" class="center">
+        <i class="fa fa-circle" style="margin-right:1%"></i>
+
+        <i class="fa fa-circle" style="margin-right:1%"></i>
+        <div class="col-sm-6 text-center">
+          <img class="responsive4" src="../../../assets/2.PNG" alt="todah">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <p id="todah">You can create beautiful things - but you have to see them in your mind first. It's important to me that you're
+            happy. If what you're doing doesn't make you happy - you're doing the wrong thing. Maybe there's a little something
+            happening right here. Exercising the imagination, experimenting with talents, being creative; these things, to
+            me, are truly the windows to your soul. Be brave..</p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
+
 <!-- easy as 123 -->
-<div class="panel panel-default">
+<div class="panel123 panel-default">
   <div class="panel-body">
     <h1 class="text-center">Campaigns as Easy as 1-2-3</h1>
     <br>
@@ -72,7 +130,8 @@
         <span class="glyphicon  glyphicon-globe fa-5x"></span>
         <h3>Set Up a Community</h3>
         <p>There is no such thing as a "magical" online campaign. It is
-          <strong>ALWAYS</strong> about who you know! We will help you set up a community, and guide you to success. </p>
+          <strong>ALWAYS</strong> about who you know! We will help you set up a community, and guide you to success.
+        </p>
       </div>
       <div class="col-sm-4 text-center">
         <span class="glyphicon glyphicon-home fa-5x"></span>
@@ -82,7 +141,7 @@
           <strong>UNIQUE</strong> (patent pending) method, campaigns will nver be as easy as it is with Todah!</p>
 
       </div>
-      <div class="col-sm-4 text-center">
+      <div class="col-sm-4 text-center ">
         <span class="glyphicon glyphicon-piggy-bank fa-5x"></span>
         <h3>Immediately Get your Contributions!</h3>
         <p>With Todah, there is
@@ -93,41 +152,133 @@
     </div>
   </div>
 </div>
-<div class="container">
-  <div class="row">
-    <div class="col-md-2">
-
-      <img src="../../../assets/girl4.jpg" alt="camille1" style="height:150px; width:150px; ">
-    </div>
-    <div class="col-md-4">
-      <br>
-      <br>
-      <p>"I had no idea raising this much money would happen so fast! Todah will always be the fundraising site I will use!
-        Thank you, Katherine Brooks!" -Kelly</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-2">
-      <img src="../../../assets/guy7.jpg" alt="streetstyle" style=" height:150px; width:150px; ">
-    </div>
-    <div class="col-md-4">
-      <br>
-      <br>
-      <p>"I have been fundraising both the old-school way, and through Go Fund Me! They have never delivered like Todah. Never
-        again, Go Fund Me! I'm here to stay!"-Bill</p>
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-2">
-
-      <img src="../../../assets/girl6.jpg" alt="other" style=" height:150px; width:150px;">
-    </div>
-    <div class="col-md-4">
-      <p>"Todah is great! It is so easy to set up and use. I just send a link to all the people in my community and, BAM!, They
-        use it and my non-profit gets the help it needs!"-Jan</p>
 
 
+
+<!-- Campaigners -->
+
+<div class="panelc panel-default">
+  <div class="panel-body">
+    <h1 class id="happy">Happy Campaigners </h1>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+      <div class="first">
+        <div class="col-sm-4 text-center">
+          <h3>"I had no idea raising this much money would happen so fast! Todah will always be the fundraising site I will use!
+            Thank you, Katherine Brooks!"</h3>
+          <br>
+          <p>
+            <img src="../../../assets/girl4.jpg" alt="camille1" style="height:85px; width:85px; border-radius: 50%; "> Kelly</p>
+        </div>
+      </div>
+      <div class="sec">
+        <div class="col-sm-4 text-center">
+          <h3>"I have been fundraising both the old-school way, and through Go Fund Me! They have never delivered like Todah.
+            Never again, Go Fund Me! I'm here to stay!"</h3>
+          <br>
+          <p>
+            <img src="../../../assets/guy7.jpg" alt="streetstyle" style=" height:85px; width:85px; border-radius: 50%; "> Bill</p>
+
+        </div>
+      </div>
+      <div class="third">
+        <div class="col-sm-4 text-center">
+          <h3>"Todah is great! It is so easy to set up and use. I just send a link to all the people in my community and, BAM!,
+            They use it and my non-profit gets the help it needs!"</h3>
+          <p>
+            <img src="../../../assets/girl6.jpg" alt="other" style=" height:85px; width:85px; border-radius: 50%;"> Jan</p>
+        </div>
+      </div>
     </div>
+
   </div>
 </div>
+<div class="footer">
+    <button class="btn btn-lg" style="background-color: #FCC63C">Start Campaign</button>
+  </div>
+
+
+
+
+
+<!-- Fundraising -->
+
+<!-- <div class='panel panel-default'>
+        <div class='panel-body'>
+          <div class="container">
+            <h1 class="text-center">Todah is Better than crowdfunding </h1>
+            <br>
+            <hr>
+            <br>
+            <br>
+            <br>
+            <div class="row">
+              <div class="col-sm-6 text-center">
+                <img class="responsive" src="../../../assets/traditional.png" alt="traditional">
+              </div>
+              <div class="tran">
+  
+  
+                 <div class="col-sm-6">
+                  <h1 class="text center">Traditional</h1>
+                  <br>
+                  <br>
+                  <br>
+                  <p id="traditional">icted to painting. It doesn't take much to get you addicted. There are no limits in this world. Even trees
+                    need a friend. We all need friends...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+   
+        <div class="row">
+          <div class="col-sm-6" style="background-color: #FCC63C ">
+  
+            <h1 class="text center">Crowdfunding</h1>
+            <br>
+            <br>
+            <br>
+            <p id="crowfunding"> If what you're doing doesn't make you happy - you're doing the wrong thing. Maybe there's a little something happening
+              right here. </p>
+          </div>
+          <div class="col-sm-6 text-center">
+            <img class="responsive2" src="../../../assets/crowdfunding.png" alt="crowfunding">
+          </div>
+        </div>
+        </div>
+        <div class="panelT panel-default">
+          <div class="panel-body">
+            <h1 class="text-center">Todah</h1>
+            <br>
+            <hr>
+            <br>
+            <br>
+            <div class="row">
+              <div class="col-sm-6 text-center">
+                <img class="responsive3" src="../../../assets/1.PNG" alt="todah">
+              </div>
+              <i class="fa fa-circle" style="margin-right:1%"></i>
+  
+              <i class="fa fa-circle" style="margin-right:1%"></i>
+  
+              <i class="fa fa-circle" style="margin-right:1%"></i>
+              <div class="col-sm-6 text-center">
+                <img class="responsive4" src="../../../assets/2.PNG" alt="todah">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12 text-center">
+                <p id="todah">You can create beautiful things - but you have to see them in your mind first. It's important to me that you're
+                  happy. If what you're doing doesn't make you happy - you're doing the wrong thing. Maybe there's a little
+                  something happening right here. Exercising the imagination, experimenting with talents, being creative; these
+                  things, to me, are truly the windows to your soul. Be brave..</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
