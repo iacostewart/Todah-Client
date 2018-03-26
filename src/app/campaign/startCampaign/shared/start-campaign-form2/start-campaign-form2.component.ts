@@ -21,10 +21,8 @@ import 'hammerjs';
   selector: 'app-start-campaign-form2',
   templateUrl: './start-campaign-form2.component.html',
   styleUrls: ['./start-campaign-form2.component.css'],
-  encapsulation: ViewEncapsulation.None
-
-
-  // perserveWhitespaces: boolean,
+  encapsulation: ViewEncapsulation.None,
+  preserveWhitespaces: false,
 
 
 })
@@ -41,20 +39,25 @@ export class StartCampaignForm2Component  {
   invert = false;
   max = 5;
   min = 0;
-  showTicks = true;
+  showTicks = true ;
   step: 1;
-  thumbLabel = false ;
+  thumbLabel = true;
   showThumb  = true ;
   value: 0;
   vertical: false;
 
 
-  constructor(private campaignService: CampaignService, private form: FormBuilder, private router: Router) {
-    this.createForm(); }
 
 
-  // ngOnInit() {
-  // }
+constructor(private campaignService: CampaignService, private form: FormBuilder, private router: Router) {
+    this.createForm();
+  }
+
+
+
+  // tslint:disable-next-line:use-life-cycle-interface
+  ngOnInit() {
+  }
   createForm() {
     this.campaignPg2 = this.form.group({
       'goal': new FormControl(50000),
@@ -67,27 +70,28 @@ export class StartCampaignForm2Component  {
 
     });
 }
-
-
-
-  // get tickInterval(): number | 'auto' {
-  //   return this.showTicks ? (this.autoTicks ? 'auto' : this._tickInterval) : 0;
-  // }
-  // set tickInterval(v) {
-  //   this._tickInterval = Number(v);
-  // }
-//   // // private _tickInterval = 1;
-// }
-onSubmit() {
-  // console.log(this.campaignForm);
-  this.campaignService.storeCampaign(this.campaignPg2.value)
-    .subscribe(
-            (response) => this.router.navigate(['/startCampaign-form3']),
-    // (response) => console.log(response),
-    (error) => console.log(error)
-    );
+get tickInterval(): number | 'auto' {
+  return this.showTicks ? (this.autoTicks ? 'auto' : this._tickInterval) : 0;
+}
+set tickInterval(v) {
+  this._tickInterval = Number(v);
+}
+// tslint:disable-next-line:member-ordering
+private _tickInterval = 1;
 }
 
 
-}
+
+
+
+// function newFunction() {
+//   onsubmit(this: Window, ev:Event) => any;
+//   {
+//     // console.log(this.campaignForm);
+//     this.campaignService.storeCampaign(this.campaignPg2.value)
+//       .subscribe((response) => this.router.navigate(['/startCampaign-form3']),
+//         // (response) => console.log(response),
+//         (error) => console.log(error));
+//   }
+
 
