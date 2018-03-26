@@ -1,4 +1,4 @@
-import { NgModule, ViewEncapsulation,Component } from '@angular/core';
+import { NgModule, ViewEncapsulation, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CampaignRoutingModule } from '../shared/campaign-routing.module';
 import {MatSliderModule} from '@angular/material/slider';
@@ -50,7 +50,7 @@ import { campaingID } from './globals';
     StartCampaignForm2Component,
     StartCampaignConfirmComponent,
     DeleteCampaignComponent,
-    
+
 
 
   ],
@@ -69,12 +69,15 @@ import { campaingID } from './globals';
     StartCampaignForm2Component,
     StartCampaignConfirmComponent,
     DeleteCampaignComponent,
-    MatCardModule,
+    MatCardModule
+
   ],
+
 
   providers: [CampaignService,
     campaingID
   ]
+
 
 })
 export class CampaignModule { }

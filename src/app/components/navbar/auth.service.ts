@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs/observable';
+import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 import { Users } from '../../campaign/startCampaign/start-campaign/model/User';
 import { Token } from '../../campaign/startCampaign/start-campaign/model/Token';

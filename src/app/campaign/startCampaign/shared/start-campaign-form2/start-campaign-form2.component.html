@@ -4,10 +4,10 @@
     <h2 style="text-align: center">Create Your Campaign!</h2>
     <h3>Contribution Information (2/3)</h3>
   </div>
-    <!-- Form -->
-    <!-- <form [formGroup]="campaignForm" #f="ngForm" (ngSubmit)="onSubmit(f)"> -->
+  <!-- Form -->
+  <!-- <form [formGroup]="campaignForm" #f="ngForm" (ngSubmit)="onSubmit(f)"> -->
 
-      <!-- <div>
+  <!-- <div>
         <div class="form-group">
           <label>Type and Select Organization Name (or 501(c)(3)number)
             <sup>*</sup>
@@ -16,54 +16,67 @@
           
         </div> -->
 
-        <!-- <div class="form-group">
+  <!-- <div class="form-group">
           <label>Chapter Name</label>
           <input type="text" placeholder="Organization Chapter Name or Number (if applicable)" id="organization_chapter_name" formControlName="organization_chapter_name"
             class="form-control">
         </div> -->
+
         
 <form [formGroup]="campaignPg2" #f="ngForm" (ngSubmit)='onSubmit(f)'>
   <div class="row">
     <div class="col-md-12">
       <label>Campaign Goal*</label>
       </div>
-      </div>
-      <div class="row">
-          <div class="form-group">
-              <input type="text" formControlName="goal" placeholder="$0.00" class="form-control">
-            </div>
+
       </div>
 
       <div class="row">
-        <div class="col-md-7">
-          Pre-Campaign Funds Raised
-        </div>
-        <div class="col-md-2">
-          End Date*
-        </div>
-        <div class="col-md-3">
           <div class="form-group">
-            <input type="checkbox" class="mat-checkbox-input" >
-            Make this a Monthy Campaign!
-          </div>
+
+              <input type="text" formControlName="goal" placeholder="$0.00" class="form-control">
+
+            </div>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-7">
+        Pre-Campaign Funds Raised
+      </div>
+      <div class="col-md-2">
+        End Date*
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <input type="checkbox" class="mat-checkbox-input"> Make this a Monthy Campaign!
         </div>
       </div>
+    </div>
+
 
       <div class="row">
         <div class="col-md-5">
           <div class="form-group">
+
             <input type="text" formControlName="initial_funded" class="form-control align-left" placeholder="$0">
+
           </div>
         </div>
         <div class="col-md-2"></div>
         <div class="col-md-5">
           <div class="form-group">
+
             <input type="date"  class="form-control align-right" placeholder="MM/DD/YYY" >
+
           </div>
+
         </div>
       </div>
+    </div>
 
-      <!-- <input type="text" id="goal" placeholder="$50,000">
+    <!-- <input type="text" id="goal" placeholder="$50,000">
     
     </div>
     <div class="col-md-3">
@@ -75,8 +88,12 @@
     </div>
   </div> -->
 
+  <hr>
 
-  
+
+
+
+
 
   
   <div class="form-group">
@@ -88,10 +105,11 @@
   </div>
   </div>
 
-  
 
 
-    <div class="col-md-8">
+
+
+   <div class="col-md-8">
       <!-- Modal of slider information -->
       <div style="text-align: center">
         <button type="button" class="btn btn-default">How do these Sliders Work?</button>
@@ -220,12 +238,9 @@
       </mat-slider>
     </mat-card-content>
       </mat-card>
-    
-  
-
+      
       <div class="row">
         <!-- <form action=''> -->
-         
         <!-- </form> -->
         <div class="col-md-4">
           <button type="submit" class="btn btn-warning">LAUNCH YOUR CAMPAIGN!</button>
@@ -240,12 +255,12 @@
     </form> 
 
 
-    <!-- Calulator Card   this is the sidebar section bellow-->
-    <div class="col-md-4">
+  <!-- Calulator Card   this is the sidebar section bellow-->
+  <!-- <div class="col-md-4"> -->
 
-<!-- 
+  <!-- 
     Calulator Card -->
-     <!-- <div class="col-md-4">
+  <!-- <div class="col-md-4">
 
       <h3>Let Us Do the Math!</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, vero impedit non saepe minus optio quia voluptatem quae dignissimos necessitatibus facilis deserunt? Obcaecati autem saepe cumque ipsa distinctio adipisci repellendus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque exercitationem architecto fugiat, magni cupiditate impedit ratione sunt possimus? Voluptatibus quibusdam obcaecati numquam, dolorem consectetur provident magnam labore nihil placeat ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, repudiandae? Animi eos sapiente esse, facere fugiat fuga deleniti, explicabo, provident minus fugit vero autem consectetur quo magnam? Ad, facere! Id!</p>
@@ -256,20 +271,3 @@
          <button type="button" class="btn btn-default">Preview your Campaign!</button>
       </div>
     </div>
-
-    <!-- this is the end of the side bar section -->
-     <!-- outside mat-card -->
-  
-</div>
-<br><br><br>
-  
-
-
-
-
-
-
-
-<br><br><br> 
-  
-

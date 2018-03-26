@@ -30,10 +30,11 @@ export class StartCampaignForm1Component implements OnInit {
   textCount = '';
   maxLength = 150;
   characterLeft = this.maxLength;
+
   longDes = '';
   campLongText = 500;
   textRemaining = this.campLongText;
-  
+
 
 
 
@@ -123,14 +124,14 @@ export class StartCampaignForm1Component implements OnInit {
 
 
 
-  count(msg){
-    if(this.maxLength >= msg.length){
+  count(msg) {
+    if (this.maxLength >= msg.length) {
       this.characterLeft = (this.maxLength) - (msg.length);
-    }
-    else{
+    } else {
       this.textCount = msg.substr(0, msg.length - 1);
     }
-  };
+  }
+
 
   longCount(msg){
     if(this.campLongText >= msg.length){
@@ -143,12 +144,14 @@ export class StartCampaignForm1Component implements OnInit {
 
 
 
+
  
   
 
   onSubmit() {
     // window.localStorage.campId = ""
     console.log(this.campaignForm.value);
+
      this.campaignService.storeCampaign(this.campaignForm.value)
   .subscribe((campId: CampId) => {
     this.router.navigate(["/startCampaign-form2"]),
