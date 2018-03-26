@@ -1,4 +1,4 @@
-import { NgModule, ViewEncapsulation,Component } from '@angular/core';
+import { NgModule, ViewEncapsulation, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CampaignRoutingModule } from '../shared/campaign-routing.module';
 import {MatSliderModule} from '@angular/material/slider';
@@ -21,6 +21,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 // import { ImageUploadModule } from "angular2-image-upload";
 import { HttpClientModule } from '@angular/common/http';
 import { CampaignService } from './campaign.service';
+import { campaingID } from './globals';
 
 
 @NgModule({
@@ -49,7 +50,7 @@ import { CampaignService } from './campaign.service';
     StartCampaignForm2Component,
     StartCampaignConfirmComponent,
     DeleteCampaignComponent,
-    
+
 
 
   ],
@@ -68,10 +69,15 @@ import { CampaignService } from './campaign.service';
     StartCampaignForm2Component,
     StartCampaignConfirmComponent,
     DeleteCampaignComponent,
-    MatCardModule,
+    MatCardModule
+
   ],
 
-  providers: [CampaignService]
+
+  providers: [CampaignService,
+    campaingID
+  ]
+
 
 })
 export class CampaignModule { }
