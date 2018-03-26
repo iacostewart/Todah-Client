@@ -4,7 +4,12 @@ import { CampaignService } from '../../../campaign.service';
 import { Router } from '@angular/router';
 import { Campaign } from '../../start-campaign/model/Campaign';
 
+
+let userId = window.localStorage.userId
+
+
 interface CampId {
+
   campId: number;
 }
 
@@ -22,10 +27,11 @@ export class StartCampaignForm1Component implements OnInit {
   textCount = '';
   maxLength = 150;
   characterLeft = this.maxLength;
+
   longDes = '';
   campLongText = 500;
   textRemaining = this.campLongText;
-  
+
 
 
 
@@ -102,7 +108,7 @@ export class StartCampaignForm1Component implements OnInit {
         'published_email_sent': new FormControl(true),
         'client_is_paying_platform_fees': new FormControl(true)
       });
-     
+
 
   }
 
@@ -121,14 +127,14 @@ export class StartCampaignForm1Component implements OnInit {
 
 
 
-  count(msg){
-    if(this.maxLength >= msg.length){
+  count(msg) {
+    if (this.maxLength >= msg.length) {
       this.characterLeft = (this.maxLength) - (msg.length);
-    }
-    else{
+    } else {
       this.textCount = msg.substr(0, msg.length - 1);
     }
-  };
+  }
+
 
 
   longCount(msg){
@@ -142,10 +148,10 @@ export class StartCampaignForm1Component implements OnInit {
 
 
 
-  
+
 
   onSubmit() {
-    window.localStorage.campId = ""
+    window.localStorage.campId = '';
      this.campaignService.storeCampaign(this.campaignForm.value)
   .subscribe((campId: CampId) => {
     this.router.navigate(['/startCampaign-form2']),
