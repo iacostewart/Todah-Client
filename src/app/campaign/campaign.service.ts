@@ -19,7 +19,7 @@ export class CampaignService {
 
 
     constructor(private http: HttpClient, private ar: ActivatedRoute, private router: Router) {}
-    
+
 
     storeCampaign(campaign: Campaign) {
         return this.http.post(`${api_url}/campaigns`, campaign, { headers : this.getHeaders()});
@@ -38,30 +38,44 @@ export class CampaignService {
         return this.http.get(`${api_url}/campaigns/${id}`, { headers : this.getHeaders()});
     }
 
-    postFile(fileToUpload: File): Observable<object> {
+    postFile(campaignImageFile: File): Observable<any> {
         const formData: FormData = new FormData();
-        formData.append('fileKey', fileToUpload, fileToUpload.name);
+
+        formData.append('fileKey', campaignImageFile, campaignImageFile.name);
         return this.http.post(`${api_url}/campaigns`, formData, {  headers : this.getHeaders() })
+
         //   .map(() => { return true; })
         //   .catch((e) => this.handleError(e));
     }
 
+    // postFile(fileToUpload: File): Observable<FormData> {
+    //     console.log('here');
+    //     console.log(fileToUpload, 'file from service')
+    //     const endpoint = 'your-destination-url';
+    //     const formData: FormData = new FormData();
+    //     console.log(formData);
+    //     formData.append('fileKey', fileToUpload, fileToUpload.name);
+    //     console.log(formData);
+    //     return new Observable<FormData>((observer) => {
+    //         observer.next(formData);
+    //     });
+
     deleteCampaign(id: number) {
 
 
-        console.log("delete my campaign")
-        console.log("CAMP ID IN LOCAL", id)
-        window.location.reload()
-        this.router.navigate(['/home'])
-        return this.http.delete(`${api_url}/campaigns/${id}`,{ headers : this.getHeaders()});
-   
+        console.log('delete my campaign');
+        console.log('CAMP ID IN LOCAL', id);
+        window.location.reload();
+        this.router.navigate(['/home']);
+        return this.http.delete(`${api_url}/campaigns/${id}`, { headers : this.getHeaders()});
+
     }
-   
+
 
 }
-  
-    
+
+
 
         // window.localStorage.setItem("campId", "")
-      
+
 

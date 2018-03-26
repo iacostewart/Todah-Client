@@ -27,10 +27,12 @@
       <div class="col-md-12">
         <label>Campaign Goal*</label>
       </div>
-    </div>
-    <div class="row">
-      <div class="form-group">
-        <input type="text" id="goal" placeholder="$0.00" class="form-control">
+
+      <div class="row">
+          <div class="form-group">
+              <input type="text" id="goal" placeholder="$0.00" class="form-control" formControlName="goal">
+            </div>
+
       </div>
     </div>
 
@@ -48,16 +50,19 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-md-5">
-        <div class="form-group">
-          <input type="text" class="form-control align-left" placeholder="$0">
+
+      <div class="row">
+        <div class="col-md-5">
+          <div class="form-group">
+            <input  type="text" class="form-control align-left" placeholder="$0" formControlName="initial_funds">
+          </div>
         </div>
-      </div>
-      <div class="col-md-2"></div>
-      <div class="col-md-5">
-        <div class="form-group">
-          <input type="date" class="form-control align-right" placeholder="MM/DD/YYY">
+        <div class="col-md-2"></div>
+        <div class="col-md-5">
+          <div class="form-group">
+            <input type="date" class="form-control align-right" placeholder="MM/DD/YYY" formControlName='end_date' >
+          </div>
+
         </div>
       </div>
     </div>
@@ -74,89 +79,59 @@
     </div>
   </div> -->
 
+  <hr>
 
 
 
-    <!-- <div class="col-md-8">
-      <! Modal of slider information -->
-    <div style="text-align: center">
-      <button type="button" class="btn btn-default">How do these Sliders Work?</button>
+
+
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+      <!-- Modal of slider information -->
+      <div style="text-align: center">
+        <button type="button" class="btn btn-default">How do these Sliders Work?</button>
+      </div>
+      <br>
     </div>
-    <hr>
+
+    <br>
+    <br>
+    <br>
     <br>
 
-    <!-- inside mat card starts here -->
-
-
-    <!-- Sliders -->
-    <mat-card class="You">
-        <mat-card-content>
-          <h2 class="example-h2"></h2>
-          
-            <div class="colored">
-          <mat-slider
-          class="example-margin3"
-            
-              [invert]="invert"
-              [max]="max"
-              [min]="min"
-              [step]="step"
-              [thumb-label]="thumbLabel"
-              [tick-interval]="tickInterval"          
-              [vertical]="vertical">
-          </mat-slider>
-        </div>
-        </mat-card-content>
-     
-      </mat-card>
-      <mat-card class="You">
-          <mat-card-content>
-            <h2 class="example-h2"></h2>
-      <mat-slider
-              class="example-margin3"
-              [disabled]="disabled"
-              [invert]="invert"
-              [max]="min"
-              [min]="max"
-              [step]="step"
-              [thumb-label]="thumbLabel"
-              [tick-interval]="tickInterval"
-              [vertical]="vertical">
-          </mat-slider>
-        </mat-card-content>
-      </mat-card>
-
-
-
-
-
-
-
-
-
-
-
-  <div class="row">
-    <!-- <form action=''> -->
-
-    <!-- </form> -->
-    <div class="col-md-4">
-      <a routerLink="/startCampaign-confirmation">
-        <button type="button" class="btn btn-warning">LAUNCH YOUR CAMPAIGN!</button>
-      </a>
-    </div>
-    <div class="col-md-4">
-      <a routerLink="/profile">
-        <button type="button" class="btn btn-primary">Save for Later</button>
-      </a>
-    </div>
-    <div class="col-md-4">
-      <a routerLink="/deleteCampaign">
-        <button type="button" class="btn btn-danger">Delete this Fundraiser :(</button>
-      </a>
-    </div>
   </div>
 
+      <!-- inside mat card starts here -->
+      
+   
+      
+
+    
+    
+  
+
+      <div class="row">
+        <!-- <form action=''> -->
+        <!-- </form> -->
+        <div class="col-md-4">
+          <button mat-button class="btn btn-warning popup-btn">LAUNCH YOUR CAMPAIGN!</button>
+        </div>
+        <div class="col-md-4">
+          <a routerLink="/profile"><button type="button" class="btn btn-primary">Save for Later</button></a>
+        </div>
+        <div class="col-md-4">
+          <a routerLink="/deleteCampaign"><button type="button" class="btn btn-danger">Delete this Fundraiser :(</button></a>
+        </div>
+      </div>
+    </form>
+
+
+    </form>
+    </div>
 
 
 
@@ -168,9 +143,7 @@
 
 
 
-
-
-
+    <!-- Calulator Card   this is the sidebar section bellow-->
 
 
 
@@ -195,14 +168,23 @@
       </div>
     </div>
 
-    <!-s is the end of the side bar section -->
-  <!-- outside mat-card -->
+
+
+
+
+
+  
+
+
+
 
   <!-- </div> -->
 
+    
 
 
-<!--  Old slider... Not sure if I will still need this or not
+
+ Old slider... Not sure if I will still need this or not
 
   <mat-card class="You">
       <mat-card-content>
@@ -262,4 +244,26 @@
       </mat-card-content>
     </mat-card>
 
-  </form>  -->
+  </form> 
+     [ngStyle]=\"_trackFillStyles\"
+
+     [ngStyle]=\"_trackBackgroundStyles\"
+
+     [ngStyle]=\"_ticksStyles\"
+
+     [ngStyle]=\"_thumbContainerStyles\"
+      
+
+#sliderWrapper
+"mat-slider-wrapper"
+"mat-slider-track-wrapper"
+"mat-slider-track-background"
+"mat-slider-track-fill"
+"mat-slider-ticks-container"
+"mat-slider-ticks"
+"mat-slider-thumb-container"
+"mat-slider-focus-ring"
+"mat-slider-thumb"
+"mat-slider-thumb-label"
+"mat-slider-thumb-label-text" -->
+

@@ -1,4 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+/* @import "@angular/material/prebuilt-themes/indigo-pink.css"; */
+/* @import './custom-theme'; */
+
+
+
+.example-margin3 {
+  width:800px;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  outline: none;
+  vertical-align: middle;
+}
+
 
 
 /* @import "~@angular/material/prebuilt-themes/indigo-pink.css";  */
@@ -14,3 +28,4 @@ dialog .mat-dialog-container {
     margin: 0px;
 
   }
+

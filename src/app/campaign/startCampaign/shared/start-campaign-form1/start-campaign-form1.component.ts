@@ -4,7 +4,12 @@ import { CampaignService } from '../../../campaign.service';
 import { Router } from '@angular/router';
 import { Campaign } from '../../start-campaign/model/Campaign';
 
+
+let userId = window.localStorage.userId
+
+
 interface CampId {
+
   campId: number;
 }
 
@@ -20,9 +25,13 @@ export class StartCampaignForm1Component implements OnInit {
   @ViewChild('MainImage') User_Image;
 
   textCount = '';
-  maxLength = 125;
+  maxLength = 150;
   characterLeft = this.maxLength;
-  
+
+  longDes = '';
+  campLongText = 500;
+  textRemaining = this.campLongText;
+
 
 
 
@@ -56,6 +65,7 @@ export class StartCampaignForm1Component implements OnInit {
         // 'twitter': new FormControl(null),
         // 'instagram': new FormControl(null),
         // 'youtube': new FormControl(null),
+
 
         'project_image_thumb_url': new FormControl(null),
         'creator_id': new FormControl(2),
@@ -98,28 +108,50 @@ export class StartCampaignForm1Component implements OnInit {
         'published_email_sent': new FormControl(true),
         'client_is_paying_platform_fees': new FormControl(true)
       });
-     
+
+
+  }
+
+  fileInput(files: FileList) {
+    console.log('file:', files);
+    // this.campaignImageFile = files.item(0);
+    this.campaignImageFile = files.item[0];
+    this.campaignService.postFile(this.campaignImageFile).subscribe((data: FormData) => {
+      console.log(data);
+    console.log(data.has('filekey'), 'in subscribe');
+      }, error => {
+        console.log(error);
+      });
+}
+
+
+
+
+  count(msg) {
+    if (this.maxLength >= msg.length) {
+      this.characterLeft = (this.maxLength) - (msg.length);
+    } else {
+      this.textCount = msg.substr(0, msg.length - 1);
+    }
   }
 
 
 
-
-
-
-  count(msg){
-    if(this.maxLength >= msg.length){
-      this.characterLeft = (this.maxLength) - (msg.length);
+  longCount(msg){
+    if(this.campLongText >= msg.length){
+      this.textRemaining = (this.campLongText) - (msg.length);
     }
     else{
-      this.textCount = msg.substr(0, msg.length - 1);
+      this.longDes = msg.substr(0, msg.length - 1);
     }
   };
 
 
-  
+
+
 
   onSubmit() {
-    window.localStorage.campId = ""
+    window.localStorage.campId = '';
      this.campaignService.storeCampaign(this.campaignForm.value)
   .subscribe((campId: CampId) => {
     this.router.navigate(['/startCampaign-form2']),
