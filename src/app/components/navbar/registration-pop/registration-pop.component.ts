@@ -28,7 +28,7 @@ export class RegistrationPopComponent implements OnInit {
 
   constructor(
 
-    public dialogRef: MatDialogRef<RegistrationPopComponent>, 
+    public dialogRef: MatDialogRef<RegistrationPopComponent>,
     private form: FormBuilder,
     private registrationService: RegistrationService
   ) {

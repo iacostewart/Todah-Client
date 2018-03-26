@@ -1,31 +1,31 @@
-
-
-.align-right {
-    direction: rtl;
-    justify-content: flex-end;
-}
-
 .example-h2 {
-    margin: 10px;
+    margin: 0px;
   }
   
-  .example-section3 {
+  /* .example-section3 {
     display: flex;
     align-content: center;
     align-items: center;
     height: 60px;
-  }
+  } */
   
   .example-margin {
-    margin: 10px;
+    margin: 0px;
 
-    
   }
-  .mat-slider {
-      width:700px;
+/* 
+  .example-margin3 {
+    width:800px;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    outline: none;
+    vertical-align: middle;
   }
+   */
 
  
+
 
 /* 
   [ngStyle]=\"_ticksContainerStyles\"

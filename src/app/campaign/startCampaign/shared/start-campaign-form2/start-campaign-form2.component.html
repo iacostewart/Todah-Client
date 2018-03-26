@@ -75,22 +75,31 @@
     </div>
   </div> -->
 
+  <hr>
 
-  
+
+
 
 
 
 
 <div class="row">
     <div class="col-md-12">
+
       <!-- Modal of slider information -->
       <div style="text-align: center">
         <button type="button" class="btn btn-default">How do these Sliders Work?</button>
       </div>
-      <hr>
       <br>
     </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
   </div>
+
       <!-- inside mat card starts here -->
       
       
@@ -101,19 +110,22 @@
   <mat-card class="You">
     <mat-card-content>
       <h2 class="example-h2"></h2>
-  
+      
+        <div class="colored">
       <mat-slider
       class="example-margin3"
-          [disabled]="disabled"
+        
           [invert]="invert"
-          [max]="100"
-          [min]="0"
+          [max]="max"
+          [min]="min"
           [step]="step"
           [thumb-label]="thumbLabel"
-          [tick-interval]="tickInterval"
+          [tick-interval]="tickInterval"          
           [vertical]="vertical">
       </mat-slider>
+    </div>
     </mat-card-content>
+ 
   </mat-card>
   <mat-card class="You">
       <mat-card-content>
@@ -122,10 +134,11 @@
           class="example-margin3"
           [disabled]="disabled"
           [invert]="invert"
-          [max]="100"
-          [min]="0"
+          [max]="min"
+          [min]="max"
           [step]="step"
           [thumb-label]="thumbLabel"
+          
           [tick-interval]="tickInterval"
           [vertical]="vertical">
       </mat-slider>
@@ -138,10 +151,11 @@
           class="example-margin3"
           [disabled]="disabled"
           [invert]="invert"
-          [max]="100"
-          [min]="0"
+          [max]="max"
+          [min]="min"
           [step]="step"
           [thumb-label]="thumbLabel"
+         
           [tick-interval]="tickInterval"
           [vertical]="vertical">
       </mat-slider>
@@ -158,6 +172,7 @@
           [min]="0"
           [step]="step"
           [thumb-label]="thumbLabel"
+          
           [tick-interval]="tickInterval"
           [vertical]="vertical">
       </mat-slider>
@@ -213,6 +228,12 @@
       </mat-slider>
     </mat-card-content>
       </mat-card>
+      <br>
+      <br>
+      <br>
+      
+
+    
     
   
 
@@ -229,13 +250,13 @@
           <a routerLink="/deleteCampaign"><button type="button" class="btn btn-danger">Delete this Fundraiser :(</button></a>
         </div>
       </div>
-    
+    </form>
 
     </form>
     </div>
 
     <!-- Calulator Card   this is the sidebar section bellow-->
-    
+
 
 <!-- 
     Calulator Card -->

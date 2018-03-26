@@ -6,7 +6,6 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialog, MatDialogRef} from '@angular/material';
-
 import {RouterModule} from '@angular/router';
 import {CommonModule} from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -26,10 +25,8 @@ import 'hammerjs';
   selector: 'app-start-campaign-form2',
   templateUrl: './start-campaign-form2.component.html',
   styleUrls: ['./start-campaign-form2.component.css'],
-  encapsulation: ViewEncapsulation.None
-
-
-  // perserveWhitespaces: boolean,
+  encapsulation: ViewEncapsulation.None,
+  preserveWhitespaces: false,
 
 
 })
@@ -44,22 +41,29 @@ export class StartCampaignForm2Component {
   autoTicks = false;
   disabled = false;
   invert = false;
-  max = 100;
+  max = 5;
   min = 0;
+
+  showTicks = true;
   step: 18;
   thumbLabel = true;
-  value: 18;
+  showThumb  = true ;
+  value: 0;
   vertical: false;
 
 
-  constructor(private campaignService: CampaignService,
-     private form: FormBuilder,
-      private router: Router
-    ) {
-    this.createForm(); 
+
+
+constructor(private campaignService: CampaignService, private form: FormBuilder, private router: Router) {
+    this.createForm();
   }
 
-   ngOnInit() {
+
+
+  // tslint:disable-next-line:use-life-cycle-interface
+  ngOnInit() {
+
+
   }
   createForm() {
     this.campaignPg2 = this.form.group({
@@ -74,6 +78,10 @@ export class StartCampaignForm2Component {
 
     });
 }
+
+
+
+
 onSubmit() {
   console.log(this.campaignPg2)
   this.router.navigate(['startCampaign-confirmation']);
@@ -98,6 +106,16 @@ onSubmit() {
 
 
 
-}
+
+// function newFunction() {
+//   onsubmit(this: Window, ev:Event) => any;
+//   {
+//     // console.log(this.campaignForm);
+//     this.campaignService.storeCampaign(this.campaignPg2.value)
+//       .subscribe((response) => this.router.navigate(['/startCampaign-form3']),
+//         // (response) => console.log(response),
+//         (error) => console.log(error));
+//   }
+
 
 
