@@ -38,13 +38,27 @@ export class CampaignService {
         return this.http.get(`${api_url}/campaigns/${id}`, { headers : this.getHeaders()});
     }
 
-    postFile(fileToUpload: File): Observable<object> {
+    postFile(campaignImageFile: File): Observable<any> {
         const formData: FormData = new FormData();
-        formData.append('fileKey', fileToUpload, fileToUpload.name);
-        return this.http.post(`${api_url}/campaigns`, formData, {  headers : this.getHeaders() });
+
+        formData.append('fileKey', campaignImageFile, campaignImageFile.name);
+        return this.http.post(`${api_url}/campaigns`, formData, {  headers : this.getHeaders() })
+
         //   .map(() => { return true; })
         //   .catch((e) => this.handleError(e));
     }
+
+    // postFile(fileToUpload: File): Observable<FormData> {
+    //     console.log('here');
+    //     console.log(fileToUpload, 'file from service')
+    //     const endpoint = 'your-destination-url';
+    //     const formData: FormData = new FormData();
+    //     console.log(formData);
+    //     formData.append('fileKey', fileToUpload, fileToUpload.name);
+    //     console.log(formData);
+    //     return new Observable<FormData>((observer) => {
+    //         observer.next(formData);
+    //     });
 
     deleteCampaign(id: number) {
 

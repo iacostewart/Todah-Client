@@ -112,7 +112,17 @@ export class StartCampaignForm1Component implements OnInit {
 
   }
 
-
+  fileInput(files: FileList) {
+    console.log('file:', files);
+    // this.campaignImageFile = files.item(0);
+    this.campaignImageFile = files.item[0];
+    this.campaignService.postFile(this.campaignImageFile).subscribe((data: FormData) => {
+      console.log(data);
+    console.log(data.has('filekey'), 'in subscribe');
+      }, error => {
+        console.log(error);
+      });
+}
 
 
 
