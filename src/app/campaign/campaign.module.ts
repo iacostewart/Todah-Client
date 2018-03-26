@@ -68,7 +68,8 @@ import { CampaignService } from './campaign.service';
     StartCampaignForm2Component,
     StartCampaignConfirmComponent,
     DeleteCampaignComponent,
-    MatCardModule,
+    MatCardModule
+
   ],
 
 
