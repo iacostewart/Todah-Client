@@ -4,20 +4,21 @@
     <h3 style="color: white">Smaller Gifts, Bigger Impact</h3>
 
     <br>
-    <!-- Button to scroll down to promo video -->
     <p>
-      <button class="btn btn-lg" [scrollTo]="'#video'" [scrollDuration]="1500" [scrollOffset]="-200">Watch video!</button>
-    </p>
+        <button class="btn btn-lg" [scrollTo]="'video'" [scrollDuration]="1500" [scrollOffset]="-200">Watch video!</button>
+      </p>
 
   </div>
 </div>
 <!-- <div class="container">
   <div class="row"> -->
 
+    
+
 <!-- Promo video here -->
 <div class="jumbotronv jumbotron-fluid">
   <div class="container">
-    <video width="1200" height="800" id="videoPlayer" controls="controls">
+    <video width="1200" height="800" id="videoPlayer" poster="../../../assets/poster.PNG"  controls="controls">
       <video src="../../../assets/video.mov" type="video/mp4">
         <source src="../../../assets/video.mov" type="video/ogg">
         <script>
@@ -42,6 +43,8 @@
     </video>
   </div>
 </div>
+  <!-- Button to scroll down to promo video -->
+ 
 
 <!-- 
         Comparison of different fundraising techniques and pathway to creating campaign here -->
@@ -194,13 +197,9 @@
 
   </div>
 </div>
-<div class="container-fluid">
-  <div class="footer">
-
+<div class="footer">
     <button class="btn btn-lg" style="background-color: #FCC63C">Start Campaign</button>
   </div>
-
-</div>
 
 
 

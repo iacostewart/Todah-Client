@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ViewEncapsulation } from '@angular/core';
+import { Component } from '@angular/core';
 
 
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
-import {MatFormFieldModule, MatInputModule, MatSliderModule, MatCardModule} from '@angular/material';
+
 import {MatCardContent} from '@angular/material';
 
 import {RouterModule} from '@angular/router';
@@ -19,19 +19,16 @@ import 'hammerjs';
 
 
 
-
 @Component({
   selector: 'app-start-campaign-form2',
   templateUrl: './start-campaign-form2.component.html',
   styleUrls: ['./start-campaign-form2.component.css'],
   encapsulation: ViewEncapsulation.None
 
-
   // perserveWhitespaces: boolean,
 
 
 })
-
 
 
 
@@ -50,7 +47,6 @@ export class StartCampaignForm2Component  {
   value: 18;
   vertical: false;
 
-
   constructor(private campaignService: CampaignService, private form: FormBuilder, private router: Router) {
     this.createForm(); }
 
@@ -64,27 +60,23 @@ export class StartCampaignForm2Component  {
       'slider_ranges': new FormControl(''),
       'goal_currency': new FormControl(''),
       'initial_funded_currency': new FormControl(''),
-        'initial_funded': new FormControl(''),
+      'initial_funded': new FormControl(''),
 
+        
+      
 
     });
+    
 }
 
 
 
-  // get tickInterval(): number | 'auto' {
-  //   return this.showTicks ? (this.autoTicks ? 'auto' : this._tickInterval) : 0;
-  // }
-  // set tickInterval(v) {
-  //   this._tickInterval = Number(v);
-  // }
-//   // // private _tickInterval = 1;
-// }
 onSubmit() {
   // console.log(this.campaignForm);
   this.campaignService.storeCampaign(this.campaignPg2.value)
     .subscribe(
             (response) => this.router.navigate(['/startCampaign-form3']),
+            
     // (response) => console.log(response),
     (error) => console.log(error)
     );
