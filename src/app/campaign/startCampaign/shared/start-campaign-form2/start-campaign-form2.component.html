@@ -22,7 +22,7 @@
             class="form-control">
         </div> -->
         
-<form [formGroup]="campaignPg2" #f="ngForm" (ngSubmit)='onsubmit(f)'>
+<form [formGroup]="campaignPg2" #f="ngForm" (ngSubmit)='onSubmit(f)'>
   <div class="row">
     <div class="col-md-12">
       <label>Campaign Goal*</label>
@@ -30,7 +30,7 @@
       </div>
       <div class="row">
           <div class="form-group">
-              <input type="text" id="goal" placeholder="$0.00" class="form-control">
+              <input type="text" formControlName="goal" placeholder="$0.00" class="form-control">
             </div>
       </div>
 
@@ -52,13 +52,13 @@
       <div class="row">
         <div class="col-md-5">
           <div class="form-group">
-            <input  type="text" class="form-control align-left" placeholder="$0">
+            <input type="text" formControlName="initial_funded" class="form-control align-left" placeholder="$0">
           </div>
         </div>
         <div class="col-md-2"></div>
         <div class="col-md-5">
           <div class="form-group">
-            <input type="date" class="form-control align-right" placeholder="MM/DD/YYY" >
+            <input type="date"  class="form-control align-right" placeholder="MM/DD/YYY" >
           </div>
         </div>
       </div>
@@ -81,16 +81,16 @@
   
   <div class="form-group">
     <label>Pre-Campaign Funds Raised</label>
-    <input type="text" placeholder="$0" class="form-control">
+    <input type="text"  placeholder="$0" class="form-control">
   <div class="form-group">
     <label>End Date*</label>
-    <input type="text" placeholder="MM/DD/YYYY" class="form-control">
+    <input type="text" formControlName="end_date" placeholder="MM/DD/YYYY" class="form-control">
   </div>
   </div>
 
   
 
-</form>
+
     <div class="col-md-8">
       <!-- Modal of slider information -->
       <div style="text-align: center">
@@ -228,7 +228,7 @@
          
         <!-- </form> -->
         <div class="col-md-4">
-          <a routerLink="/startCampaign-confirmation"><button type="button" class="btn btn-warning">LAUNCH YOUR CAMPAIGN!</button></a>
+          <button type="submit" class="btn btn-warning">LAUNCH YOUR CAMPAIGN!</button>
         </div>
         <div class="col-md-4">
           <a routerLink="/profile"><button type="button" class="btn btn-primary">Save for Later</button></a>
@@ -237,7 +237,7 @@
           <a routerLink="/deleteCampaign"><button type="button" class="btn btn-danger">Delete this Fundraiser :(</button></a>
         </div>
       </div>
-    
+    </form> 
 
 
     <!-- Calulator Card   this is the sidebar section bellow-->

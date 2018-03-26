@@ -3,6 +3,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Campaign } from './startCampaign/start-campaign/model/Campaign';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
+import { campaingID } from './globals';
+import { CampaignUpdate } from './startCampaign/start-campaign/model/Campaign_Update';
 
 
 
@@ -18,7 +20,7 @@ export class CampaignService {
 
 
 
-    constructor(private http: HttpClient, private ar: ActivatedRoute, private router: Router) {}
+    constructor(private http: HttpClient, private ar: ActivatedRoute, private router: Router, public campaignID: campaingID) {}
     
 
     storeCampaign(campaign: Campaign) {
@@ -29,6 +31,10 @@ export class CampaignService {
         //     console.log(window.localStorage)
         //   });
     }
+    updateCampaign(campaignUpdate: CampaignUpdate){
+        console.log("update happening... campaignUpdate", campaignUpdate)
+        return this.http.put(`${api_url}/campaigns/${campaignUpdate.campId}`, campaignUpdate, { headers : this.getHeaders()});
+    }
 
     private getHeaders() {
         return new HttpHeaders().set('Authorization', window.localStorage.token);
@@ -38,9 +44,9 @@ export class CampaignService {
         return this.http.get(`${api_url}/campaigns/${id}`, { headers : this.getHeaders()});
     }
 
-    postFile(fileToUpload: File): Observable<object> {
+    postFile(campaignImageFile: File): Observable<object> {
         const formData: FormData = new FormData();
-        formData.append('fileKey', fileToUpload, fileToUpload.name);
+        formData.append('fileKey', campaignImageFile, campaignImageFile.name);
         return this.http.post(`${api_url}/campaigns`, formData, {  headers : this.getHeaders() })
         //   .map(() => { return true; })
         //   .catch((e) => this.handleError(e));
@@ -48,7 +54,7 @@ export class CampaignService {
 
     deleteCampaign(id: number) {
 
-
+        console.log("CAMP ID IN Global campaignID", this.campaignID.ID)
         console.log("delete my campaign")
         console.log("CAMP ID IN LOCAL", id)
         window.location.reload()

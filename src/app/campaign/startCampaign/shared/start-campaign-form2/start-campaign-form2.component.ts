@@ -1,10 +1,7 @@
 import { NgModule } from '@angular/core';
-
-
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation, ViewChild } from '@angular/core';
 import {MatFormFieldModule, MatInputModule, MatSliderModule, MatCardModule} from '@angular/material';
 import {MatCardContent} from '@angular/material';
-
 import {RouterModule} from '@angular/router';
 import {CommonModule} from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -35,7 +32,7 @@ import 'hammerjs';
 
 
 
-export class StartCampaignForm2Component  {
+export class StartCampaignForm2Component implements OnInit  {
   campaignPg2: FormGroup;
   campaignImageFile: File = null;
   defaultDropdownDirection = 'select';
@@ -55,17 +52,18 @@ export class StartCampaignForm2Component  {
     this.createForm(); }
 
 
-  // ngOnInit() {
-  // }
+  ngOnInit() {
+  }
   createForm() {
     this.campaignPg2 = this.form.group({
-      'goal': new FormControl(50000),
-      'slider_inputs': new FormControl(''),
-      'slider_ranges': new FormControl(''),
-      'goal_currency': new FormControl(''),
-      'initial_funded_currency': new FormControl(''),
-        'initial_funded': new FormControl(''),
-
+      'campId': new FormControl (Number(window.localStorage.campId)),
+      'goal': new FormControl(""),
+      'slider_inputs': new FormControl(5),
+      'slider_ranges': new FormControl(500),
+      'goal_currency': new FormControl('USD'),
+      'initial_funded_currency': new FormControl('USD'),
+      'initial_funded': new FormControl(""),
+      'end_date': new FormControl("")
 
     });
 }
@@ -81,10 +79,13 @@ export class StartCampaignForm2Component  {
 //   // // private _tickInterval = 1;
 // }
 onSubmit() {
-  // console.log(this.campaignForm);
-  this.campaignService.storeCampaign(this.campaignPg2.value)
+  console.log("PAGE 2 INFO", this.campaignPg2.value);
+  this.campaignService.updateCampaign(this.campaignPg2.value)
     .subscribe(
-            (response) => this.router.navigate(['/startCampaign-form3']),
+      () => {
+      this.router.navigate(["/startCampaign-form3"])
+    },
+            // (response) => this.router.navigate(['/startCampaign-form3']),
     // (response) => console.log(response),
     (error) => console.log(error)
     );

@@ -21,6 +21,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 // import { ImageUploadModule } from "angular2-image-upload";
 import { HttpClientModule } from '@angular/common/http';
 import { CampaignService } from './campaign.service';
+import { campaingID } from './globals';
 
 
 @NgModule({
@@ -71,7 +72,9 @@ import { CampaignService } from './campaign.service';
     MatCardModule,
   ],
 
-  providers: [CampaignService]
+  providers: [CampaignService,
+    campaingID
+  ]
 
 })
 export class CampaignModule { }
