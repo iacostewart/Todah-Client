@@ -17,6 +17,13 @@ interface Tokens {
     uid: String
   }
 }
+interface Tokens2 {
+  message: String;
+  token: string;
+  data: {
+    uid: String
+  }
+}
 
 const api_Url = 'http://localhost:3000/api/users';
 
@@ -31,7 +38,16 @@ export class RegistrationService {
 
   // registration API call
   storeUsers(users: Users) {
-    return this.http.post(`${api_Url}/signup`, users);
+    return this.http.post(`${api_Url}/signup`, users)
+    .subscribe((token2: Tokens2) =>{
+      console.log(token2)
+      window.localStorage.setItem("userId", JSON.stringify(token2.data.uid) );
+      window.localStorage.setItem('token', token2.token);
+      this.isLoggedIn =true;
+      window.localStorage.setItem('isloggedin', JSON.stringify(this.isLoggedIn))
+    }
+
+    )
   }
 
   login(loginInfo) {
@@ -40,19 +56,16 @@ export class RegistrationService {
     const str =
     `grant_type=password&username=${encodeURI(loginInfo.email)}&password=${encodeURI(loginInfo.password)}`;
 
-    return this.http.post(`${api_Url}/Token`, loginInfo)
+    return this.http.post(`${api_Url}/Token`, loginInfo, )
     .subscribe( (token: Tokens) => {
-      console.log('*******notyThingkie************',token );
       window.localStorage.setItem("userId", JSON.stringify(token.user.uid) );
       window.localStorage.setItem('token', token.token);
       this.isLoggedIn =true;
-      window.localStorage.setItem('isloggedin', JSON.stringify(this.isLoggedIn));
-      console.log('Is logged in', this.isLoggedIn);
-      // this.router.navigate(['/notes'])
-      console.log('******* token **** not lord of the rings...', window.localStorage.token);
-      console.log('*******Local storage Uid************',window.localStorage.userId);
-    }); 
-
+      window.localStorage.setItem('isloggedin', JSON.stringify(this.isLoggedIn)),
+      (error) => {alert("Login failed please make sure your user name and password are correct.")
+      console.log(error)}
+    
+    });
   }
   auth(){
     if (window.localStorage.isloggedin === "true"){

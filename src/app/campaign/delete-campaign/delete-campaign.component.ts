@@ -44,17 +44,18 @@ export class DeleteCampaignComponent implements OnInit {
     console.log("delete?", campIds);
     console.log("CAMPAIGN ID DELETE",this.campaignID.ID)
     this.campaignService.deleteCampaign(campIds)
-    .subscribe((campId: CampId) => {
+    .subscribe(() => {
       this.router.navigate(['/home'])
     //   console.log('*******campid Thingkie************',campId),
     //   // (campId) => {JSON.stringify(campId), console.log(campId.id)}
     // //  window.localStorage.setItem('campId', ""),
     // //  console.log("camp id after",window.localStorage.campId)
     //       (campId) => {this.router.navigate(['/'])}
-    
+    alert("You have deleted your campaign")
     },
-    (error) => console.log(error)
-    )
+    (error) => {alert("registration failed please make sure all fields are filled out correctly")
+    console.log(error)}
+    );
     }
   }
   //   .subscribe(

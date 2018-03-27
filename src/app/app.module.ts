@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, ViewEncapsulation } from '@angular/core';
+import { NgModule, ViewEncapsulation, ReflectiveInjector, ComponentFactoryResolver, } from '@angular/core';
 import {CdkTableModule} from '@angular/cdk/table';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import {MatCardContent} from '@angular/material';
 import 'hammerjs';
+// import { Service } from './service';
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -26,7 +27,6 @@ import {
   MatDatepickerModule,
   MatDividerModule,
   MatExpansionModule,
-  MatGridListModule,
   MatIconModule,
   MatListModule,
   MatMenuModule,
@@ -48,7 +48,7 @@ import {
   MatTooltipModule,
 
 
-  
+
 } from '@angular/material';
 import { ScrollToModule } from 'ng2-scroll-to-el';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -67,12 +67,8 @@ import { RegistrationService } from './components/navbar/auth.service';
 
 
 
+
 // import { PersonalCampaignComponent } from './personal-campaign/personal-campaign.component';
-
-
-
-
-
 
 
 // import { StartCampaignForm1Component } from './campaign/startCampaign/shared/start-campaign-form1/start-campaign-form1.component'
@@ -82,6 +78,7 @@ import { RegistrationService } from './components/navbar/auth.service';
 @NgModule({
   declarations: [
     AppComponent,
+
     NavbarComponent,
     FooterComponent,
     HomeComponent,
@@ -97,11 +94,13 @@ import { RegistrationService } from './components/navbar/auth.service';
 
   ],
   exports: [
+
     // MatCardModule
   ],
   entryComponents: [
     RegistrationPopComponent,
-    LoginPopComponent
+    LoginPopComponent,
+
   ],
 
   imports: [
@@ -118,6 +117,7 @@ import { RegistrationService } from './components/navbar/auth.service';
     MatSliderModule,
     ReactiveFormsModule,
   
+
 
     // MaterialModule.forRoot(),
     ScrollToModule.forRoot(),
@@ -157,7 +157,6 @@ exports: [
   MatDividerModule,
   MatCardContent,
   MatExpansionModule,
-  MatGridListModule,
   MatIconModule,
   MatInputModule,
   MatListModule,
@@ -180,6 +179,9 @@ exports: [
   MatTooltipModule,
 
 ],
+bootstrap: [AppComponent]
 })
 export class AppModule { }
+
 export class PizzaPartyAppModule { }
+

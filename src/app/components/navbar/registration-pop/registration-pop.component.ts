@@ -56,7 +56,7 @@ createForm() {
     'is_active': new FormControl(true, Validators.required),
     'firstname': new FormControl('Test', Validators.required),
     'username': new FormControl('Test', Validators.required),
-    'email': new FormControl('Test@test.com', Validators.required),
+    'email': new FormControl('', [Validators.required, Validators.email]),
     'password': new FormControl('', Validators.required),
     'repassword': new FormControl('', Validators.required)
 
@@ -76,12 +76,6 @@ createForm() {
 
     console.log('this is regForm', this.regForm);
     this.registrationService.storeUsers(this.regForm.value)
-      .subscribe(
-      (response: Response) => window.localStorage.setItem('token', response.token),
-      (error) => console.log(error)
-      );
-     console.log('&&&&&& registration button***********', this.regForm);
-     console.log('********* TOKEN *******', window.localStorage.token);
   }
 
 }

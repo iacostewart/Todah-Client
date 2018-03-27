@@ -22,7 +22,7 @@ export class CampaignService {
 
 
     constructor(private http: HttpClient, private ar: ActivatedRoute, private router: Router, public campaignID: campaingID) {}
-    
+
 
 
     storeCampaign(campaign: Campaign) {
@@ -33,10 +33,10 @@ export class CampaignService {
         //     console.log(window.localStorage)
         //   });
     }
+
     updateCampaign(campaignUpdate: CampaignUpdate){
-        console.log("update happening... campaignUpdate", campaignUpdate)
-        this.router.navigate(["/startCampaign-confirmation"])
-        return this.http.put(`${api_url}/campaigns/${campaignUpdate.campId}`, campaignUpdate, { headers : this.getHeaders()});
+        // this.router.navigate(["/startCampaign-confirmation"])
+        return this.http.put(`${api_url}/campaigns/${campaignUpdate.campId}`, campaignUpdate, { headers : this.getHeaders(), responseType: 'text'});
     }
 
     private getHeaders() {
@@ -51,7 +51,7 @@ export class CampaignService {
     postFile(campaignImageFile: File): Observable<object> {
         const formData: FormData = new FormData();
         formData.append('fileKey', campaignImageFile, campaignImageFile.name);
-        return this.http.post(`${api_url}/campaigns`, formData, {  headers : this.getHeaders() })
+        return this.http.post(`${api_url}/campaigns`, formData, {  headers : this.getHeaders() });
 
         //   .map(() => { return true; })
         //   .catch((e) => this.handleError(e));
@@ -77,12 +77,8 @@ export class CampaignService {
         console.log("CAMP ID IN LOCAL", id)
         window.location.reload()
         this.router.navigate(['/home'])
-        return this.http.delete(`${api_url}/campaigns/${id}`,{ headers : this.getHeaders()});
-   
-
+        return this.http.delete(`${api_url}/campaigns/${id}`,{ headers : this.getHeaders(), responseType: 'text'});
     }
-
-
 }
 
 

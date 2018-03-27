@@ -25,7 +25,7 @@
         
 <form [formGroup]="campaignPg2" #f="ngForm" (ngSubmit)='onSubmit(f)'>
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-lg-12">
       <label>Campaign Goal*</label>
       </div>
 
@@ -72,6 +72,10 @@
 
         </div>
       </div>
+      <div style="text-align:center">
+          <br>
+            <button type="button" class="btn btn-default">How do these Sliders Work?</button>
+          </div>
     </div>
 
     <!-- <input type="text" id="goal" placeholder="$50,000">
@@ -86,25 +90,23 @@
     </div>
   </div> -->
 
-  <hr>
-
 
 
 
 
 
   
-  <div class="form-group">
-    <label>Pre-Campaign Funds Raised</label>
-    <input type="text"  placeholder="$0" class="form-control">
-  <div class="form-group">
-    <label>End Date*</label>
-    <input type="text"  placeholder="MM/DD/YYYY" class="form-control">
-  </div>
-  </div>
+  
 
 
 
+
+
+
+ 
+    <br>
+    <br>
+    <br>
 
       <!-- Modal of slider information -->
    <!-- <div class="col-md-8">
@@ -115,6 +117,7 @@
       <hr>
       <br>
     </div> -->
+
       <!-- inside mat card starts here -->
       
       
@@ -125,20 +128,24 @@
   
       <mat-card class="You">
         <mat-card-content>
+          
           <h2 class="example-h2"></h2>
           
             <div class="colored">
               <h3>$1-10... Can be repeated 5 times with a possible sum of $275</h3>
+              <br>
           <mat-slider
           class="example-margin3"
-            
+          id='slider_range1'
+          [(ngModel)]="value"
               [invert]="invert"
               [max]="max"
               [min]="min"
               [step]="step"
               [thumb-label]="thumbLabel"
               [tick-interval]="tickInterval"          
-              [vertical]="vertical">
+              [vertical]="vertical"
+              formControlName = 'slider_ranges1'>
           </mat-slider>
         </div>
         <hr>
@@ -146,16 +153,19 @@
             
               <div class="colored">
                   <h3>$11-25... Can be repeated 4 times with a possible sum of $1,080</h3>
+                  <br>
             <mat-slider
             class="example-margin3"
-              
-                [invert]="invert"
-                [max]="max"
-                [min]="min"
-                [step]="step"
-                [thumb-label]="thumbLabel"
-                [tick-interval]="tickInterval"          
-                [vertical]="vertical">
+            id='slider_range2'
+            [(ngModel)]="value"
+              [invert]="invert"
+              [max]="max"
+              [min]="min"
+              [step]="step"
+              [thumb-label]="thumbLabel"
+              [tick-interval]="tickInterval"          
+              [vertical]="vertical"
+              formControlName = 'slider_ranges2'>
             </mat-slider>
           </div>
           <hr>
@@ -163,16 +173,19 @@
               
                 <div class="colored">
                     <h3>$26-50... Can be repeated 4 times with a possible sum of $3,800</h3>
+                    <br>
               <mat-slider
               class="example-margin3"
-                
-                  [invert]="invert"
-                  [max]="max"
-                  [min]="min"
-                  [step]="step"
-                  [thumb-label]="thumbLabel"
-                  [tick-interval]="tickInterval"          
-                  [vertical]="vertical">
+              id='slider_range3'
+              [(ngModel)]="value"
+              [invert]="invert"
+              [max]="max"
+              [min]="min"
+              [step]="step"
+              [thumb-label]="thumbLabel"
+              [tick-interval]="tickInterval"          
+              [vertical]="vertical"
+              formControlName = 'slider_ranges3'>
               </mat-slider>
             </div>
             <hr>
@@ -180,81 +193,99 @@
                 
                   <div class="colored">
                       <h3>$51-100... Can be repeated 1 times with a possible sum of $3,775</h3>
+                      <br>
                 <mat-slider
                 class="example-margin3"
-                  
-                    [invert]="invert"
-                    [max]="max"
-                    [min]="min"
-                    [step]="step"
-                    [thumb-label]="thumbLabel"
-                    [tick-interval]="tickInterval"          
-                    [vertical]="vertical">
-                </mat-slider>
-              </div>
-              <hr>
-              <div class="colored">
-                  <h3>$101-150... Can be repeated 0 times with a possible sum of $0</h3>
-            <mat-slider
-            class="example-margin3"
-              
+                id='slider_range4'
+                [(ngModel)]="value"
                 [invert]="invert"
                 [max]="max"
                 [min]="min"
                 [step]="step"
                 [thumb-label]="thumbLabel"
                 [tick-interval]="tickInterval"          
-                [vertical]="vertical">
-            </mat-slider>
-          </div>
-              
-                  
-                    <div class="colored">
-                        <h3>$151-200... Can be repeated 0 times with a possible sum of $0</h3>
-                  <mat-slider
-                  class="example-margin3"
-                    
-                      [invert]="invert"
-                      [max]="max"
-                      [min]="min"
-                      [step]="step"
-                      [thumb-label]="thumbLabel"
-                      [tick-interval]="tickInterval"          
-                      [vertical]="vertical">
-                  </mat-slider>
-                </div>
-                <div class="colored">
-                    <h3>$201-250... Can be repeated 1 times with a possible sum of $11,275</h3>
-              <mat-slider
-              class="example-margin3"
-                
-                  [invert]="invert"
-                  [max]="max"
-                  [min]="min"
-                  [step]="step"
-                  [thumb-label]="thumbLabel"
-                  [tick-interval]="tickInterval"          
-                  [vertical]="vertical">
-              </mat-slider>
-            </div>
-            <div class="colored">
-                <h3>$251-300... Can be repeated 1 times with a possible sum of $13,775</h3>
-          <mat-slider
-          class="example-margin3"
-            
+                [vertical]="vertical"
+                formControlName = 'slider_ranges4'>
+                </mat-slider>
+              </div>
+              <hr>
+              <div class="colored">
+                  <h3>$101-150... Can be repeated 0 times with a possible sum of $0</h3>
+                  <br>
+            <mat-slider
+            class="example-margin3"
+            id='slider_range5'
+            [(ngModel)]="value"
               [invert]="invert"
               [max]="max"
               [min]="min"
               [step]="step"
               [thumb-label]="thumbLabel"
               [tick-interval]="tickInterval"          
-              [vertical]="vertical">
+              [vertical]="vertical"
+              formControlName = 'slider_ranges5'>
+            </mat-slider>
+          </div>
+              
+                  
+                    <div class="colored">
+                        <h3>$151-200... Can be repeated 0 times with a possible sum of $0</h3>
+                        <br>
+                  <mat-slider
+              class="example-margin3"
+              id='slider_range6'
+              [(ngModel)]="value"
+              [invert]="invert"
+              [max]="max"
+              [min]="min"
+              [step]="step"
+              [thumb-label]="thumbLabel"
+              [tick-interval]="tickInterval"          
+              [vertical]="vertical"
+              formControlName = 'slider_ranges6'>
+                  </mat-slider>
+                </div>
+                <div class="colored">
+                    <h3>$201-250... Can be repeated 1 times with a possible sum of $11,275</h3>
+                    <br>
+              <mat-slider
+              class="example-margin3"
+              id='slider_range7'
+              [(ngModel)]="value"
+              [invert]="invert"
+              [max]="max"
+              [min]="min"
+              [step]="step"
+              [thumb-label]="thumbLabel"
+              [tick-interval]="tickInterval"          
+              [vertical]="vertical"
+              formControlName = 'slider_ranges7'>
+              </mat-slider>
+            </div>
+            <div class="colored">
+                <h3>$251-300... Can be repeated 1 times with a possible sum of $13,775</h3>
+                <br>
+          <mat-slider
+          class="example-margin3"
+              id='slider_range8'
+              [(ngModel)]="value"
+              [invert]="invert"
+              [max]="max"
+              [min]="min"
+              [step]="step"
+              [thumb-label]="thumbLabel"
+              [tick-interval]="tickInterval"          
+              [vertical]="vertical"
+              formControlName = 'slider_ranges8'>
           </mat-slider>
+          <!-- <button mat-button [click]='onClick'>+ Add Slider</button> -->
         </div>
                 </mat-card-content>
              
               </mat-card>
-      
+      <br>
+      <br>
+      <br>
       <div class="row">
         <!-- <form action=''> -->
         <!-- </form> -->
@@ -265,7 +296,7 @@
           <a routerLink="/profile"><button type="button" class="btn btn-primary">Save for Later</button></a>
         </div>
         <div class="col-md-4">
-          <a routerLink="/deleteCampaign"><button type="button" class="btn btn-danger">Delete this Fundraiser :(</button></a>
+          <a routerLink="/deleteCampaign"><button type="button" class="btn btn-danger">Delete this Fundraiser</button></a>
         </div>
       </div>
     </form> 

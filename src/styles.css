@@ -1,17 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 /* @import "@angular/material/prebuilt-themes/indigo-pink.css"; */
 /* @import './custom-theme'; */
+@import url('https://fonts.googleapis.com/css?family=Oswald');
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+/* <style>
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+</style> */
 
 
-.example-margin3 {
-  width:800px;
-  display: inline-block;
-  position: relative;
-  box-sizing: border-box;
-  outline: none;
-  vertical-align: middle;
-}
+
 
 
 
