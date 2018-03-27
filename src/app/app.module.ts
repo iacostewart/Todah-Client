@@ -54,7 +54,6 @@ import { ScrollToModule } from 'ng2-scroll-to-el';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
-import { HowItWorksComponent } from './components/how-it-works/how-it-works.component';
 import { HowToSucceedComponent } from './components/how-to-succeed/how-to-succeed.component';
 import { FaqComponent } from './components/faq/faq.component';
 import { AboutComponent } from './components/about/about.component';
@@ -65,6 +64,8 @@ import { LoginPopComponent } from './components/navbar/login-pop/login-pop.compo
 import { CampaignService } from './campaign/campaign.service';
 import { RegistrationService } from './components/navbar/auth.service';
 import { PersonalCampaignComponent } from './campaign/personal-campaign/personal-campaign.component';
+import { HowItWorksComponent } from './components/how-to-succeed/how-it-works/how-it-works.component';
+import { IsLogedInComponent } from './components/navbar/is-loged-in/is-loged-in.component';
 
 
 
@@ -90,7 +91,8 @@ import { PersonalCampaignComponent } from './campaign/personal-campaign/personal
     ContactComponent,
     RegistrationPopComponent,
     LoginPopComponent,
-    PersonalCampaignComponent
+    PersonalCampaignComponent,
+    IsLogedInComponent
 
   ],
   exports: [
