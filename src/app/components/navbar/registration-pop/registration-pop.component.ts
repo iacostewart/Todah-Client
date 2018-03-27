@@ -56,7 +56,7 @@ createForm() {
     'is_active': new FormControl(true, Validators.required),
     'firstname': new FormControl('Test', Validators.required),
     'username': new FormControl('Test', Validators.required),
-    'email': new FormControl('Test@test.com', Validators.required),
+    'email': new FormControl('', [Validators.required, Validators.email]),
     'password': new FormControl('', Validators.required),
     'repassword': new FormControl('', Validators.required)
 

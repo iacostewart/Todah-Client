@@ -24,6 +24,7 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
+    "@material-git/grid-list": "^2.0.0-git.20160919",
     "@material/tabs": "^0.30.0",
     "angular-awesome-slider": "^2.4.4",
     "angular-material-source": "github:angular/material",
