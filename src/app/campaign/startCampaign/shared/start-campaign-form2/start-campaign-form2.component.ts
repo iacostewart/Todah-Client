@@ -10,7 +10,7 @@ import {
   ViewChild,
   ViewContainerRef } from '@angular/core';
 import {MatFormFieldModule, MatInputModule, MatSliderModule, MatCardModule} from '@angular/material';
-// import {MatCardContent} from '@angular/material';
+import {MatCardContent} from '@angular/material';
 import {RouterModule} from '@angular/router';
 import {CommonModule} from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
