@@ -35,9 +35,8 @@ export class CampaignService {
     }
 
     updateCampaign(campaignUpdate: CampaignUpdate){
-        console.log("update happening... campaignUpdate", campaignUpdate)
-        this.router.navigate(["/startCampaign-confirmation"])
-        return this.http.put(`${api_url}/campaigns/${campaignUpdate.campId}`, campaignUpdate, { headers : this.getHeaders()});
+        // this.router.navigate(["/startCampaign-confirmation"])
+        return this.http.put(`${api_url}/campaigns/${campaignUpdate.campId}`, campaignUpdate, { headers : this.getHeaders(), responseType: 'text'});
     }
 
     private getHeaders() {
@@ -73,17 +72,13 @@ export class CampaignService {
     deleteCampaign(id: number) {
 
 
-        console.log('CAMP ID IN Global campaignID', this.campaignID.ID);
-        console.log('delete my campaign');
-        console.log('CAMP ID IN LOCAL', id);
-        window.location.reload();
-        this.router.navigate(['/home']);
-        return this.http.delete(`${api_url}/campaigns/${id}`, { headers : this.getHeaders()});
-
-
+        console.log("CAMP ID IN Global campaignID", this.campaignID.ID)
+        console.log("delete my campaign")
+        console.log("CAMP ID IN LOCAL", id)
+        window.location.reload()
+        this.router.navigate(['/home'])
+        return this.http.delete(`${api_url}/campaigns/${id}`,{ headers : this.getHeaders(), responseType: 'text'});
     }
-
-
 }
 
 

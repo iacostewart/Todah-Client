@@ -76,6 +76,7 @@ public logout(){
   console.log("*****Local storate after logout",window.localStorage)
   return ()=> {
   window.localStorage.setItem("isloggedin", "false")
+ alert("You have logged out.  Please come back another time!")
   }
 }
 

@@ -13,6 +13,13 @@
     margin: 0px;
 
   }
+
+  input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+    border: 1px solid red;
+  }
+
   .example-margin3 {
     width:1100px;
     display: inline-block;
@@ -31,6 +38,7 @@
   .row{
     font-family: 'Oswald', sans-serif;
     /* color:#63bad3; */
+
 
   }
 .colored{

@@ -76,12 +76,6 @@ createForm() {
 
     console.log('this is regForm', this.regForm);
     this.registrationService.storeUsers(this.regForm.value)
-      .subscribe(
-      (response: Response) => window.localStorage.setItem('token', response.token),
-      (error) => console.log(error)
-      );
-     console.log('&&&&&& registration button***********', this.regForm);
-     console.log('********* TOKEN *******', window.localStorage.token);
   }
 
 }
