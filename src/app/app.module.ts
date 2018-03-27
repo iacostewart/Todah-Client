@@ -145,6 +145,7 @@ import { RegistrationService } from './components/navbar/auth.service';
 
 })
 @NgModule({
+  declarations: [MatCardContent],
 exports: [
   CdkTableModule,
   MatAutocompleteModule,
