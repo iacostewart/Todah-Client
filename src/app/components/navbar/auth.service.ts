@@ -25,7 +25,7 @@ interface Tokens2 {
   }
 }
 
-const api_Url = 'https://todah-server.herokuapp.com/api';
+const api_Url = 'https://todah-server.herokuapp.com/api/users';
 
 @Injectable()
 
