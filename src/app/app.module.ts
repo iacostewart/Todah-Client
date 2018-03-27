@@ -14,13 +14,12 @@ import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
-// import {MatCardContent} from '@angular/material';
+import {MatCardContent} from '@angular/material';
 import 'hammerjs';
 // import { Service } from './service';
 import {
   MatAutocompleteModule,
   MatButtonModule,
-  MatCardContent,
   MatButtonToggleModule,
   MatCardModule,
   MatCheckboxModule,
@@ -79,7 +78,7 @@ import { RegistrationService } from './components/navbar/auth.service';
 @NgModule({
   declarations: [
     AppComponent,
-    MatCardContent,
+
     NavbarComponent,
     FooterComponent,
     HomeComponent,
@@ -95,7 +94,7 @@ import { RegistrationService } from './components/navbar/auth.service';
 
   ],
   exports: [
-    MatCardContent
+
     // MatCardModule
   ],
   entryComponents: [
@@ -117,7 +116,6 @@ import { RegistrationService } from './components/navbar/auth.service';
     FormsModule,
     MatSliderModule,
     ReactiveFormsModule,
-    MatCardContent,
   
 
 
@@ -157,7 +155,7 @@ exports: [
   MatDatepickerModule,
   MatDialogModule,
   MatDividerModule,
-  // MatCardContent,
+  MatCardContent,
   MatExpansionModule,
   MatIconModule,
   MatInputModule,
