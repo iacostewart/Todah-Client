@@ -79,7 +79,7 @@ import { RegistrationService } from './components/navbar/auth.service';
 @NgModule({
   declarations: [
     AppComponent,
-    // MatCardContent,
+    MatCardContent,
     NavbarComponent,
     FooterComponent,
     HomeComponent,
@@ -95,6 +95,7 @@ import { RegistrationService } from './components/navbar/auth.service';
 
   ],
   exports: [
+    MatCardContent
     // MatCardModule
   ],
   entryComponents: [
@@ -144,7 +145,6 @@ import { RegistrationService } from './components/navbar/auth.service';
 
 })
 @NgModule({
-  declarations: [MatCardContent],
 exports: [
   CdkTableModule,
   MatAutocompleteModule,
@@ -157,7 +157,7 @@ exports: [
   MatDatepickerModule,
   MatDialogModule,
   MatDividerModule,
-  MatCardContent,
+  // MatCardContent,
   MatExpansionModule,
   MatIconModule,
   MatInputModule,
