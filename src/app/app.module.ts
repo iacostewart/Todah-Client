@@ -14,12 +14,13 @@ import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
-import {MatCardContent} from '@angular/material';
+// import {MatCardContent} from '@angular/material';
 import 'hammerjs';
 // import { Service } from './service';
 import {
   MatAutocompleteModule,
   MatButtonModule,
+  MatCardContent,
   MatButtonToggleModule,
   MatCardModule,
   MatCheckboxModule,
