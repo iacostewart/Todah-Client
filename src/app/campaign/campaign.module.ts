@@ -6,7 +6,7 @@ import { NgModule,
 import { CommonModule } from '@angular/common';
 import { CampaignRoutingModule } from '../shared/campaign-routing.module';
 import {MatSliderModule} from '@angular/material/slider';
-import {MatCardModule, MatCardContent} from '@angular/material';
+import {MatCardModule} from '@angular/material';
 import { ProfileComponent } from './profile/profile.component';
 import { FindCampaignSnapshotComponent } from './findCampaign/find-campaign-snapshot/find-campaign-snapshot.component';
 import { FindCampaignComponent } from './findCampaign/find-campaign/find-campaign.component';
@@ -37,7 +37,7 @@ import { campaingID } from './globals';
     HttpClientModule,
     MatSliderModule,
     MatCardModule,
-    MatCardContent
+    // MatCardContent
 
 
   ],
@@ -56,7 +56,7 @@ import { campaingID } from './globals';
     StartCampaignForm2Component,
     StartCampaignConfirmComponent,
     DeleteCampaignComponent,
-    MatCardContent
+    // MatCardContent
 
 
 
@@ -77,7 +77,7 @@ import { campaingID } from './globals';
     StartCampaignConfirmComponent,
     DeleteCampaignComponent,
     MatCardModule,
-    MatCardContent
+    // MatCardContent
 
 
   ],
