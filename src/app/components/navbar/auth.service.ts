@@ -61,9 +61,9 @@ export class RegistrationService {
       window.localStorage.setItem("userId", JSON.stringify(token.user.uid) );
       window.localStorage.setItem('token', token.token);
       this.isLoggedIn =true;
-      window.localStorage.setItem('isloggedin', JSON.stringify(this.isLoggedIn)),
-      (error) => {alert("Login failed please make sure your user name and password are correct.")
-      console.log(error)}
+      window.localStorage.setItem('isloggedin', JSON.stringify(this.isLoggedIn))
+      // (error) => {alert("Login failed please make sure your user name and password are correct.")
+      // console.log(error)}
     
     });
   }
