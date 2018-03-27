@@ -1,0 +1,25 @@
+.btn-primary,
+  .btn-primary:hover,
+  .btn-primary:active,
+  .btn-primary:visited,
+  .btn-primary:focus,
+  .btn-warning,
+  .btn-warning:hover,
+  .btn-warning:active,
+  .btn-warning:visited,
+  .btn-warning:focus,
+  .btn-danger,
+  .btn-danger:hover,
+  .btn-danger:active,
+  .btn.danger:visited,
+  .btn.dnager:focus,
+  .btn-default,
+  .btn-default:hover,
+  .btn-default:active,
+  .btn-default:visited,
+  .btn-default:focus
+   {
+    width: 22rem;
+    border-radius: 0%;
+    margin-bottom: 2rem;
+  }
