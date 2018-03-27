@@ -1,10 +1,13 @@
-<div class="container">
+<div>
+  <p>hello world</p>
+</div>
+<!-- <div class="container">
     <div class="row">
       <h1 style="text-align: center">Start Your Own Campaign!</h1>
       <h2 style="text-align: center">Create Your Campaign!</h2>
-      <h3>Basic Information (1/3)</h3>
-      <!-- Form -->
-      <div class="col-md-8">
+      <h3>Basic Information (1/3)</h3> -->
+<!-- Form -->
+      <!-- <div class="col-md-8">
         <form [formGroup]="personalForm" #f (ngSubmit)="onSubmit()">
           <p>Once you publish, there will be a 24-48 hour delay while the Todah team reviews your campaign. Also be prepared that
             you will have to create or link a WePay account with your campaign to receive payments from your donors.</p>
@@ -76,9 +79,9 @@
               <label>Campaign Category
                 <sup>*</sup>
               </label>
-              <br>
-              <!-- (change)="selectDropdown($event)" -->
-              <select [ngModel]="defaultDropdownDirection" formControlName="project_purpose">
+              <br> -->
+<!-- (change)="selectDropdown($event)" -->
+              <!-- <select [ngModel]="defaultDropdownDirection" formControlName="project_purpose">
                 <option value="select">--Please select one category below--</option>
                 <option value="Animals" class="form-control">Animals</option>
                 <option value="Arts & Culture" class="form-control">Arts & Culture</option>
@@ -131,9 +134,9 @@
                 class="form-control"></textarea>
                 <span 
                 *ngIf="!campaignForm.get('campaignData.campaign_slug').valid && campaignForm.get('campaignData.campaign_slug').touched" 
-                class="help-block">Please enter a full description for your campaign.</span>
+                class="help-block">Please enter a full description for your campaign.</span> -->
                 <!-- limit to 255 characters -->
-            </div>
+            <!-- </div>
             <div class="form-group">
               <label>Organization Website</label>
               <input 
@@ -147,22 +150,22 @@
               <label>Upload your Main Campaign Image
                 <sup>*</sup>
               </label>
-              <input type="file" class="form-control" formControlName="project_image_thumb_url" #MainImage>
+              <input type="file" class="form-control" formControlName="project_image_thumb_url" #MainImage> -->
               <!-- <image-upload dropBoxMessage=""></image-upload> -->
-              <br>
+              <!-- <br> -->
               <!-- look into event.file -->
               <!-- (uploadFinished)="onUploadFinished($event.file)"> not recongnized as a function-->
-              <span 
+              <!-- <span 
                 *ngIf="!campaignForm.get('campaignData.project_image_thumb_url').valid && campaignForm.get('campaignData.project_image_thumb_url').touched" 
                 class="help-block">Please upload an image for your campaign.</span>
-            </div>
+            </div> -->
             <!-- <div class="form-group">
               <label>Upload Additional Images and Videos</label>
               <input type="file" class="form-control">
               <image-upload dropBoxMessage=""></image-upload> -->
               <!-- <br>
             </div> -->
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label>Facebook Url</label>
               <input 
                 type="text" 
@@ -198,12 +201,12 @@
                 formControlName="youtube_url" 
                 class="form-control">
             </div>
-          </div>
+          </div> -->
   
   
           <!-- <button class="btn btn-primary" type>Submit</button> -->
   
-  
+<!--   
           <hr>
           <div class="row">
             <div class="col-md-4">
@@ -226,4 +229,4 @@
   
           </div>
         </form>
-      </div>
+      </div> -->
