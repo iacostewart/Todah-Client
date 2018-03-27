@@ -1,0 +1,103 @@
+<div class="close_button">
+  <a (click)="onCloseConfirm()" ><i class="far fa-times-circle fa-2x"></i></a>
+</div>
+<div class="container" id="modal">
+<h1>Register</h1>
+<h3>New to Todah?</h3>
+<p>A Todah account is required to continue.</p>
+<div>
+  <form [formGroup]="regForm" #f (ngSubmit)="onSubmit()">
+    <div class="row"></div>
+    <mat-input-container>
+      <input matInput type="text" placeholder="First Name" id="firstname" formControlName="firstname" >
+    </mat-input-container>
+    
+    <mat-input-container>
+      <input  matInput type="text" placeholder="Last Name"id="lastname" formControlName="lastname" >
+    </mat-input-container>
+<br>
+
+    <mat-input-container>
+      <input matInput type="text" placeholder="User Name" id="username" formControlName="username" >
+    </mat-input-container>
+
+    
+
+    <mat-input-container>
+      <input matInput type="text" placeholder="Email" id="email" formControlName="email" >
+    </mat-input-container>
+
+    <br>
+
+
+    <!-- <mat-input-container>
+      <input matInput type="password"placeholder="Password" id="password" formControlName="password" required>
+      <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+        <div *ngIf="password.errors.required">
+          Password is required
+        </div>
+      </div>
+    </mat-input-container>
+ 
+
+    <mat-input-container>
+      <input matInput type="password" class='form-control' formControlName='verify'
+      advs-compare="verify" parent='false' placeholder="Confirm Password" id="repassword" required>
+      <div *ngIf="repassword.invalid && (repassword.dirty || repassword.touched)" class="text-danger">
+        <div *ngIf="repassword.errors.required">
+          Password is required
+        </div>
+      </div>
+    </mat-input-container> -->
+
+ 
+      <mat-form-field>
+          <input matInput placeholder="Password" type="password" id="password" formControlName="password" required/>
+          
+      </mat-form-field>
+       
+      <mat-form-field>
+          <input matInput placeholder="Confirm password" id="repassword" type="password" formControlName="repassword" [errorStateMatcher]="confirmValidParentMatcher" />
+          <mat-error>
+        
+          </mat-error>
+      </mat-form-field>
+
+
+
+
+    <br>
+    
+    <div mat-dialog-actions>
+    <button mat-button class="popup-btn" (click)="onCloseConfirm()" >Submit</button>
+  </div> 
+
+    <!-- <button mat-button class="popup-btn" data-dismiss="myModal" (click)="openDialogReg" type="submit" >submit</button> -->
+    
+</form>
+  <br>
+  <br>
+  
+  </div>
+  <!-- <p>Register or link your account:</p>
+  <div class="social-contianer">
+    <div class="row">
+      <div class="col-md-4">
+        <a href="#"><img src="../../../../assets/facebook.png" alt=""></a>
+      </div>
+      <div class="col-md-4">
+        <a href="#"><img src="../../../../assets/twitter.png" alt=""></a>
+      </div>
+      <div class="col-md-4">
+        <a href="#"><img src="../../../../assets/google+.png" alt=""></a>
+      </div>
+    </div>
+  </div> -->
+<div class="container modal">
+  
+  <!-- bellow on the (click) we are calling for the close, and at the close we are takeing the values of nickname and student id with us.. -->
+  
+    <!-- <button mat-button class="popup-btn" (click)="dialogRef.close({name: name.value, email: email.value, username: username.value, password: password.value, repassword: repassword.value})">Submit</button> -->
+
+
+<!-- (click)="openDialogReg" -->

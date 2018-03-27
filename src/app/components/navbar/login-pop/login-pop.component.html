@@ -1,0 +1,43 @@
+<div class="close_button">
+  <a (click)="onCloseConfirm()" ><i class="far fa-times-circle fa-2x"></i></a>
+  </div>
+<h1>login</h1>
+<h4>Already Have an Account?</h4>
+<div>
+  
+   <form [formGroup]="logForm" #f (ngSubmit)="onSubmit()">
+<label></label>
+<br>  
+<mat-input-container>
+  <input matInput type="text" placeholder="E-Mail" id="email" formControlName="email" required >
+</mat-input-container>
+<br>
+
+    <label></label>
+    <br>
+      <mat-input-container>
+        <input matInput type="password" placeholder="Password" id="password" formControlName="password" required>
+
+      </mat-input-container>
+
+    <div mat-dialog-actions>
+        <button mat-button class="popup-btn" (click)="onCloseConfirm()">Submit</button>
+      </div>
+
+      </form>
+      <br>
+      <p>Log in with:</p>
+      <div class="social-contianer">
+          <div class="row">
+            <div class="col-md-4">
+              <a disabled href="#"><img src="../../../../assets/facebook.png" disabled alt=""></a>
+            </div>
+            <div class="col-md-4">
+              <a href="#"><img src="../../../../assets/twitter.png" alt=""></a>
+            </div>
+            <div class="col-md-4">
+              <a href="#"><img src="../../../../assets/google+.png" alt=""></a>
+            </div>
+          </div>
+        </div>
+      <div class="container modal">
