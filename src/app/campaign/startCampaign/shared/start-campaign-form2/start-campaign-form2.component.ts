@@ -39,7 +39,7 @@ export class StartCampaignForm2Component implements OnInit  {
   autoTicks = false;
   disabled = false;
   invert = false;
-  max = 100;
+  max = 5;
   min = 0;
   showTicks = true;
   step: 18;
@@ -70,20 +70,21 @@ export class StartCampaignForm2Component implements OnInit  {
 
 
 
-  // get tickInterval(): number | 'auto' {
-  //   return this.showTicks ? (this.autoTicks ? 'auto' : this._tickInterval) : 0;
-  // }
-  // set tickInterval(v) {
-  //   this._tickInterval = Number(v);
-  // }
-//   // // private _tickInterval = 1;
-// }
+  get tickInterval(): number | 'auto' {
+    return this.showTicks ? (this.autoTicks ? 'auto' : this._tickInterval) : 0;
+  }
+  set tickInterval(v) {
+    this._tickInterval = Number(v);
+  }
+  private _tickInterval = 1;
+
+
 onSubmit() {
   console.log("PAGE 2 INFO", this.campaignPg2.value);
   this.campaignService.updateCampaign(this.campaignPg2.value)
     .subscribe(
       () => {
-      this.router.navigate(["/startCampaign-form3"])
+      this.router.navigate(["/startCampaign-confirmation"])
     },
             // (response) => this.router.navigate(['/startCampaign-form3']),
     // (response) => console.log(response),
