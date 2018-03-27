@@ -29,13 +29,45 @@
 
     <br>
 
-    <mat-input-container>
-      <input matInput type="password"  placeholder="Password" id="password" formControlName="password">
+
+    <!-- <mat-input-container>
+      <input matInput type="password"placeholder="Password" id="password" formControlName="password" required>
+      <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+        <div *ngIf="password.errors.required">
+          Password is required
+        </div>
+      </div>
     </mat-input-container>
-    
+ 
+
     <mat-input-container>
-      <input matInput type="password" placeholder="Confirm Password" id="repassword">
-    </mat-input-container>
+      <input matInput type="password" class='form-control' formControlName='verify'
+      advs-compare="verify" parent='false' placeholder="Confirm Password" id="repassword" required>
+      <div *ngIf="repassword.invalid && (repassword.dirty || repassword.touched)" class="text-danger">
+        <div *ngIf="repassword.errors.required">
+          Password is required
+        </div>
+      </div>
+    </mat-input-container> -->
+
+ 
+      <mat-form-field>
+          <input matInput placeholder="Password" type="password" id="password" formControlName="password"/>
+          <mat-error>
+          
+          </mat-error>
+      </mat-form-field>
+       
+      <mat-form-field>
+          <input matInput placeholder="Confirm password" id="repassword" type="password" formControlName="repassword" [errorStateMatcher]="confirmValidParentMatcher"/>
+          <mat-error>
+        
+          </mat-error>
+      </mat-form-field>
+
+
+
+
     <br>
     
     <div mat-dialog-actions>
