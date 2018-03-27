@@ -64,7 +64,7 @@ import { LoginPopComponent } from './components/navbar/login-pop/login-pop.compo
 import { CampaignService } from './campaign/campaign.service';
 import { RegistrationService } from './components/navbar/auth.service';
 import { PersonalCampaignComponent } from './campaign/personal-campaign/personal-campaign.component';
-import { HowItWorksComponent } from './components/how-to-succeed/how-it-works/how-it-works.component';
+import { HowItWorksComponent } from './components/how-it-works/how-it-works.component';
 import { IsLogedInComponent } from './components/navbar/is-loged-in/is-loged-in.component';
 
 
