@@ -64,11 +64,12 @@ import { RegistrationPopComponent } from './components/navbar/registration-pop/r
 import { LoginPopComponent } from './components/navbar/login-pop/login-pop.component';
 import { CampaignService } from './campaign/campaign.service';
 import { RegistrationService } from './components/navbar/auth.service';
+import { PersonalCampaignComponent } from './campaign/personal-campaign/personal-campaign.component';
 
 
 
 
-// import { PersonalCampaignComponent } from './personal-campaign/personal-campaign.component';
+
 
 
 // import { StartCampaignForm1Component } from './campaign/startCampaign/shared/start-campaign-form1/start-campaign-form1.component'
@@ -89,7 +90,7 @@ import { RegistrationService } from './components/navbar/auth.service';
     ContactComponent,
     RegistrationPopComponent,
     LoginPopComponent,
-    // PersonalCampaignComponent
+    PersonalCampaignComponent
 
   ],
   exports: [
