@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-start-campaign-success',
   templateUrl: './start-campaign-success.component.html',
