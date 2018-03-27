@@ -36,6 +36,25 @@
 .colored{
   padding-top:5px;
 }
+
+.btn-primary,
+  .btn-primary:hover,
+  .btn-primary:active,
+  .btn-primary:visited,
+  .btn-primary:focus,
+  .btn-warning,
+  .btn-warning:hover,
+  .btn-warning:active,
+  .btn-warning:visited,
+  .btn-warning:focus,
+  .btn-danger,
+  .btn-danger:hover,
+  .btn-danger:active,
+  .btn.danger:visited,
+  .btn.dnager:focus {
+   
+    border-radius: 0%;
+  }
 /* 
   .example-margin3 {
     width:800px;
