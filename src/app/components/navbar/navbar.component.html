@@ -198,12 +198,22 @@
     <li>
       <a style="padding: auto 0">|</a>
     </li>
-    <li>
+    <!-- <li>
       <a style="padding-right: 0" (click)=openDialogLog()>Login</a>
-    </li>
-  </ul>
+    </li> -->
 
-
+  <li >
+    <a style="padding-right: 0" *ngIf="!isLoggedIn" (click)=openDialogLog()>Login</a>
+    <a style="padding-right: 0" *ngIf="isLoggedIn" (click)="logout()">Logout</a>
+  </li>
+</ul>
+  <!-- <ng-container>
+    <button  *ngIf="isLoggedin ==='Logout'" class="menu-btn" style="padding-right: 0"  [class.activeHighlight]="checkActive(f)" (click)="Logout"> Logout
+      </button>
+    <button  *ngIf="!isLoggedin"  class="menu-btn" text-center  [class.activeHighlight]="checkActive(f)" (click)=openDialogLog()>Login
+     </button>
+    </ng-container> -->
+  
 
 </nav>
 
