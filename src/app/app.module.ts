@@ -66,7 +66,6 @@ import { RegistrationService } from './components/navbar/auth.service';
 import { PersonalCampaignComponent } from './campaign/personal-campaign/personal-campaign.component';
 import { HowItWorksComponent } from './components/how-to-succeed/how-it-works/how-it-works.component';
 import { IsLogedInComponent } from './components/navbar/is-loged-in/is-loged-in.component';
-import { HowItWorksItemsComponent } from './admin/components/how-it-works-items/how-it-works-items.component';
 
 
 
@@ -93,7 +92,6 @@ import { HowItWorksItemsComponent } from './admin/components/how-it-works-items/
     LoginPopComponent,
     PersonalCampaignComponent,
     IsLogedInComponent,
-    HowItWorksItemsComponent,
     HowItWorksComponent,
 
   ],
