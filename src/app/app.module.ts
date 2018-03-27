@@ -147,7 +147,6 @@ import { RegistrationService } from './components/navbar/auth.service';
     FormsModule,
     MatSliderModule,
     ReactiveFormsModule,
-    HomeComponent,
   
 
 
