@@ -7,6 +7,7 @@ textarea.ng-invalid.ng-touched {
 
 
 
+
   .btn-primary,
   .btn-primary:hover,
   .btn-primary:active,
@@ -28,3 +29,14 @@ textarea.ng-invalid.ng-touched {
     padding: 1% 2%;
     border-color: #63bad3 !important;
 }
+  .form-group{
+    font-family: 'Oswald', sans-serif;
+    color:#63bad3;
+    /* text-shadow:.1px 0px black; */
+    background-color:rgb(243, 243, 243);
+    /* #1f3d49 */
+  }
+  .row{
+    font-family: 'Oswald', sans-serif;
+
+  }

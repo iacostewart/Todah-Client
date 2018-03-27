@@ -1,4 +1,3 @@
-
 .btn,
 btn-primary:hover,
 btn-primary:active,
@@ -14,4 +13,20 @@ btn-primary:visited,
 
 .btn-primary:focus{
     background-color: #63bad3
+
+p {
+    color: black;
+    font-size:14pt;
+}
+h2{
+    padding-bottom:10px; 
+}
+
+b{
+    margin: 15px;
+    
+
+}
+.container{
+    font-family: 'Oswald', sans-serif;
 }

@@ -22,7 +22,7 @@ export class CampaignService {
 
 
     constructor(private http: HttpClient, private ar: ActivatedRoute, private router: Router, public campaignID: campaingID) {}
-    
+
 
 
     storeCampaign(campaign: Campaign) {
@@ -33,6 +33,7 @@ export class CampaignService {
         //     console.log(window.localStorage)
         //   });
     }
+
     updateCampaign(campaignUpdate: CampaignUpdate){
         console.log("update happening... campaignUpdate", campaignUpdate)
         this.router.navigate(["/startCampaign-confirmation"])
@@ -51,7 +52,7 @@ export class CampaignService {
     postFile(campaignImageFile: File): Observable<object> {
         const formData: FormData = new FormData();
         formData.append('fileKey', campaignImageFile, campaignImageFile.name);
-        return this.http.post(`${api_url}/campaigns`, formData, {  headers : this.getHeaders() })
+        return this.http.post(`${api_url}/campaigns`, formData, {  headers : this.getHeaders() });
 
         //   .map(() => { return true; })
         //   .catch((e) => this.handleError(e));
@@ -72,13 +73,13 @@ export class CampaignService {
     deleteCampaign(id: number) {
 
 
-        console.log("CAMP ID IN Global campaignID", this.campaignID.ID)
-        console.log("delete my campaign")
-        console.log("CAMP ID IN LOCAL", id)
-        window.location.reload()
-        this.router.navigate(['/home'])
-        return this.http.delete(`${api_url}/campaigns/${id}`,{ headers : this.getHeaders()});
-   
+        console.log('CAMP ID IN Global campaignID', this.campaignID.ID);
+        console.log('delete my campaign');
+        console.log('CAMP ID IN LOCAL', id);
+        window.location.reload();
+        this.router.navigate(['/home']);
+        return this.http.delete(`${api_url}/campaigns/${id}`, { headers : this.getHeaders()});
+
 
     }
 
