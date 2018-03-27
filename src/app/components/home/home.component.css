@@ -15,6 +15,22 @@
 
 }
 
+.container {
+  width: 100%;
+  
+}
+.GB{
+  font-family: 'Oswald', sans-serif;
+  font-size:150pt;
+  text-shadow:1px 1px #1f3d49;
+}
+.G{
+  font-family: 'Oswald', sans-serif;
+ 
+  text-shadow:1px 1px #1f3d49;
+}
+
+
 .panel {
   background-color: lightgray;
 

@@ -45,7 +45,7 @@ ngOnInit() {
 
 openDialogReg() {
   this.dialogRef = this.dialog.open(RegistrationPopComponent, {
-    height: '570px',
+    height: '550px',
     width: '500px',
     panelClass: 'myapp-no-padding-dialog'
 
@@ -76,6 +76,7 @@ public logout(){
   console.log("*****Local storate after logout",window.localStorage)
   return ()=> {
   window.localStorage.setItem("isloggedin", "false")
+ alert("You have logged out.  Please come back another time!")
   }
 }
 

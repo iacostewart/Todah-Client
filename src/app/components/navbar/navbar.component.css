@@ -26,6 +26,15 @@ a {
   
 }
 
+.btnn {
+  border-radius: 0;
+  background-color:lightgray;
+  color: white;
+  padding: 5px 40px 5px 30px;
+  font-size: 15px;
+  margin-left: 2rem !important;
+}
+
 
 /* .btn active {
   background-color: #286d87;
@@ -113,3 +122,20 @@ a {
 }
 
 
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+    background-color: #63bad3 !important;
+    border-color: #63bad3 !important;
+}
+
+.btn-primary,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+    background-color: #63bad3;
+    border-color: #63bad3;
+    
+}
