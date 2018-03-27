@@ -10,6 +10,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { RegistrationService } from '../auth.service';
+import { Directive, Attribute  } from '@angular/core';
+import { Validator,  NG_VALIDATORS } from '@angular/forms';
 
 interface Response {
   message: String;
@@ -55,12 +57,13 @@ createForm() {
     'firstname': new FormControl('Test', Validators.required),
     'username': new FormControl('Test', Validators.required),
     'email': new FormControl('Test@test.com', Validators.required),
-    'password': new FormControl('Test7*', Validators.required),
-    'repassword': new FormControl('Test7*', Validators.required)
+    'password': new FormControl('', Validators.required),
+    'repassword': new FormControl('', Validators.required)
 
 
   });
   }
+  
 
 
 
