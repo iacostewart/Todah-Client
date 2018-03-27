@@ -26,8 +26,6 @@ import { ReactiveFormsModule, NgModel } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CampaignService } from './campaign.service';
 import { campaingID } from './globals';
-import { HowItWorksComponent } from '../components/how-to-succeed/how-it-works/how-it-works.component';
-
 
 @NgModule({
   imports: [
@@ -39,7 +37,6 @@ import { HowItWorksComponent } from '../components/how-to-succeed/how-it-works/h
     MatSliderModule,
     MatCardModule,
     // MatCardContent
-    HowItWorksComponent
 
 
   ],
