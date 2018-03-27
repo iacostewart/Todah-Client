@@ -180,6 +180,7 @@ exports: [
   MatTooltipModule,
 
 ],
+bootstrap: [AppComponent]
 })
 export class AppModule { }
 export class PizzaPartyAppModule { }

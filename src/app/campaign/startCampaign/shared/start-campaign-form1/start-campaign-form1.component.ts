@@ -4,6 +4,11 @@ import { CampaignService } from '../../../campaign.service';
 import { Router } from '@angular/router'
 import { Campaign } from '../../start-campaign/model/Campaign';
 import { campaingID } from '../../../globals';
+import {MatFormFieldModule, MatInputModule, MatSliderModule, MatCardModule} from '@angular/material';
+import {MatCardContent} from '@angular/material';
+
+
+
 
 let userId = window.localStorage.userId
 
