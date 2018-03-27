@@ -26,7 +26,6 @@ import {
   MatDatepickerModule,
   MatDividerModule,
   MatExpansionModule,
-  MatGridListModule,
   MatIconModule,
   MatListModule,
   MatMenuModule,
@@ -67,12 +66,8 @@ import { RegistrationService } from './components/navbar/auth.service';
 
 
 
+
 // import { PersonalCampaignComponent } from './personal-campaign/personal-campaign.component';
-
-
-
-
-
 
 
 // import { StartCampaignForm1Component } from './campaign/startCampaign/shared/start-campaign-form1/start-campaign-form1.component'
@@ -157,7 +152,6 @@ exports: [
   MatDividerModule,
   MatCardContent,
   MatExpansionModule,
-  MatGridListModule,
   MatIconModule,
   MatInputModule,
   MatListModule,
@@ -183,3 +177,4 @@ exports: [
 })
 export class AppModule { }
 export class PizzaPartyAppModule { }
+

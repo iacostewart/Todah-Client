@@ -52,14 +52,12 @@
 
  
       <mat-form-field>
-          <input matInput placeholder="Password" type="password" id="password" formControlName="password"/>
-          <mat-error>
+          <input matInput placeholder="Password" type="password" id="password" formControlName="password" [type]="hide ? 'password' : 'text'" required/>
           
-          </mat-error>
       </mat-form-field>
        
       <mat-form-field>
-          <input matInput placeholder="Confirm password" id="repassword" type="password" formControlName="repassword" [errorStateMatcher]="confirmValidParentMatcher"/>
+          <input matInput placeholder="Confirm password" id="repassword" type="password" formControlName="repassword" [errorStateMatcher]="confirmValidParentMatcher" />
           <mat-error>
         
           </mat-error>
