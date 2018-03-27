@@ -50,29 +50,33 @@
               class="help-block">Please enter a campaign creator role.</span> -->
           </div>
           <div class="form-group">
-            <label>Campaign Category
-              <sup>*</sup>
-            </label>
-            <br>
-            <!-- (change)="selectDropdown($event)" -->
-            <select [ngModel]="defaultDropdownDirection" formControlName="project_purpose">
-              <option value="select">--Please select one category below--</option>
-              <option value="Animals" class="form-control">Animals</option>
-              <option value="Arts & Culture" class="form-control">Arts & Culture</option>
-              <option value="Children & Youth" class="form-control">Children & Youth</option>
-              <option value="Disabilites" class="form-control">Disabilites</option>
-              <option value="Disaster Relief" class="form-control">Disaster Relief</option>
-              <option value="Economic Development" class="form-control">Economic Development</option>
-              <option value="education" class="form-control">Education</option>
-              <option value="Education" class="form-control">Environment</option>
-              <option value="Faith" class="form-control">Faith</option>
-              <option value="Girls & Women" class="form-control">Girls & Women</option>
-              <option value="Global Issues" class="form-control">Global Issues</option>
-              <option value="Health" class="form-control">Health</option>
-              <option value="Poverty" class="form-control">Poverty</option>
-              <option value="Science & Technology" class="form-control">Science & Technology</option>
-              <option value="Veterans" class="form-control">Veterans</option>
-            </select>
+              <label>Campaign Category
+                <sup>*</sup>
+              </label>
+              <br>
+              <!-- (change)="selectDropdown($event)" -->
+              <select [ngModel]="defaultDropdownDirection" formControlName="project_purpose">
+                <option value="select">--Please select one category below--</option>
+                <option value="Animals" class="form-control">Animals</option>
+                <option value="Arts & Culture" class="form-control">Arts & Culture</option>
+                <option value="Children & Youth" class="form-control">Children & Youth</option>
+                <option value="Disabilites" class="form-control">Disabilites</option>
+                <option value="Disaster Relief" class="form-control">Disaster Relief</option>
+                <option value="Economic Development" class="form-control">Economic Development</option>
+                <option value="education" class="form-control">Education</option>
+                <option value="Education" class="form-control">Environment</option>
+                <option value="Faith" class="form-control">Faith</option>
+                <option value="Girls & Women" class="form-control">Girls & Women</option>
+                <option value="Global Issues" class="form-control">Global Issues</option>
+                <option value="Health" class="form-control">Health</option>
+                <option value="Poverty" class="form-control">Poverty</option>
+                <option value="Science & Technology" class="form-control">Science & Technology</option>
+                <option value="Veterans" class="form-control">Veterans</option>
+              </select>
+          
+             
+          
+          </div>
             <!-- <span 
               *ngIf="!campaignForm.get('campaignData.project_purpose').valid && campaignForm.get('campaignData.project_purpose').touched" 
               class="help-block">Please enter a campaign title.</span> -->
@@ -148,27 +152,28 @@
             <label>YouTube Url</label>
             <input type="text" placeholder="YouTube url" id="youtube_url" formControlName="youtube_url" class="form-control">
           </div>
-        </div>
+        <!-- </div> -->
 
 
         <!-- <button class="btn btn-primary" type>Submit</button> -->
 
 
         <hr>
-        <div class="row">
-          <div class="col-md-4">
-              <button type="submit" class="btn btn-warning">Save and Go to Next Step!</button>
+        <div class="row bottom-bottom">
+          <div class="col-md-4 float-left">
+              <button type="submit" class="btn btn-warning btn-NextStep">Save and Go to Next Step!</button>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 float-left">
             <a routerLink="/profile">
-              <button type="button" class="btn btn-primary">Save for Later</button>
+              <button type="button" class="btn btn-primary btn-saveForLater">Save for Later</button>
             </a>
             <br>
 
           </div>
-          <div class="col-md-4">
-            <a routerLink="/deleteCampaign">
-              <button type="button" class="btn btn-danger">Delete this Fundraiser</button>
+
+          <div class="col-md-4 delete-btn float-right"  >
+            <a id="deleteBtn" routerLink="/deleteCampaign">
+              <button type="button" class="btn btn-danger ">Delete this Fundraiser</button>
             </a>
           </div>
           
