@@ -31,6 +31,7 @@ export class DeleteCampaignComponent implements OnInit {
 
 
   ngOnInit() {
+    window.scrollTo(0,0);
   }
 
   deleteCamp() {
