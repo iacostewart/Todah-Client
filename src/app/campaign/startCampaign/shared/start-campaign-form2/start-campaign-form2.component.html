@@ -3,22 +3,263 @@
     <h1 style="text-align: center">Start Your Own Campaign!</h1>
     <h2 style="text-align: center">Create Your Campaign!</h2>
     <h3>Contribution Information (2/3)</h3>
-    <!-- Form -->
-    <div class="col-md-8">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime natus doloribus dolor at repellat laboriosam voluptas esse odio ipsa officia labore autem praesentium veritatis, unde dolorum laudantium animi et exercitationem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum incidunt, cum pariatur odit dolor dicta eligendi consequatur, dignissimos, iusto itaque exercitationem aliquid at asperiores ipsam vel maiores repellendus quas natus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus libero ex, ullam dolores numquam in pariatur expedita, incidunt dolorum voluptates aliquid saepe! Esse minus enim possimus odio provident vero ullam.</p><br>
+  </div>
+  <!-- Form -->
+  <!-- <form [formGroup]="campaignForm" #f="ngForm" (ngSubmit)="onSubmit(f)"> -->
+
+  <!-- <div>
+        <div class="form-group">
+          <label>Type and Select Organization Name (or 501(c)(3)number)
+            <sup>*</sup>
+          </label>
+          <input type="text" placeholder="Organization Name" id="organization_name" formControlName="organization_name" class="form-control">
+          
+        </div> -->
+
+  <!-- <div class="form-group">
+          <label>Chapter Name</label>
+          <input type="text" placeholder="Organization Chapter Name or Number (if applicable)" id="organization_chapter_name" formControlName="organization_chapter_name"
+            class="form-control">
+        </div> -->
+
+        
+<form [formGroup]="campaignPg2" #f="ngForm" (ngSubmit)='onSubmit(f)'>
+  <div class="row">
+    <div class="col-md-12">
+      <label>Campaign Goal*</label>
+      </div>
+
+      </div>
+
+      <div class="row">
+          <div class="form-group">
+
+              <input type="text" formControlName="goal" placeholder="$0.00" class="form-control">
+
+            </div>
+
+
+    <div class="row">
+      <div class="col-md-7">
+        Pre-Campaign Funds Raised
+      </div>
+      <div class="col-md-2">
+        End Date*
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <input type="checkbox" class="mat-checkbox-input"> Make this a Monthy Campaign!
+        </div>
+      </div>
+    </div>
+
+
+      <div class="row">
+        <div class="col-md-5">
+          <div class="form-group">
+
+            <input type="text" formControlName="initial_funded" class="form-control align-left" placeholder="$0">
+
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-5">
+          <div class="form-group">
+
+            <input type="date" formControlName="end_date"  class="form-control align-right" placeholder="MM/DD/YYY" >
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- <input type="text" id="goal" placeholder="$50,000">
+    
+    </div>
+    <div class="col-md-3">
+      <label>End Date*</label>
+    </div>
+    <div class="col-4">
+      <input type="checkbox" class="mat-checkbox-input">
+      <label for="">Make this a Monthly Campaign!</label>
+    </div>
+  </div> -->
+
+  <hr>
+
+
+
+
+
+
+  
+  <div class="form-group">
+    <label>Pre-Campaign Funds Raised</label>
+    <input type="text"  placeholder="$0" class="form-control">
+  <div class="form-group">
+    <label>End Date*</label>
+    <input type="text"  placeholder="MM/DD/YYYY" class="form-control">
+  </div>
+  </div>
+
+
+
+
       <!-- Modal of slider information -->
+   <!-- <div class="col-md-8">
+
       <div style="text-align: center">
         <button type="button" class="btn btn-default">How do these Sliders Work?</button>
       </div>
       <hr>
+      <br>
+    </div> -->
+      <!-- inside mat card starts here -->
+      
+      
       <!-- Sliders -->
-     
+      
+
+    
+  
+      <mat-card class="You">
+        <mat-card-content>
+          <h2 class="example-h2"></h2>
+          
+            <div class="colored">
+              <h3>$1-10... Can be repeated 5 times with a possible sum of $275</h3>
+          <mat-slider
+          class="example-margin3"
+            
+              [invert]="invert"
+              [max]="max"
+              [min]="min"
+              [step]="step"
+              [thumb-label]="thumbLabel"
+              [tick-interval]="tickInterval"          
+              [vertical]="vertical">
+          </mat-slider>
+        </div>
+        <hr>
+      
+            
+              <div class="colored">
+                  <h3>$11-25... Can be repeated 4 times with a possible sum of $1,080</h3>
+            <mat-slider
+            class="example-margin3"
+              
+                [invert]="invert"
+                [max]="max"
+                [min]="min"
+                [step]="step"
+                [thumb-label]="thumbLabel"
+                [tick-interval]="tickInterval"          
+                [vertical]="vertical">
+            </mat-slider>
+          </div>
+          <hr>
+        
+              
+                <div class="colored">
+                    <h3>$26-50... Can be repeated 4 times with a possible sum of $3,800</h3>
+              <mat-slider
+              class="example-margin3"
+                
+                  [invert]="invert"
+                  [max]="max"
+                  [min]="min"
+                  [step]="step"
+                  [thumb-label]="thumbLabel"
+                  [tick-interval]="tickInterval"          
+                  [vertical]="vertical">
+              </mat-slider>
+            </div>
+            <hr>
+               
+                
+                  <div class="colored">
+                      <h3>$51-100... Can be repeated 1 times with a possible sum of $3,775</h3>
+                <mat-slider
+                class="example-margin3"
+                  
+                    [invert]="invert"
+                    [max]="max"
+                    [min]="min"
+                    [step]="step"
+                    [thumb-label]="thumbLabel"
+                    [tick-interval]="tickInterval"          
+                    [vertical]="vertical">
+                </mat-slider>
+              </div>
+              <hr>
+              <div class="colored">
+                  <h3>$101-150... Can be repeated 0 times with a possible sum of $0</h3>
+            <mat-slider
+            class="example-margin3"
+              
+                [invert]="invert"
+                [max]="max"
+                [min]="min"
+                [step]="step"
+                [thumb-label]="thumbLabel"
+                [tick-interval]="tickInterval"          
+                [vertical]="vertical">
+            </mat-slider>
+          </div>
+              
+                  
+                    <div class="colored">
+                        <h3>$151-200... Can be repeated 0 times with a possible sum of $0</h3>
+                  <mat-slider
+                  class="example-margin3"
+                    
+                      [invert]="invert"
+                      [max]="max"
+                      [min]="min"
+                      [step]="step"
+                      [thumb-label]="thumbLabel"
+                      [tick-interval]="tickInterval"          
+                      [vertical]="vertical">
+                  </mat-slider>
+                </div>
+                <div class="colored">
+                    <h3>$201-250... Can be repeated 1 times with a possible sum of $11,275</h3>
+              <mat-slider
+              class="example-margin3"
+                
+                  [invert]="invert"
+                  [max]="max"
+                  [min]="min"
+                  [step]="step"
+                  [thumb-label]="thumbLabel"
+                  [tick-interval]="tickInterval"          
+                  [vertical]="vertical">
+              </mat-slider>
+            </div>
+            <div class="colored">
+                <h3>$251-300... Can be repeated 1 times with a possible sum of $13,775</h3>
+          <mat-slider
+          class="example-margin3"
+            
+              [invert]="invert"
+              [max]="max"
+              [min]="min"
+              [step]="step"
+              [thumb-label]="thumbLabel"
+              [tick-interval]="tickInterval"          
+              [vertical]="vertical">
+          </mat-slider>
+        </div>
+                </mat-card-content>
+             
+              </mat-card>
+      
       <div class="row">
         <!-- <form action=''> -->
-          <mat-slider min="1" max="5" step="1" value="18"></mat-slider>
         <!-- </form> -->
         <div class="col-md-4">
-          <a routerLink="/startCampaign-confirmation"><button type="button" class="btn btn-warning">LAUNCH YOUR CAMPAIGN!</button></a>
+          <button type="submit" class="btn btn-warning">LAUNCH YOUR CAMPAIGN!</button>
         </div>
         <div class="col-md-4">
           <a routerLink="/profile"><button type="button" class="btn btn-primary">Save for Later</button></a>
@@ -27,20 +268,22 @@
           <a routerLink="/deleteCampaign"><button type="button" class="btn btn-danger">Delete this Fundraiser :(</button></a>
         </div>
       </div>
-    </div>
+    </form> 
 
-    <!-- Calulator Card -->
-    <div class="col-md-4">
+
+  <!-- Calulator Card   this is the sidebar section bellow-->
+  <!-- <div class="col-md-4"> -->
+
+  <!-- 
+    Calulator Card -->
+  <!-- <div class="col-md-4">
+
       <h3>Let Us Do the Math!</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, vero impedit non saepe minus optio quia voluptatem quae dignissimos necessitatibus facilis deserunt? Obcaecati autem saepe cumque ipsa distinctio adipisci repellendus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque exercitationem architecto fugiat, magni cupiditate impedit ratione sunt possimus? Voluptatibus quibusdam obcaecati numquam, dolorem consectetur provident magnam labore nihil placeat ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, repudiandae? Animi eos sapiente esse, facere fugiat fuga deleniti, explicabo, provident minus fugit vero autem consectetur quo magnam? Ad, facere! Id!</p>
       <div style="text-align: center">
         <a routerLink="/startCampaign-confirmation"><button type="button" class="btn btn-warning">LAUNCH YOUR CAMPAIGN!</button></a><br>
         <a routerLink="/profile"><button type="button" class="btn btn-primary">Save for Later</button></a><br>
-        <!-- This button produces a modal of profile -->
-        <button type="button" class="btn btn-default">Preview your Campaign!</button>
+         This button produces a modal of profile 
+         <button type="button" class="btn btn-default">Preview your Campaign!</button>
       </div>
-    </div>
-  </div>
-</div>
-<br><br><br>
-  
+    </div>-->

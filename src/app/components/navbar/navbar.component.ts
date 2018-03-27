@@ -14,6 +14,9 @@ import { NgModule } from '@angular/core';
 import { Inject } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
 import { MatDialogContainer } from '@angular/material/typings/dialog/dialog-container';
+import { RegistrationService } from './auth.service';
+import { Router } from '@angular/router';
+import { all } from 'q';
 
 @Component({
   selector: 'app-navbar',
@@ -22,17 +25,21 @@ import { MatDialogContainer } from '@angular/material/typings/dialog/dialog-cont
 
 
 })
-export class NavbarComponent implements OnInit{
+export class NavbarComponent implements OnInit {
 dialogRef: MatDialogRef<RegistrationPopComponent>;
-dialogReflog: MatDialogRef<LoginPopComponent>
-constructor(public dialog: MatDialog) {
+dialogReflog: MatDialogRef<LoginPopComponent>;
+// isLoggedIn = <boolean>(false);
+public get isLoggedIn(): boolean {
+  return this.authService.auth();
+}
+constructor(public dialog: MatDialog, private authService: RegistrationService, private router: Router) {
   // this.openDialog();
-  
-  let isLogedIn: '';
+  // window.localStorage.setItem('isloggedin', JSON.stringify(this.isLoggedIn))
+
 
 }
 ngOnInit() {
- 
+
 
 }
 
@@ -41,9 +48,9 @@ openDialogReg() {
     height: '570px',
     width: '500px',
     panelClass: 'myapp-no-padding-dialog'
-   
-    
-    
+
+
+
   });
 
 }
@@ -54,7 +61,22 @@ openDialogLog() {
   this.dialogReflog = this.dialog.open(LoginPopComponent);
   this.dialogReflog.afterClosed().subscribe((result) => {
     console.log(result);
-  })
+  });
+}
+
+public logout(){
+  window.localStorage.clear()
+  // console.log("*****Local storate after logout",window.localStorage)
+  // window.localStorage.setItem("token", " ")
+  // return window.localStorage.setItem("isloggedin", "false").subscribe(()=>{
+  //   window.localStorage.setItem("isloggedin", "false"),
+    this.router.navigate(["/home"])
+  //   
+  // })
+  console.log("*****Local storate after logout",window.localStorage)
+  return ()=> {
+  window.localStorage.setItem("isloggedin", "false")
+  }
 }
 
 }

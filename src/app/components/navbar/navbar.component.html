@@ -198,10 +198,109 @@
     <li>
       <a style="padding: auto 0">|</a>
     </li>
-    <li>
+    <!-- <li>
       <a style="padding-right: 0" (click)=openDialogLog()>Login</a>
-    </li>
-  </ul>
+    </li> -->
 
+  <li >
+    <a style="padding-right: 0" *ngIf="!isLoggedIn" (click)=openDialogLog()>Login</a>
+    <a style="padding-right: 0" *ngIf="isLoggedIn" (click)="logout()">Logout</a>
+  </li>
+</ul>
+  <!-- <ng-container>
+    <button  *ngIf="isLoggedin ==='Logout'" class="menu-btn" style="padding-right: 0"  [class.activeHighlight]="checkActive(f)" (click)="Logout"> Logout
+      </button>
+    <button  *ngIf="!isLoggedin"  class="menu-btn" text-center  [class.activeHighlight]="checkActive(f)" (click)=openDialogLog()>Login
+     </button>
+    </ng-container> -->
+  
 
 </nav>
+
+<div class="modal fade registrationlogin" id="registrationsignin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="container-12 ">
+
+    <div class="modal-dialog" role="document">
+      <div class="container registrationlogin">
+        <div class="row">
+          <div class="col-sm-12">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span class="spanx" aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="modal-content col-lg-6 registermodal">
+              <div class="modal-header">
+                <h5 class="modal-title" id="registrationsignin">Register</h5>
+              </div>
+              <div></div>
+              <div class="modal-body">
+                <div class="container">
+                  <div class="row">
+
+                    <!-- <mat-form-field class="col-md-12">
+                                <input matInput placeholder="Enter your full name (or the name of your organization)">
+                              </mat-form-field>
+                        
+                       </div> 
+                       <div class="row">
+                         <div class="col">
+                              <mat-form-field>
+                                <input matInput placeholder="Enter your e-mail address">
+                              </mat-form-field>
+                         </div>
+                         <div class="col">
+                            <mat-form-field>
+                                <input matInput placeholder="Enter desired username">
+                              </mat-form-field>
+                         </div>
+                       </div>
+
+                       <div class="row">
+                         <div class="col">
+                            <mat-form-field>
+                                <input matInput placeholder="Enter password">
+                              </mat-form-field>
+                         </div>
+                         <div class="col">
+                              <mat-form-field>
+                                <input matInput placeholder="Re-enter password">
+                              </mat-form-field>
+                         </div>
+                       </div>
+                      </div> 
+                     </div>
+                     <div class="modal-footer">
+                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                       <button type="button" class="btn btn-primary">Save changes</button>
+                     </div>
+                   </div>
+        
+        
+        
+                   <div class="modal-content col-lg-4 signinmodal">
+                     <div class="modal-header">
+                       <h5 class="modal-title" id="registrationsignin">Login</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                       
+                        </button>
+                     </div>
+                   <div class="modal-body">
+                     ...
+                   </div>
+                        <div class="modal-footer">
+                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                   </div>
+            </div>
+          </div>
+</div>
+</div>
+</div> 
+
+</nav>-->

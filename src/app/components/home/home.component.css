@@ -10,10 +10,17 @@
   border-radius: 0%;
 
 }
+.container {
+  width: 100%;
+  
+}
 
 .panel {
   background-color: lightgray;
+  width: 100%;
+  margin-left: 0%;
 }
+
 
 .center {
   display: block;
@@ -25,59 +32,157 @@
 
 /* Video */
 
-#video1 {
+.jumbotronv {
   background-color: lightgray;
-  width: 217.5%;
-  height: 45%;
-  margin-left: -59%;
-  margin-top: -3%;
+  width: 100%;
+  height: auto;
 }
+
 video {
   float: center;
   display: block;
   margin: 0 auto;
-  /* width: 100%; */
   height: auto;
 }
 
-
 /* Fundraising  */
 
-img {
-  height: 50%;
-  width: 50%;
-}
-.img1 {
-  float: right;
-}
-.traditional {
+.containerf {
   width: 100%;
-  height: 100%;
+
+
 }
 
+/* Traditional  */
+
+
+.responsive {
+  float: left;
+  width: 100%;
+  height: auto;
+  max-width:1300px;
+
+}
 #traditional {
-  font-size: 30px;
+  font-size: 1.7vw;
   height: 40%;
-  width: 40%;
-  margin-top: 5%;
-  float: right;
-  padding-right: 5%;
-}
+  padding: 4% 6%;
+  
+  /* float: right; */
+ 
+} 
 
-.crowfunding {
-  width: 100%;
-  height: 100%;
-
-}
+/* Crowfunding */
 
 #crowfunding {
-  font-size: 30px;
-  height: 40%;
-  width: 45%;
-  padding: 8%;
+  font-size: 1.7vw;
+  padding: 2% 6%;
+  text-align: center;
+  
+
+} 
+
+.responsive2 {
+  width: 100%;
+  height: auto;
+  max-width:1300px;
+  /* float:right; */
 }
-/* .todah {
-  width: 25%;
-  height: 25%;
+
+
+
+/*  Todah  */
+.jumbotron3 {
+  height: auto;
+  width: 100%;
+}
+
+.responsive3 {
+  width: 100%;
+  height: auto;
+  max-width:800px;
  
-} */
+}
+.responsive4 {
+  width: 100%;
+  height: auto;
+  max-width:800px;
+}
+#todah {
+  font-size: 1.5vw;
+  height: 40%;
+  width: 70%;
+  padding:2% 8%;
+  text-align: center;
+ margin: auto;
+ 
+} 
+
+
+/* Easy as 1-2-3 */
+
+.panel123 {
+  background-color: whitesmoke;
+}
+
+
+
+
+/* Campaigners */
+
+
+.panelc {
+  background-image: linear-gradient(rgba(128,128,128,0.9), rgba(128,128,128,0.9)), url("../../../assets/splash1.jpg"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+
+} 
+
+  #happy {
+    text-align: center;
+    color: white;
+
+  }
+  hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    /* border-style: inset; */
+    border-width: 2px;
+    border-bottom: thick line black;
+    width: 8%;
+    border-color: white;
+  
+  }
+
+
+  .first, .sec, .third {
+    color: white;
+  }
+  
+
+/*  Footer */
+
+.footer {
+  background-color: #257692;
+  width: 103.2%;
+  padding-top: 2%;
+  padding-bottom: 3%;
+  margin-bottom: -4%;
+  margin-left: -2%;
+
+ } 
+
+.btn {
+  font-size: 20px;
+  border-radius: 0%;
+  background-color: #63bad3;
+  color: white;
+  padding: 1% 2%;
+
+ 
+}
