@@ -78,7 +78,6 @@ import { RegistrationService } from './components/navbar/auth.service';
 @NgModule({
   declarations: [
     AppComponent,
-
     NavbarComponent,
     FooterComponent,
     HomeComponent,
@@ -94,7 +93,39 @@ import { RegistrationService } from './components/navbar/auth.service';
 
   ],
   exports: [
-
+    CdkTableModule,
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  // MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatStepperModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatDividerModule,
+  // MatCardContent,
+  MatExpansionModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
     // MatCardModule
   ],
   entryComponents: [
@@ -142,45 +173,6 @@ import { RegistrationService } from './components/navbar/auth.service';
     AppComponent
   ],
 
-})
-@NgModule({
-exports: [
-  CdkTableModule,
-  MatAutocompleteModule,
-  MatButtonModule,
-  MatButtonToggleModule,
-  // MatCardModule,
-  MatCheckboxModule,
-  MatChipsModule,
-  MatStepperModule,
-  MatDatepickerModule,
-  MatDialogModule,
-  MatDividerModule,
-  // MatCardContent,
-  MatExpansionModule,
-  MatIconModule,
-  MatInputModule,
-  MatListModule,
-  MatMenuModule,
-  MatNativeDateModule,
-  MatPaginatorModule,
-  MatProgressBarModule,
-  MatProgressSpinnerModule,
-  MatRadioModule,
-  MatRippleModule,
-  MatSelectModule,
-  MatSidenavModule,
-  MatSliderModule,
-  MatSlideToggleModule,
-  MatSnackBarModule,
-  MatSortModule,
-  MatTableModule,
-  MatTabsModule,
-  MatToolbarModule,
-  MatTooltipModule,
-
-],
-bootstrap: [AppComponent]
 })
 export class AppModule { }
 
