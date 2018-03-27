@@ -199,3 +199,6 @@ iframe {
 
  
 }
+.jumbotron-fluid {
+  margin: 0 !important;
+}
