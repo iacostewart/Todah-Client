@@ -2,6 +2,10 @@
   "name": "todah",
   "version": "0.0.0",
   "license": "MIT",
+  "engines": {
+    "node": "8.9.3",
+    "npm": "5.5.1"
+  },
   "scripts": {
     "ng": "ng",
     "prestart": "ng serve",
@@ -9,7 +13,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start": "node ./node_modules/http-server/bin/http-server"
+    "start": "node ./node_modules/http-server/bin/http-server",
+    "postinstall": "ng build --aot -prod"
   },
   "private": true,
   "dependencies": {
@@ -38,7 +43,8 @@
     "ng2-scroll-to-el": "^1.2.1",
     "popper.js": "^1.14.1",
     "rxjs": "^5.5.6",
-    "zone.js": "^0.8.19"
+    "zone.js": "^0.8.19",
+    "typescript": "~2.5.3"
   },
   "devDependencies": {
     "@angular/cli": "1.6.8",
