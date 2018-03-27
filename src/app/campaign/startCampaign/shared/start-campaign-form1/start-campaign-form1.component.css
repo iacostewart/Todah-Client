@@ -28,6 +28,7 @@ textarea.ng-invalid.ng-touched {
    
     padding: 1% 2%;
     border-color: #63bad3 !important;
+    margin-bottom: 2rem;
 }
   .form-group{
     font-family: 'Oswald', sans-serif;
