@@ -50,15 +50,15 @@ export class RegistrationPopComponent implements OnInit {
   // is_active?: boolean;
 createForm() {
   this.regForm = this.form.group({
-    'lastname': new FormControl( 'Tester' , Validators.required),
+    'lastname': new FormControl( null , Validators.required),
     'is_superuser': new FormControl( false, Validators.required),
     'is_staff': new FormControl(true, Validators.required),
     'is_active': new FormControl(true, Validators.required),
-    'firstname': new FormControl('Test', Validators.required),
-    'username': new FormControl('Test', Validators.required),
-    'email': new FormControl('', [Validators.required, Validators.email]),
-    'password': new FormControl('', Validators.required),
-    'repassword': new FormControl('', Validators.required)
+    'firstname': new FormControl(null, Validators.required),
+    'username': new FormControl(null, Validators.required),
+    'email': new FormControl(null, [Validators.required, Validators.email]),
+    'password': new FormControl(null, Validators.required),
+    'repassword': new FormControl(null, Validators.required)
 
 
   });
