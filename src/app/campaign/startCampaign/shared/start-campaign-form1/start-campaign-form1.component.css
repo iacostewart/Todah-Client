@@ -3,3 +3,14 @@ select.ng-invalid.ng-touched,
 textarea.ng-invalid.ng-touched {
     border: 1px solid red;
   }
+  .form-group{
+    font-family: 'Oswald', sans-serif;
+    color:#63bad3;
+    /* text-shadow:.1px 0px black; */
+    background-color:rgb(243, 243, 243);
+    /* #1f3d49 */
+  }
+  .row{
+    font-family: 'Oswald', sans-serif;
+
+  }

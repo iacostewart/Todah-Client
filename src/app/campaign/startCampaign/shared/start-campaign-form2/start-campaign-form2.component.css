@@ -13,7 +13,29 @@
     margin: 0px;
 
   }
+  .example-margin3 {
+    width:1100px;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    outline: none;
+    vertical-align: middle;
+  }
+  .You{
+    font-family: 'Oswald', sans-serif;
+    color:#63bad3;
+    background-color:rgb(243, 243, 243);
+ 
+    
+  }
+  .row{
+    font-family: 'Oswald', sans-serif;
+    /* color:#63bad3; */
 
+  }
+.colored{
+  padding-top:5px;
+}
 /* 
   .example-margin3 {
     width:800px;
