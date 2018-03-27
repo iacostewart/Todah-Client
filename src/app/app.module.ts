@@ -92,7 +92,7 @@ import { IsLogedInComponent } from './components/navbar/is-loged-in/is-loged-in.
     LoginPopComponent,
     PersonalCampaignComponent,
     IsLogedInComponent,
-    HowItWorksComponent,
+    HowItWorksComponent
 
   ],
   exports: [
