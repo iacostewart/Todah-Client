@@ -74,7 +74,6 @@ import { campaingID } from './globals';
     StartCampaignForm1Component,
     StartCampaignForm2Component,
     StartCampaignConfirmComponent,
-    DeleteCampaignComponent,
     MatCardModule,
     // MatCardContent
 
