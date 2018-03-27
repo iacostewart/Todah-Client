@@ -84,7 +84,7 @@ onSubmit() {
   this.campaignService.updateCampaign(this.campaignPg2.value)
     .subscribe(
       () => {
-      this.router.navigate(["/startCampaign-form3"])
+      this.router.navigate(["/startCampaign-confirmation"])
     },
             // (response) => this.router.navigate(['/startCampaign-form3']),
     // (response) => console.log(response),
