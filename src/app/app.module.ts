@@ -78,7 +78,7 @@ import { RegistrationService } from './components/navbar/auth.service';
 @NgModule({
   declarations: [
     AppComponent,
-
+    MatCardContent,
     NavbarComponent,
     FooterComponent,
     HomeComponent,
@@ -116,6 +116,7 @@ import { RegistrationService } from './components/navbar/auth.service';
     FormsModule,
     MatSliderModule,
     ReactiveFormsModule,
+    MatCardContent,
   
 
 
