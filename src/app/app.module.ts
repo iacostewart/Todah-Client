@@ -95,7 +95,6 @@ import { RegistrationService } from './components/navbar/auth.service';
 
   ],
   exports: [
-    MatCardContent
     // MatCardModule
   ],
   entryComponents: [
