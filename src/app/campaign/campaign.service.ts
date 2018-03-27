@@ -33,8 +33,10 @@ export class CampaignService {
         //     console.log(window.localStorage)
         //   });
     }
-    updateCampaign(campaignUpdate: CampaignUpdate) {
-        console.log('update happening... campaignUpdate', campaignUpdate);
+
+    updateCampaign(campaignUpdate: CampaignUpdate){
+        console.log("update happening... campaignUpdate", campaignUpdate)
+        this.router.navigate(["/startCampaign-confirmation"])
         return this.http.put(`${api_url}/campaigns/${campaignUpdate.campId}`, campaignUpdate, { headers : this.getHeaders()});
     }
 
