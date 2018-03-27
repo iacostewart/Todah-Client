@@ -52,8 +52,7 @@ export class LoginPopComponent implements OnInit {
   }
 
   onSubmit() {
-    // console.log(this.campaignForm);
-    console.log("this is logForm", this.logForm);
-    this.registrationService.login(this.logForm.value);
+    this.registrationService.login(this.logForm.value)
   }
+  
 }

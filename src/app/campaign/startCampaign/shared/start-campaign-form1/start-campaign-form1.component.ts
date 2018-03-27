@@ -117,6 +117,7 @@ export class StartCampaignForm1Component implements OnInit {
     this.campaignService.postFile(this.campaignImageFile).subscribe(data => {
       //do something, file success
     }, error => {
+      alert("")
       console.log(error);
     });
   }
@@ -149,20 +150,15 @@ export class StartCampaignForm1Component implements OnInit {
   
 
   onSubmit() {
-    // window.localStorage.campId = ""
-    console.log(this.campaignForm.value);
-
      this.campaignService.storeCampaign(this.campaignForm.value)
   .subscribe((campId: CampId) => {
     this.router.navigate(["/startCampaign-form2"]),
-    console.log('*******notyThingkie************',campId),
-    // (campId) => {JSON.stringify(campId), console.log(campId.id)}
-   window.localStorage.setItem('campId', JSON.stringify(campId.campId))
-   this.campaignID.ID = campId.campId
-   console.log("CAMPAIGN ID1",this.campaignID.ID)
+    window.localStorage.setItem('campId', JSON.stringify(campId.campId))
+    this.campaignID.ID = campId.campId
   },
-  (error) => console.log(error)
-  );
+  (error) => {alert("1Campaign did not post please make sure all required fields are filled out")
+  console.log(error)}
+  )
   }
 
   // this.campaignService.storeCampaign(this.campaignForm.value)

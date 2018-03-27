@@ -57,13 +57,13 @@ export class StartCampaignForm2Component implements OnInit  {
   createForm() {
     this.campaignPg2 = this.form.group({
       'campId': new FormControl (Number(window.localStorage.campId)),
-      'goal': new FormControl(""),
+      'goal': new FormControl(null, Validators.required),
       'slider_inputs': new FormControl(5),
       'slider_ranges': new FormControl(500),
       'goal_currency': new FormControl('USD'),
       'initial_funded_currency': new FormControl('USD'),
-      'initial_funded': new FormControl(""),
-      'end_date': new FormControl("")
+      'initial_funded': new FormControl(null, Validators.required),
+      'end_date': new FormControl(null, Validators.required)
 
     });
 }
@@ -80,15 +80,14 @@ export class StartCampaignForm2Component implements OnInit  {
 
 
 onSubmit() {
-  console.log("PAGE 2 INFO", this.campaignPg2.value);
+
   this.campaignService.updateCampaign(this.campaignPg2.value)
     .subscribe(
       () => {
       this.router.navigate(["/startCampaign-confirmation"])
     },
-            // (response) => this.router.navigate(['/startCampaign-form3']),
-    // (response) => console.log(response),
-    (error) => console.log(error)
+    (error) => {alert("2Campaign did not post please make sure all required fields are filled out")
+    console.log(error)}
     );
 }
 
