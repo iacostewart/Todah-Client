@@ -10,7 +10,7 @@ import {
   ViewChild,
   ViewContainerRef } from '@angular/core';
 import {MatFormFieldModule, MatInputModule, MatSliderModule, MatCardModule} from '@angular/material';
-// import {MatCardContent} from '@angular/material';
+import {MatCardContent} from '@angular/material';
 import {RouterModule} from '@angular/router';
 import {CommonModule} from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -20,30 +20,15 @@ import { CampaignService } from '../../../campaign.service';
 import { Router } from '@angular/router';
 // import {Service} from './service ';
 import 'hammerjs';
-
-
 // tslint:disable-next-line:import-spacing
-
-
-
-
 @Component({
   selector: 'app-start-campaign-form2',
   templateUrl: './start-campaign-form2.component.html',
   styleUrls: ['./start-campaign-form2.component.css'],
   encapsulation: ViewEncapsulation.None,
   preserveWhitespaces: true,
-
-
-
   // perserveWhitespaces: boolean,
-
-
 })
-
-
-
-
 export class StartCampaignForm2Component implements OnInit  {
   campaignPg2: FormGroup;
   campaignImageFile: File = null;
@@ -58,23 +43,19 @@ export class StartCampaignForm2Component implements OnInit  {
   thumbLabel = true;
   value = 4;
   vertical: false;
-
-
   @ViewChild('dynamic', {
     read: ViewContainerRef
   }) viewContainerRef: ViewContainerRef;
-
   // tslint:disable-next-line:max-line-length
   constructor(private campaignService: CampaignService, private form: FormBuilder, private router: Router, ) {
     this.createForm();
     // this.service = service;
     // @Inject(Service)service
    }
-
-
   ngOnInit() {
     // this.service.setRootViewContainerRef(this.viewContainerRef);
     // this.service.addDynamicComponent();
+    window.scrollTo(0,0);
   }
   createForm() {
     this.campaignPg2 = this.form.group ({
@@ -97,10 +78,7 @@ export class StartCampaignForm2Component implements OnInit  {
   // tslint:disable-next-line:member-ordering
   private _tickInterval = 1;
 onClick() {
-
-
 }
-
 onSubmit() {
   this.campaignService.updateCampaign(this.campaignPg2.value)
     .subscribe(
@@ -111,8 +89,6 @@ onSubmit() {
     console.log(error)}
     );
 }
-
-
 // }
 // @Component({
 //   // tslint:disable-next-line:component-selector
@@ -124,4 +100,3 @@ onSubmit() {
 // export class ButtonOverviewExample { }
 // tslint:disable-next-line:member-ordering
 }
-
