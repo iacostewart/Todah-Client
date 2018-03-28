@@ -75,6 +75,7 @@ export class StartCampaignForm2Component implements OnInit  {
   ngOnInit() {
     // this.service.setRootViewContainerRef(this.viewContainerRef);
     // this.service.addDynamicComponent();
+    window.scrollTo(0,0);
   }
   createForm() {
     this.campaignPg2 = this.form.group ({
