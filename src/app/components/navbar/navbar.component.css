@@ -1,22 +1,17 @@
 a {
   text-decoration: none;
 }
-
 .navbar {
   height: 5.5rem;
   margin-bottom: 0;
   background-color: #1F3D49;
 }
-
-
 #secondNav { 
   background-color: lightgrey;
   height: 16rem;
  
 }
-
-
-.btn {
+button {
   border-radius: 0;
   background-color: #63bad3;
   color: white;
@@ -25,7 +20,6 @@ a {
   margin-left: 30px;
   
 }
-
 .btnn {
   border-radius: 0;
   background-color:lightgray;
@@ -34,31 +28,19 @@ a {
   font-size: 15px;
   margin-left: 2rem !important;
 }
-
-
-/* .btn active {
-  background-color: #286d87;
-} button select*/
-
 .todahHeaderLogo {
   height: 60%;
   margin-top: 1.5%;
   padding: 0 2.7% 0 2%;
 }
-
-
 .navbar-brand {
   position: relative;
   top: .7px;
   left: 12px;
   color: lightgray;
   font-size: 12px;
-
   
 }
-
-
-
 .how-it-works {
   position:relative;
   top: 15px;
@@ -66,7 +48,6 @@ a {
   font-size: 12px;
   color: lightgray;
 }
-
 .about {
   position:relative;
   top: 15px;
@@ -74,7 +55,6 @@ a {
   font-size: 12px;
   color: lightgray;
 }
-
 .contact {
   position:relative;
   top: 15px;
@@ -82,7 +62,27 @@ a {
   font-size: 12px;
   color: lightgray;
 }
-
+.profile {
+  position:relative;
+  top: 15px;
+  left: 120px;
+  font-size: 12px;
+  color: lightgray;
+}
+/* .Register {
+  position:relative;
+  top: 15px;
+  left: 150px;
+  font-size: 12px;
+  color: lightgray;
+}
+.Login {
+  position:relative;
+  top: 15px;
+  left: 180px;
+  font-size: 12px;
+  color: lightgray;
+} */
 /* .pricing {
   position:relative;
   top: 15px;
@@ -90,38 +90,26 @@ a {
   font-size: 12px;
   color: lightgray;
 } */
-
-
-
-
-
 .loginRetister {
   margin: 2.5rem 5rem;
 }
-
   
 .container-12 {
   margin: 130px 471px 0 471px;
 } 
-
 .modal-dialog {
   margin: 0;
 }
-
 .registermodal {
   margin: 2rem;
 }
 .signinmodal {
   margin: 2rem;
 }
-
 .spanx {
   margin-right: 15rem;
   color: white;
-
 }
-
-
 .btn-primary,
 .btn-primary:hover,
 .btn-primary:active,
@@ -130,7 +118,6 @@ a {
     background-color: #63bad3 !important;
     border-color: #63bad3 !important;
 }
-
 .btn-primary,
 .btn-primary:active,
 .btn-primary:visited,
@@ -139,5 +126,3 @@ a {
     border-color: #63bad3;
     
 }
-
-

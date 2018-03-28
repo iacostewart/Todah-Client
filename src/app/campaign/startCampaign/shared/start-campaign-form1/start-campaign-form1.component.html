@@ -6,7 +6,7 @@
     <!-- Form -->
     <div class="col-md-8">
         <!-- enctype="multipart/form-data" -->
-      <form [formGroup]="campaignForm" #f="ngForm" (ngSubmit)="onSubmit()">
+      <form [formGroup]="campaignForm" #f="ngForm" (ngSubmit)="onSubmit(f)">
         <p>Once you publish, there will be a 24-48 hour delay while the Todah team reviews your campaign. Also be prepared that
           you will have to create or link a WePay account with your campaign to receive payments from your donors.</p>
         <div>
@@ -86,17 +86,13 @@
             <label>Campaign Teaser
               <sup>*</sup>
             </label>
-
             <p>Your campaign teaser will appear with your main campaign image on Todah homepage as well as on any social media
               or email posts used to promote your campaign.</p>
-
             <textarea [(ngModel)]="textCount" (keyup)="count(textCount)" type="text" placeholder="Short Description" id="project_short_description"
               formControlName="project_short_description" class="form-control"></textarea>
             <p>characters left: {{ characterLeft }}</p>
             
-
               <!-- <span 
-
               *ngIf="!campaignForm.get('campaignData.project_short_description').valid && campaignForm.get('campaignData.project_short_description').touched" 
               class="help-block">Please enter a short description for your campaign.</span> -->
           </div>
@@ -121,9 +117,7 @@
             <label>Upload your Main Campaign Image
               <sup>*</sup>
             </label>
-
             <!-- <input type="file" id="file" class="form-control" (change)="fileInput($event.target.files)" formControlName="project_image" #MainImage> -->
-
             <br>
             <!-- look into event.file -->
             <!-- (uploadFinished)="onUploadFinished($event.file)"> not recongnized as a function-->
@@ -153,11 +147,7 @@
             <input type="text" placeholder="YouTube url" id="youtube_url" formControlName="youtube_url" class="form-control">
           </div>
         <!-- </div> -->
-
-
         <!-- <button class="btn btn-primary" type>Submit</button> -->
-
-
         <hr>
         <div class="row bottom-bottom">
           <div class="col-md-4 float-left">
@@ -168,9 +158,7 @@
               <button type="button" class="btn btn-primary btn-saveForLater">Save for Later</button>
             </a>
             <br>
-
           </div>
-
           <div class="col-md-4 delete-btn float-right"  >
             <a id="deleteBtn" routerLink="/deleteCampaign">
               <button type="button" class="btn btn-danger ">Delete this Fundraiser</button>
@@ -180,9 +168,6 @@
           </div>
       </form>
     <!-- </div> -->
-
-
-
     <!-- Preview Card -->
     <!-- on another page? -->
     <!-- <div class="col-md-4">

@@ -1,7 +1,5 @@
 <!-- Make more mobile friendly.  Some features do not hold to small computer screens or tablets specifically.  Double check ALL mobile device options however. -->
 <!-- Mobile functionality should be checked on ALL levels -->
-
-
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -12,19 +10,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-
       <!-- Add Todah logo here -->
       <a class="navbar-brand" routerLink="/home">Home</a>
       <a class="how-it-works" routerLink="/howItWorks">How it Works</a>
       <a class="about" routerLink="/about">About</a>
       <a class="contact" routerLink="/contact">Contact</a>
+      <a class="profile" routerLink="/profile">Profile</a>
+        
       <!-- <a class="pricing" routerLink="/pricing">Pricing</a> -->
     </div>
-
     <!-- Features don't quite work with mobile dropdown -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-
       </ul>
       <form class="navbar-form navbar-left">
         <!-- Idea is that starting a campaign carries that yellow/orange color all the way through the envelope wall -->
@@ -33,8 +30,6 @@
         <!-- Only visible when logged in as admin -->
         <!-- <a routerLink="/admin"><button type="button" class="btn btn-default">Admin Portal</button></a> -->
       </form>
-
-
       <form class="navbar-form navbar-right">
         <div class="input-group">
           <input type="text" class="form-control" placeholder="Search Campaigns" list="categories">
@@ -69,7 +64,6 @@
           <ul class="dropdown-menu">
             <li>
               <a routerLink="/browseCategory">
-
                 <!-- When count is at zero, have as no value so the badge does no show (PERTAINS TO ALL AREAS WITH THESE BADGE ICONS) -->
                 <i class="fas fa-paw fa-2x" data-fa-transform="shrink-3.5" data-fa-mask="fas fa-circle"></i> Animals
                 <span class="badge"></span>
@@ -166,61 +160,37 @@
   </div>
 </nav>
 <nav class="navbar navbar-default" id="secondNav">
-  <img src="../../../assets/trans.png" class="todahHeaderLogo" alt="" />
-
-  <a routerLink="/snapshot">
-    <button type="button" class="btn btn-lg">Find a Campaign</button>
+  <a routerLink="/home">
+    <img src="../../../assets/logo.png" class="todahHeaderLogo" alt="" />
   </a>
-
-  <a routerLink="/startCampaign">
-    <button type="button" class="btn btn-lg">Start a Campaign</button>
-  </a>
-
-
-
+  <!-- <div class="campaignButtons"> -->
+    <a routerLink="/snapshot">
+      <button mat-raised-button>Find a Campaign</button>
+    </a>
+    <a routerLink="/startCampaign">
+      <button mat-raised-button>Start a Campaign</button>
+    </a>
+  <!-- </div> -->
   <ul class="nav navbar-nav navbar-right loginRetister">
-    <!-- Profile link only visible when logged in -->
-    <li>
-      <a routerLink="/profile" style="padding-right: 0">Profile</a>
-    </li>
-    <!-- Bar only visible when profile is visible -->
     <li>
       <a style="padding: auto 0">|</a>
     </li>
-    <!-- On click to modal for register (left side) and login (right side) => options for login through Google and Facebook needed as well -->
-    <!-- When logged in, switch to logout -->
-
-    <!-- disabled login and out bellow, this controls the older register/sign in modal -->
-
     <li>
       <a style="padding-left: 0" (click)=openDialogReg()>Register</a>
     </li>
     <li>
       <a style="padding: auto 0">|</a>
     </li>
-    <!-- <li>
-      <a style="padding-right: 0" (click)=openDialogLog()>Login</a>
-    </li> -->
-
-  <li >
-    <a style="padding-right: 0" *ngIf="!isLoggedIn" (click)=openDialogLog()>Login</a>
-    <a style="padding-right: 0" *ngIf="isLoggedIn" (click)="logout()">Logout</a>
-  </li>
-</ul>
-  <!-- <ng-container>
-    <button  *ngIf="isLoggedin ==='Logout'" class="menu-btn" style="padding-right: 0"  [class.activeHighlight]="checkActive(f)" (click)="Logout"> Logout
-      </button>
-    <button  *ngIf="!isLoggedin"  class="menu-btn" text-center  [class.activeHighlight]="checkActive(f)" (click)=openDialogLog()>Login
-     </button>
-    </ng-container> -->
-  
-
+ 
+    <li>
+      <a style="padding-right: 0" *ngIf="!isLoggedIn" (click)=openDialogLog()>Login</a>
+      <a style="padding-right: 0" *ngIf="isLoggedIn" (click)="logout()">Logout</a>
+    </li>
+  </ul>
 </nav>
-
 <div class="modal fade registrationlogin" id="registrationsignin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
   aria-hidden="true">
   <div class="container-12 ">
-
     <div class="modal-dialog" role="document">
       <div class="container registrationlogin">
         <div class="row">
@@ -230,7 +200,6 @@
             </button>
           </div>
         </div>
-
         <div class="container">
           <div class="row">
             <div class="modal-content col-lg-6 registermodal">
@@ -241,66 +210,3 @@
               <div class="modal-body">
                 <div class="container">
                   <div class="row">
-
-                    <!-- <mat-form-field class="col-md-12">
-                                <input matInput placeholder="Enter your full name (or the name of your organization)">
-                              </mat-form-field>
-                        
-                       </div> 
-                       <div class="row">
-                         <div class="col">
-                              <mat-form-field>
-                                <input matInput placeholder="Enter your e-mail address">
-                              </mat-form-field>
-                         </div>
-                         <div class="col">
-                            <mat-form-field>
-                                <input matInput placeholder="Enter desired username">
-                              </mat-form-field>
-                         </div>
-                       </div>
-
-                       <div class="row">
-                         <div class="col">
-                            <mat-form-field>
-                                <input matInput placeholder="Enter password">
-                              </mat-form-field>
-                         </div>
-                         <div class="col">
-                              <mat-form-field>
-                                <input matInput placeholder="Re-enter password">
-                              </mat-form-field>
-                         </div>
-                       </div>
-                      </div> 
-                     </div>
-                     <div class="modal-footer">
-                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                       <button type="button" class="btn btn-primary">Save changes</button>
-                     </div>
-                   </div>
-        
-        
-        
-                   <div class="modal-content col-lg-4 signinmodal">
-                     <div class="modal-header">
-                       <h5 class="modal-title" id="registrationsignin">Login</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                       
-                        </button>
-                     </div>
-                   <div class="modal-body">
-                     ...
-                   </div>
-                        <div class="modal-footer">
-                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                   </div>
-            </div>
-          </div>
-</div>
-</div>
-</div> 
-
-</nav>-->

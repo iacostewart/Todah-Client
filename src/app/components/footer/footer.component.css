@@ -2,24 +2,18 @@
     background-color:#1f3d49;
     height: 150px;
 }
-
 #footer_color {
     background-color:#1f3d49;
     
 }
-
-
-
 .btn {
     border-radius: 0;
     background-color: #63bad3;
     color: white;
 }
-
 a {
     color: white;
 }
-
 #bottom{
     color: black !important;
 }
