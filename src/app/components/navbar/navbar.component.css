@@ -16,7 +16,7 @@ a {
 }
 
 
-.btn {
+button {
   border-radius: 0;
   background-color: #63bad3;
   color: white;
@@ -36,9 +36,6 @@ a {
 }
 
 
-/* .btn active {
-  background-color: #286d87;
-} button select*/
 
 .todahHeaderLogo {
   height: 60%;
@@ -82,6 +79,28 @@ a {
   font-size: 12px;
   color: lightgray;
 }
+
+.profile {
+  position:relative;
+  top: 15px;
+  left: 120px;
+  font-size: 12px;
+  color: lightgray;
+}
+/* .Register {
+  position:relative;
+  top: 15px;
+  left: 150px;
+  font-size: 12px;
+  color: lightgray;
+}
+.Login {
+  position:relative;
+  top: 15px;
+  left: 180px;
+  font-size: 12px;
+  color: lightgray;
+} */
 
 /* .pricing {
   position:relative;

@@ -1,41 +1,27 @@
-/* Header */
-
-/* div {
-  width: 100%;
-} */
-
 .jumbotron {
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 
-  margin-left: -1%;
-  border-radius: 0%;
+  margin-bottom: -5%;
 
 }
 
-.container {
-  width: 100%;
-  
+.GB {
+  font-family: "Oswald", sans-serif;
+  font-size: 150pt;
+  text-shadow: 1px 1px #1f3d49;
 }
-.GB{
-  font-family: 'Oswald', sans-serif;
-  font-size:150pt;
-  text-shadow:1px 1px #1f3d49;
-}
-.G{
-  font-family: 'Oswald', sans-serif;
- 
-  text-shadow:1px 1px #1f3d49;
-}
+.G {
+  font-family: "Oswald", sans-serif;
 
+  text-shadow: 1px 1px #1f3d49;
+}
 
 .panel {
   background-color: lightgray;
-
 }
-
 
 .center {
   display: block;
@@ -44,47 +30,36 @@
   width: 50%;
 }
 
-
 /* Video */
-
-.jumbotronv {
-  background-color: lightgray;
-  width: 100%;
-  height: auto;
-}
 
 iframe {
   float: center;
   display: block;
   margin: 0 auto;
-
+}
+#video {
+  background-color: D3D3D3;
 }
 
 /* Fundraising  */
 
 .containerf {
   width: 100%;
-
-
 }
 
 /* Traditional  */
-
 
 .responsive {
   float: left;
   width: 100%;
   height: auto;
-  max-width:1300px;
-
+  max-width: 1300px;
 }
 #traditional {
   font-size: 1.7vw;
   height: 40%;
   padding: 4% 6%;
-
- 
-} 
+}
 
 /* Crowfunding */
 
@@ -92,74 +67,63 @@ iframe {
   font-size: 1.7vw;
   padding: 2% 6%;
   text-align: center;
-  
-
-} 
+}
 
 .responsive2 {
   width: 100%;
   height: auto;
-  max-width:1300px;
+  max-width: 1300px;
   /* float:right; */
 }
 
-
-
 /*  Todah  */
-.jumbotron3 {
-  height: auto;
-  width: 100%;
-}
 
 .responsive3 {
   width: 100%;
   height: auto;
-  max-width:800px;
- 
+  max-width: 800px;
 }
 .responsive4 {
   width: 100%;
   height: auto;
-  max-width:800px;
+  max-width: 800px;
 }
 #todah {
   font-size: 1.5vw;
   height: 40%;
   width: 70%;
-  padding:2% 8%;
+  padding: 2% 8%;
   text-align: center;
- margin: auto;
- 
-} 
-
+  margin: auto;
+}
 
 /* Easy as 1-2-3 */
 
-#Campaigns{
-  background-color: whitesmoke;
+#Campaigns {
+  background-color: white;
+  margin-top: -2%;
 }
-
-
-
 
 /* Campaigners */
 
-
-.panelc {
-  background-image: linear-gradient(rgba(128,128,128,0.9), rgba(128,128,128,0.9)), url("../../../assets/splash1.jpg"); 
+#happyCampaigners {
+  background-image: linear-gradient(
+      rgba(128, 128, 128, 0.9),
+      rgba(128, 128, 128, 0.9)
+    ),
+    url("../../../assets/splash1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
+  margin-top: -2%;
+}
 
-} 
-
-  #happy {
-    text-align: center;
-    color: white;
-
-  }
-  hr {
+#happy {
+  text-align: center;
+  color: white;
+}
+ hr {
     display: block;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
@@ -168,27 +132,36 @@ iframe {
     /* border-style: inset; */
     border-width: 4px;
     width: 8%;
-    border-color: #257692;
+    border-color: #FCC63C;
   
-  }
+  } 
+
+.todah {
+  border-color: black;
+  border-width: 2px;
+  width: 30vw;
+}
+.TodahUnder {
+  border-color: black;
+  border-width: 2px;
+  width: 5vw;
+}
 
 
-  .first, .sec, .third {
-    color: white;
-  }
-  
+.first,
+.sec,
+.third {
+  color: white;
+}
 
 /*  Footer */
 
 .footer {
   background-color: #257692;
 
-  padding-top: 2%;
-  padding-bottom: 3%;
-  margin-bottom: -4%;
-  margin-left: -2%;
+  padding: 1%;
+}
 
- } 
 
 .btn {
   font-size: 20px;
@@ -197,8 +170,5 @@ iframe {
   color: white;
   padding: 1% 2%;
 
- 
 }
-.jumbotron-fluid {
-  margin: 0 !important;
-}
+

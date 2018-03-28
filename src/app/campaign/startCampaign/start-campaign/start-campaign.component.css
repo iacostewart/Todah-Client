@@ -4,3 +4,7 @@
     color: white;
     width: 15vw;
   }
+
+  a {
+    text-decoration: none;
+  }
