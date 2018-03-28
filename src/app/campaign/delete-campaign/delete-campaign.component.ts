@@ -37,7 +37,7 @@ export class DeleteCampaignComponent implements OnInit {
     // console.log("CAMPAIGN ID DELETE",this.campaignID.ID)
     this.campaignService.deleteCampaign(campIds)
     .subscribe(() => {
-      this.router.navigate(['home'])
+      this.router.navigate(['/home'])
     //   console.log('*******campid Thingkie************',campId),
     //   // (campId) => {JSON.stringify(campId), console.log(campId.id)}
     // //  window.localStorage.setItem('campId', ""),
