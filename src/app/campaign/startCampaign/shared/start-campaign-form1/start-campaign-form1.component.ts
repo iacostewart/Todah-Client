@@ -50,7 +50,7 @@ export class StartCampaignForm1Component implements OnInit {
   }
 
   ngOnInit() {
-
+    window.scrollTo(0,0);
   }
 
   createForm() {

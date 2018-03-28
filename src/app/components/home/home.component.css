@@ -3,7 +3,9 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+
   margin-bottom: -5%;
+
 }
 
 .GB {
@@ -156,8 +158,10 @@ iframe {
 
 .footer {
   background-color: #257692;
+
   padding: 1%;
 }
+
 
 .btn {
   font-size: 20px;

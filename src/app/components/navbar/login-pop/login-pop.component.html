@@ -6,17 +6,17 @@
 <div>
   
    <form [formGroup]="logForm" #f (ngSubmit)="onSubmit()">
-<label>Enter Your email:</label>
+<label></label>
 <br>  
 <mat-input-container>
-  <input matInput type="text" id="email" formControlName="email" required >
+  <input matInput type="text" placeholder="E-Mail" id="email" formControlName="email" required >
 </mat-input-container>
 <br>
 
-    <label>password:</label>
+    <label></label>
     <br>
       <mat-input-container>
-        <input matInput type="password" id="password" formControlName="password" required>
+        <input matInput type="password" placeholder="Password" id="password" formControlName="password" required>
 
       </mat-input-container>
 
