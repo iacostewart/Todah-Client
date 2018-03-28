@@ -6,21 +6,14 @@ import { Campaign } from '../../start-campaign/model/Campaign';
 import { campaingID } from '../../../globals';
 import {MatFormFieldModule, MatInputModule, MatSliderModule, MatCardModule} from '@angular/material';
 import {MatCardContent} from '@angular/material';
-
-
-
-
 // tslint:disable-next-line:prefer-const
 let userId = window.localStorage.userId;
-
 interface CampId  {
   campId: number;
 }
-
 interface FileList {
   files: Object;
 }
-
 @Component({
   selector: 'app-start-campaign-form1',
   templateUrl: './start-campaign-form1.component.html',
@@ -32,30 +25,20 @@ export class StartCampaignForm1Component implements OnInit {
   campaignImageFile: File = null;
   defaultDropdownDirection = 'select';
   @ViewChild('MainImage') User_Image;
-
   textCount = '';
   maxLength = 150;
   characterLeft = this.maxLength;
-
   longDes = '';
   campLongText = 500;
   textRemaining = this.campLongText;
-
-
-
-
-
   constructor(private campaignService: CampaignService, private form: FormBuilder, private router: Router, public campaignID: campaingID) {
     this.createForm();
   }
-
   ngOnInit() {
-
+    window.scrollTo(0,0);
   }
-
   createForm() {
     this.campaignForm = this.form.group({
-
         // 'project_img_thumb_url': new FormControl(null),
         // 'creator_id': new FormControl(null),
         // 'organization_name': new FormControl(null, Validators.required),
@@ -63,13 +46,11 @@ export class StartCampaignForm1Component implements OnInit {
         // 'campaignTitle': new FormControl(null, Validators.required),
         // 'chapterName': new FormControl(null),
         // 'staffName': new FormControl(null),
-
         // 'campaignCreatorRole': new FormControl(null, Validators.required),
         // 'campaignCategory': new FormControl(null, Validators.required),
         // 'campaignTeaser': new FormControl(null, Validators.required),
         // 'campaignLongDesc': new FormControl(null, Validators.required),
         // 'orgWebsite': new FormControl(null),
-
         // 'facebook': new FormControl(null),
         // 'twitter': new FormControl(null),
         // 'instagram': new FormControl(null),
@@ -116,7 +97,6 @@ export class StartCampaignForm1Component implements OnInit {
         'client_is_paying_platform_fees': new FormControl(true)
       });
   }
-
   fileInput(files: FileList) {
     // this.campaignImageFile = files.item[0].files;
     console.log('**********imageNote**********', files[0]);
@@ -127,10 +107,6 @@ export class StartCampaignForm1Component implements OnInit {
       console.log(error);
     });
   }
-
-
-
-
   count(msg) {
     if (this.maxLength >= msg.length) {
       this.characterLeft = (this.maxLength) - (msg.length);
@@ -138,8 +114,6 @@ export class StartCampaignForm1Component implements OnInit {
       this.textCount = msg.substr(0, msg.length - 1);
     }
   }
-
-
   longCount(msg) {
     if (this.campLongText >= msg.length) {
       this.textRemaining = (this.campLongText) - (msg.length);
@@ -147,33 +121,22 @@ export class StartCampaignForm1Component implements OnInit {
       this.longDes = msg.substr(0, msg.length - 1);
     }
   }
-
-
-
-
-
-
-
   onSubmit() {
      this.campaignService.storeCampaign(this.campaignForm.value)
   .subscribe((campId: CampId) => {
     this.router.navigate(["/startCampaign-form2"]),
     window.localStorage.setItem('campId', JSON.stringify(campId.campId))
     this.campaignID.ID = campId.campId
-
   },
   (error) => {alert("1Campaign did not post please make sure all required fields are filled out")
   console.log(error)}
   )
   }
-
   // this.campaignService.storeCampaign(this.campaignForm.value)
   // .subscribe((response: Campaign) => {
   //   console.log("******* THE RESPONSE *******", response);
   //   this.router.navigate(["/startCampaign-form2"]
   //       )},
-
   // (error) => console.log(error)
   // );
-
 }
