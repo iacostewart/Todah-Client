@@ -94,57 +94,7 @@ import { RegistrationService } from './components/navbar/auth.service';
 
   ],
   exports: [
-
-    // MatCardModule
-  ],
-  entryComponents: [
-    RegistrationPopComponent,
-    LoginPopComponent,
-
-  ],
-
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    CommonModule,
-    CampaignModule,
-    AdminModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    FormsModule,
-    HttpModule,
-    FormsModule,
-    MatSliderModule,
-    ReactiveFormsModule,
-  
-
-
-    // MaterialModule.forRoot(),
-    ScrollToModule.forRoot(),
-    BrowserAnimationsModule,
-    MatInputModule,
-    HttpClientModule,
-
-
-  ],
-  // schemas: [CUSTOM_ELEMENTS_SCHEMA],
-
-
-  providers: [
-    CampaignService,
-    RegistrationService,
-
-
-  ],
-
-  bootstrap: [
-    AppComponent
-  ],
-
-})
-@NgModule({
-exports: [
-  CdkTableModule,
+    CdkTableModule,
   MatAutocompleteModule,
   MatButtonModule,
   MatButtonToggleModule,
@@ -178,9 +128,50 @@ exports: [
   MatToolbarModule,
   MatTooltipModule,
 
-],
-bootstrap: [AppComponent]
+    // MatCardModule
+  ],
+
+  entryComponents: [
+    RegistrationPopComponent,
+    LoginPopComponent,
+
+  ],
+
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    CommonModule,
+    CampaignModule,
+    AdminModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    FormsModule,
+    HttpModule,
+    FormsModule,
+    MatSliderModule,
+    ReactiveFormsModule,
+    // MaterialModule.forRoot(),
+    ScrollToModule.forRoot(),
+    BrowserAnimationsModule,
+    MatInputModule,
+    HttpClientModule,
+
+  ],
+  // schemas: [CUSTOM_ELEMENTS_SCHEMA],
+
+  providers: [
+    CampaignService,
+    RegistrationService,
+
+  ],
+
+  bootstrap: [
+    AppComponent
+  ],
+
 })
+
+
 export class AppModule { }
 
 export class PizzaPartyAppModule { }
