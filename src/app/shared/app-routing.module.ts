@@ -27,7 +27,7 @@ import { DeleteCampaignComponent } from '../campaign/delete-campaign/delete-camp
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+  { path: '/home', component: HomeComponent },
 
   { path: 'howItWorks', component: HowItWorksComponent },
   { path: 'howToSucceed', component: HowToSucceedComponent },
