@@ -5,7 +5,6 @@
   "main": "server.js",
   "scripts": {
     "ng": "ng",
-    "preinstall": "npm install --save @angular/cli",
     "start": "node index.js",
     "build": "ng build -prod",
     "test": "ng test",
@@ -50,6 +49,8 @@
     "typescript": "~2.5.3"
   },
   "devDependencies": {
+    "@angular/cli": "1.6.8",
+    "@angular/compiler-cli": "^5.2.0",
     "@angular/language-service": "^5.2.0",
     "@types/hammerjs": "^2.0.35",
     "@types/jasmine": "~2.8.3",
